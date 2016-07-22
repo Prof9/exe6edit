@@ -7,7 +7,8 @@
     <ProjectGuid>{1B3F0106-B2C6-40AB-BE3E-929E40FA17B8}</ProjectGuid>
     <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
     <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
-    <ApplicationIcon>無題 - 2.ico</ApplicationIcon>
+    <ApplicationIcon>
+    </ApplicationIcon>
     <AssemblyKeyContainerName>
     </AssemblyKeyContainerName>
     <AssemblyName>EXE6Edit</AssemblyName>
@@ -149,7 +150,6 @@
     <Content Include="Readme.txt">
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </Content>
-    <Content Include="無題 - 2.ico" />
   </ItemGroup>
   <ItemGroup>
     <BootstrapperPackage Include="Microsoft.Net.Framework.2.0">
