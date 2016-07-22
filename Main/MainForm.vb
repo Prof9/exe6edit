@@ -55,7 +55,7 @@ Public Class MainForm
     '開く
     Private Sub MenuFileOpen_Click(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles MenuFileOpen.Click
         OpenFileDialog.FileName = ""
-        OpenFileDialog.Filter = "VisualBoyAdvance Battery File|*.sav|ProActionReplay SaveData File|*.xps|GameShark SnapShot File|*.sps"
+        OpenFileDialog.Filter = "VisualBoyAdvance Battery File|*.sa*|ProActionReplay SaveData File|*.xps|GameShark SnapShot File|*.sps"
         OpenFileDialog.ShowDialog()
         If OpenFileDialog.FileName <> "" Then
             loadFlag = OpenFileDialog.FilterIndex
