@@ -6,16 +6,16 @@ Public Class MainForm
 
     Private loadFlag As Integer = lFlag.NONE
 
-    'ƒ[ƒhƒtƒ‰ƒO—ñ‹“‘Ì
+    'ãƒ­ãƒ¼ãƒ‰ãƒ•ãƒ©ã‚°åˆ—æŒ™ä½“
     Enum lFlag
-        NONE = 0    '–¢ƒ[ƒh
+        NONE = 0    'æœªãƒ­ãƒ¼ãƒ‰
         VBA = 1     'VisualBoyAdvance Battery File
         PAR = 2     'ProActionReplay Save Data File
         GS = 3      'GameShark SnapShot File
     End Enum
 
-#Region "ƒƒCƒ“ƒƒjƒ…[ ‚ÌƒNƒŠƒbƒNˆ—"
-    'ŠJ‚­
+#Region "ãƒ¡ã‚¤ãƒ³ãƒ¡ãƒ‹ãƒ¥ãƒ¼ ã®ã‚¯ãƒªãƒƒã‚¯å‡¦ç†"
+    'é–‹ã
     Private Sub MenuFileOpen_Click(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles MenuFileOpen.Click
         OpenFileDialog.FileName = ""
         OpenFileDialog.Filter = "VisualBoyAdvance Battery File|*.sav|ProActionReplay SaveData File|*.xps|GameShark SnapShot File|*.sps"
@@ -32,7 +32,7 @@ Public Class MainForm
         End If
     End Sub
 
-    'ƒtƒ@ƒCƒ‹‚Ì“Ç‚İ‚İˆ—
+    'ãƒ•ã‚¡ã‚¤ãƒ«ã®èª­ã¿è¾¼ã¿å‡¦ç†
     Private Sub LoadFile()
         If loadFlag = 0 Then
             be = New EXE6SaveDataEditor(fname)
@@ -40,20 +40,20 @@ Public Class MainForm
             be = New EXE6SaveDataEditor(fname, True)
         End If
         If be.CalcCheckSum <> be.CheckSumValue Then
-            MsgBox("ƒZ[ƒuƒf[ƒ^‚ª‰ó‚ê‚Ä‚¢‚Ü‚·")
+            MsgBox("ã‚»ãƒ¼ãƒ–ãƒ‡ãƒ¼ã‚¿ãŒå£Šã‚Œã¦ã„ã¾ã™")
         End If
     End Sub
 
-    'ƒtƒ@ƒCƒ‹‚Ì“Ç‚İ‚İ
+    'ãƒ•ã‚¡ã‚¤ãƒ«ã®èª­ã¿è¾¼ã¿
     Private Sub Initializer()
 
         LibGigaChipLB.Items.Clear()
-        If (be.VersionInfo = "ƒOƒŒƒCƒK") Then
+        If (be.VersionInfo = "ã‚°ãƒ¬ã‚¤ã‚¬") Then
             LibGigaChipLB.Items.AddRange(EXE6DataList.LibGigaChipNameListAtGrayga)
-            MenuBeast.Text = "“d”]bƒOƒŒƒCƒKƒ`ƒbƒvƒf[ƒ^"
-        ElseIf (be.VersionInfo = "ƒtƒ@ƒ‹ƒU[") Then
+            MenuBeast.Text = "é›»è„³ç£ã‚°ãƒ¬ã‚¤ã‚¬ãƒãƒƒãƒ—ãƒ‡ãƒ¼ã‚¿"
+        ElseIf (be.VersionInfo = "ãƒ•ã‚¡ãƒ«ã‚¶ãƒ¼") Then
             LibGigaChipLB.Items.AddRange(EXE6DataList.LibGigaChipNameListAtFalther)
-            MenuBeast.Text = "“d”]bƒtƒ@ƒ‹ƒU[ƒ`ƒbƒvƒf[ƒ^"
+            MenuBeast.Text = "é›»è„³ç£ãƒ•ã‚¡ãƒ«ã‚¶ãƒ¼ãƒãƒƒãƒ—ãƒ‡ãƒ¼ã‚¿"
         End If
 
         ClearDatabindings()
@@ -70,16 +70,16 @@ Public Class MainForm
         ReadFolder()
         ListBox1.EndUpdate()
         RcCountTB.Text = be.RemodelCardCount
-        ReadRemodelCard() '‰ü‘¢ƒJ[ƒh‚ğRcList‚É“Ç‚İ‚Ş
+        ReadRemodelCard() 'æ”¹é€ ã‚«ãƒ¼ãƒ‰ã‚’RcListã«èª­ã¿è¾¼ã‚€
         ReadMapValue()
         ReadLibrary()
     End Sub
 
-    '–¼•t‚¯•Û‘¶
+    'åä»˜ã‘ä¿å­˜
     Private Sub MenuItem10_Click(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles MenuFileSave.Click
         If be Is Nothing Then Exit Sub
         SaveFileDialog.FileName = ""
-        'ƒ[ƒhƒtƒ‰ƒO‚É‚æ‚Á‚ÄƒtƒBƒ‹ƒ^‚ğİ’è
+        'ãƒ­ãƒ¼ãƒ‰ãƒ•ãƒ©ã‚°ã«ã‚ˆã£ã¦ãƒ•ã‚£ãƒ«ã‚¿ã‚’è¨­å®š
         Select Case loadFlag
             Case lFlag.VBA
                 SaveFileDialog.Filter = "VisualBoyAdvance Battery File|*.sav"
@@ -97,37 +97,37 @@ Public Class MainForm
         End If
     End Sub
 
-    'ã‘‚«•Û‘¶
+    'ä¸Šæ›¸ãä¿å­˜
     Private Sub MenuItem11_Click(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles MenuFileSaveOverWrite.Click
         If be Is Nothing Then Exit Sub
         SaveFile(fname)
     End Sub
 
-    'ƒtƒ@ƒCƒ‹‚Ö‘‚«‚Şˆ—
+    'ãƒ•ã‚¡ã‚¤ãƒ«ã¸æ›¸ãè¾¼ã‚€å‡¦ç†
     Private Sub SaveFile(ByVal FileName As String)
 
         CheckTextBox(ZennyTB, be.ZennyValue)
         CheckTextBox(BugPieceTB, be.BugPieceValue)
         CheckTextBox(ChipTB, be.ChipValue)
-        ''ƒTƒuƒ`ƒbƒv
-        CheckTextBox(SubChipTB, be.SubChipValue) '‘¶İƒtƒ‰ƒO
-        CheckTextBox(MaxOfSubchipNumTB, be.MaxOfSubChipValue) 'Å‘å–‡”
-        ''‰ü‘¢ƒJ[ƒh
+        ''ã‚µãƒ–ãƒãƒƒãƒ—
+        CheckTextBox(SubChipTB, be.SubChipValue) 'å­˜åœ¨ãƒ•ãƒ©ã‚°
+        CheckTextBox(MaxOfSubchipNumTB, be.MaxOfSubChipValue) 'æœ€å¤§æšæ•°
+        ''æ”¹é€ ã‚«ãƒ¼ãƒ‰
         CheckTextBox(RcCapacityTB, be.RemodelCardCapacity)
-        ''Šg’£ƒƒ‚ƒŠ
+        ''æ‹¡å¼µãƒ¡ãƒ¢ãƒª
         CheckTextBox(ExtendMemoryTB, be.ExtendMemoryValue)
-        ''ŠÔ
+        ''æ™‚é–“
         CheckTextBox(HourTB, be.HourValue)
         CheckTextBox(MinuteTB, be.MinuteValue)
         CheckTextBox(SecondTB, be.SecondValue)
         CheckTextBox(MsecondTB, be.MsecondValue)
 
         CheckTextBox(FolderValueTB, be.FolderValue)
-        ''ƒiƒrƒJƒXƒ^ƒ}ƒCƒU[
+        ''ãƒŠãƒ“ã‚«ã‚¹ã‚¿ãƒã‚¤ã‚¶ãƒ¼
         CheckTextBox(NaviCusTB, be.NaviCusValue)
 
 
-        WriteRemodelCard() '‰ü‘¢ƒJ[ƒh‚ğ‘‚«‚Ş
+        WriteRemodelCard() 'æ”¹é€ ã‚«ãƒ¼ãƒ‰ã‚’æ›¸ãè¾¼ã‚€
         be.SetCheckSum()
         If loadFlag = 2 Then
             be.WriteFile(FileName, True)
@@ -145,7 +145,7 @@ Public Class MainForm
         End If
     End Sub
 
-    'ƒtƒHƒ‹ƒ_[¨ƒtƒ@ƒCƒ‹‚Ö•Û‘¶
+    'ãƒ•ã‚©ãƒ«ãƒ€ãƒ¼â†’ãƒ•ã‚¡ã‚¤ãƒ«ã¸ä¿å­˜
     Private Sub MenuItem27_Click(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles MenuFolderSave.Click
         SaveFileDialog.FileName = ""
         SaveFileDialog.Filter = "folder file|*.dmp"
@@ -162,7 +162,7 @@ Public Class MainForm
         End If
     End Sub
 
-    'ƒtƒHƒ‹ƒ_[¨ƒtƒ@ƒCƒ‹‚©‚ç“Ç‚İ‚İ
+    'ãƒ•ã‚©ãƒ«ãƒ€ãƒ¼â†’ãƒ•ã‚¡ã‚¤ãƒ«ã‹ã‚‰èª­ã¿è¾¼ã¿
     Private Sub MenuFolderLoad_Click(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles MenuFolderLoad.Click
         OpenFileDialog.FileName = ""
         OpenFileDialog.Filter = "folder file|*.dmp"
@@ -180,21 +180,21 @@ Public Class MainForm
         ReadFolder()
     End Sub
 
-    '•Â‚¶‚é
+    'é–‰ã˜ã‚‹
     Private Sub MenuFileClose_Click(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles MenuFileClose.Click
         SetEnabled(False)
         StatusDisplay.Text = ""
         Timer1.Enabled = False
     End Sub
 
-    'I—¹
+    'çµ‚äº†
     Private Sub MenuExit_Click(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles MenuExit.Click
         Me.Close()
     End Sub
 #End Region
 
-#Region "ƒƒCƒ“ƒƒjƒ…[ •ÒW ‚ÌƒNƒŠƒbƒNˆ—"
-    'ƒ‰ƒCƒuƒ‰ƒŠ‘SŠJ¨‘S‚Ä
+#Region "ãƒ¡ã‚¤ãƒ³ãƒ¡ãƒ‹ãƒ¥ãƒ¼ ç·¨é›† ã®ã‚¯ãƒªãƒƒã‚¯å‡¦ç†"
+    'ãƒ©ã‚¤ãƒ–ãƒ©ãƒªå…¨é–‹â†’å…¨ã¦
     Private Sub MenuItem16_Click(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles MenuItem16.Click
         MenuItem18_Click(MenuItem18, New System.EventArgs)
         MenuItem19_Click(MenuItem19, New System.EventArgs)
@@ -203,7 +203,7 @@ Public Class MainForm
         MenuItem21_Click(MenuItem21, New System.EventArgs)
     End Sub
 
-    'ƒ‰ƒCƒuƒ‰ƒŠ‘SŠJ¨ƒƒKƒNƒ‰ƒX‚Ì‚İ
+    'ãƒ©ã‚¤ãƒ–ãƒ©ãƒªå…¨é–‹â†’ãƒ¡ã‚¬ã‚¯ãƒ©ã‚¹ã®ã¿
     Private Sub MenuItem18_Click(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles MenuItem18.Click
         For i As Integer = 0 To LibMegaChipLB.Items.Count - 1
             LibMegaChipLB.SetItemChecked(i, True)
@@ -211,7 +211,7 @@ Public Class MainForm
         LibMegaChipLB_SelectedIndexChanged(LibMegaChipLB, New System.EventArgs)
     End Sub
 
-    'ƒ‰ƒCƒuƒ‰ƒŠ‘SŠJ¨ƒMƒKƒNƒ‰ƒX‚Ì‚İ
+    'ãƒ©ã‚¤ãƒ–ãƒ©ãƒªå…¨é–‹â†’ã‚®ã‚¬ã‚¯ãƒ©ã‚¹ã®ã¿
     Private Sub MenuItem19_Click(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles MenuItem19.Click
         For i As Integer = 0 To LibGigaChipLB.Items.Count - 1
             LibGigaChipLB.SetItemChecked(i, True)
@@ -219,7 +219,7 @@ Public Class MainForm
         LibGigaChipLB_SelectedIndexChanged(LibGigaChipLB, New System.EventArgs)
     End Sub
 
-    'ƒ‰ƒCƒuƒ‰ƒŠ‘SŠJ¨ƒXƒ^ƒ“ƒ_[ƒh‚Ì‚İ
+    'ãƒ©ã‚¤ãƒ–ãƒ©ãƒªå…¨é–‹â†’ã‚¹ã‚¿ãƒ³ãƒ€ãƒ¼ãƒ‰ã®ã¿
     Private Sub MenuItem17_Click(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles MenuItem17.Click
         For i As Integer = 0 To LibraryLB.Items.Count - 1
             LibraryLB.SetItemChecked(i, True)
@@ -227,7 +227,7 @@ Public Class MainForm
         LIbraryLB_SelectedIndexChanged(LibraryLB, New System.EventArgs)
     End Sub
 
-    'ƒ‰ƒCƒuƒ‰ƒŠ‘SŠJ¨ƒV[ƒNƒŒƒbƒg‚Ì‚İ
+    'ãƒ©ã‚¤ãƒ–ãƒ©ãƒªå…¨é–‹â†’ã‚·ãƒ¼ã‚¯ãƒ¬ãƒƒãƒˆã®ã¿
     Private Sub MenuItem20_Click(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles MenuItem20.Click
         For i As Integer = 0 To LibSeacretChipLB.Items.Count - 1
             LibSeacretChipLB.SetItemChecked(i, True)
@@ -235,7 +235,7 @@ Public Class MainForm
         LibSeacretChipLB_SelectedIndexChanged(LibSeacretChipLB, New System.EventArgs)
     End Sub
 
-    'ƒ‰ƒCƒuƒ‰ƒŠ‘SŠJ¨‚oD‚`D‚Ì‚İ
+    'ãƒ©ã‚¤ãƒ–ãƒ©ãƒªå…¨é–‹â†’ï¼°ï¼ï¼¡ï¼ã®ã¿
     Private Sub MenuItem21_Click(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles MenuItem21.Click
         For i As Integer = 0 To LibPaLB.Items.Count - 1
             LibPaLB.SetItemChecked(i, True)
@@ -243,12 +243,12 @@ Public Class MainForm
         LibPaLB_SelectedIndexChanged(LibPaLB, New System.EventArgs)
     End Sub
 
-    'ƒ_ƒuƒ‹ƒr[ƒXƒg¨ƒf[ƒ^‚ğ’Ç‰Á
+    'ãƒ€ãƒ–ãƒ«ãƒ“ãƒ¼ã‚¹ãƒˆâ†’ãƒ‡ãƒ¼ã‚¿ã‚’è¿½åŠ 
     Private Sub MenuItem7_Click(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles MenuItem7.Click
         If Not be Is Nothing Then be.SetDoubleBeast()
     End Sub
 
-    'ƒ_ƒuƒ‹ƒr[ƒXƒg¨ƒf[ƒ^‚ğíœ
+    'ãƒ€ãƒ–ãƒ«ãƒ“ãƒ¼ã‚¹ãƒˆâ†’ãƒ‡ãƒ¼ã‚¿ã‚’å‰Šé™¤
     Private Sub MenuItem8_Click(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles MenuItem8.Click
         If Not be Is Nothing Then be.ResetDoubleBeast()
     End Sub
@@ -261,7 +261,7 @@ Public Class MainForm
         If Not be Is Nothing Then be.ResetBeast()
     End Sub
 
-    '‘S‚Ä~99
+    'å…¨ã¦Ã—99
     Private Sub MenuItem9_Click(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles MenuChip.Click
         If Not be Is Nothing Then
             be.SetAllChip()
@@ -269,7 +269,7 @@ Public Class MainForm
         End If
     End Sub
 
-    'ƒTƒuƒ`ƒbƒv‘S‚Ä‚W
+    'ã‚µãƒ–ãƒãƒƒãƒ—å…¨ã¦ï¼˜
     Private Sub MenuItem13_Click(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles MenuSubChip.Click
         For i As Integer = 0 To 7
             be.SubChipExistFlag(i) = True
@@ -281,7 +281,7 @@ Public Class MainForm
         MaxOfSubchipNumTB.Text = 8
     End Sub
 
-    'ƒiƒrƒJƒX‘S‚Ä‚X
+    'ãƒŠãƒ“ã‚«ã‚¹å…¨ã¦ï¼™
     Private Sub MenuItem14_Click(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles MenuNaviCus.Click
         For i As Integer = 0 To EXE6DataList.NaviCusName.Length - 1
             be.NaviCusExistFlag(i) = True
@@ -291,7 +291,7 @@ Public Class MainForm
         NaviCusCkB.Checked = True
     End Sub
 
-    'ƒL[ƒAƒCƒeƒ€‘S‚Ä
+    'ã‚­ãƒ¼ã‚¢ã‚¤ãƒ†ãƒ å…¨ã¦
     Private Sub MenuItem15_Click(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles MenuKeyItem.Click
         For i As Integer = 0 To KeyItemLB.Items.Count - 1
             KeyItemLB.SetItemChecked(i, True)
@@ -300,7 +300,7 @@ Public Class MainForm
     End Sub
 #End Region
 
-#Region " ƒ‰ƒCƒuƒ‰ƒŠ[ŠÖ˜A‚Ìˆ— "
+#Region " ãƒ©ã‚¤ãƒ–ãƒ©ãƒªãƒ¼é–¢é€£ã®å‡¦ç† "
     '
     Private Sub LIbraryLB_SelectedIndexChanged(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles LibraryLB.SelectedIndexChanged
         For i As Integer = 0 To LibraryLB.Items.Count - 1
@@ -318,11 +318,11 @@ Public Class MainForm
     '
     Private Sub LibGigaChipLB_SelectedIndexChanged(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles LibGigaChipLB.SelectedIndexChanged
 
-        If (be.VersionInfo = "ƒOƒŒƒCƒK") Then
+        If (be.VersionInfo = "ã‚°ãƒ¬ã‚¤ã‚¬") Then
             For i As Integer = 0 To LibGigaChipLB.Items.Count - 1
                 be.LibraryFlag(EXE6DataList.LibGigaChipFlagListAtGrayga, i) = LibGigaChipLB.GetItemChecked(i)
             Next
-        ElseIf (be.VersionInfo = "ƒtƒ@ƒ‹ƒU[") Then
+        ElseIf (be.VersionInfo = "ãƒ•ã‚¡ãƒ«ã‚¶ãƒ¼") Then
             For i As Integer = 0 To LibGigaChipLB.Items.Count - 1
                 be.LibraryFlag(EXE6DataList.LibGigaChipFlagListAtFalther, i) = LibGigaChipLB.GetItemChecked(i)
             Next
@@ -355,12 +355,12 @@ Public Class MainForm
         For i As Integer = 0 To LibMegaChipLB.Items.Count - 1
             LibMegaChipLB.SetItemChecked(i, be.LibraryFlag(EXE6DataList.LibMegaChipFlagList, i))
         Next
-        If (be.VersionInfo = "ƒOƒŒƒCƒK") Then
+        If (be.VersionInfo = "ã‚°ãƒ¬ã‚¤ã‚¬") Then
             For i As Integer = 0 To LibGigaChipLB.Items.Count - 1
                 LibGigaChipLB.SetItemChecked(i, be.LibraryFlag(EXE6DataList.LibGigaChipFlagListAtGrayga, i))
             Next
 
-        ElseIf (be.VersionInfo = "ƒtƒ@ƒ‹ƒU[") Then
+        ElseIf (be.VersionInfo = "ãƒ•ã‚¡ãƒ«ã‚¶ãƒ¼") Then
             For i As Integer = 0 To LibGigaChipLB.Items.Count - 1
                 LibGigaChipLB.SetItemChecked(i, be.LibraryFlag(EXE6DataList.LibGigaChipFlagListAtFalther, i))
             Next
@@ -373,8 +373,8 @@ Public Class MainForm
     End Sub
 #End Region
 
-#Region " ‰ü‘¢ƒJ[ƒh "
-    '‰ü‘¢ƒJ[ƒh‚Ì’Ç‰Áˆ—
+#Region " æ”¹é€ ã‚«ãƒ¼ãƒ‰ "
+    'æ”¹é€ ã‚«ãƒ¼ãƒ‰ã®è¿½åŠ å‡¦ç†
     Private Sub RcAddButton_Click(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles RcAddButton.Click
         Dim bufIndex As Integer = RcList.SelectedIndex
         RcList.Items.Insert(RcList.SelectedIndex + 1, RcCardList.Items(RcCardList.SelectedIndex))
@@ -386,7 +386,7 @@ Public Class MainForm
         RcDisplayExistFlagCkB.Checked = True
     End Sub
 
-    '‰ü‘¢ƒJ[ƒh‚Ìíœˆ—
+    'æ”¹é€ ã‚«ãƒ¼ãƒ‰ã®å‰Šé™¤å‡¦ç†
     Private Sub RcRemoveButton_Click(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles RcRemoveButton.Click
         Dim bufIndex As Integer = RcList.SelectedIndex
         RcList.Items.RemoveAt(RcList.SelectedIndex)
@@ -402,7 +402,7 @@ Public Class MainForm
         RcButtonSetting()
     End Sub
 
-    '‰ü‘¢ƒJ[ƒh‚ª‹K’è”‚Ì‚Æ‚«ƒ{ƒ^ƒ“‚ÌEnabled‚ğİ’è
+    'æ”¹é€ ã‚«ãƒ¼ãƒ‰ãŒè¦å®šæ•°ã®ã¨ããƒœã‚¿ãƒ³ã®Enabledã‚’è¨­å®š
     Private Sub RcButtonSetting()
         If RcList.Items.Count >= 32 Then
             RcAddButton.Enabled = False
@@ -437,8 +437,8 @@ Public Class MainForm
     End Sub
 #End Region
 
-#Region " ƒtƒHƒ‹ƒ_ŠÖ˜A‚Ìˆ— "
-    'ƒtƒHƒ‹ƒ_‚Öƒ`ƒbƒv‚ğ’Ç‰Á‚·‚éˆ—
+#Region " ãƒ•ã‚©ãƒ«ãƒ€é–¢é€£ã®å‡¦ç† "
+    'ãƒ•ã‚©ãƒ«ãƒ€ã¸ãƒãƒƒãƒ—ã‚’è¿½åŠ ã™ã‚‹å‡¦ç†
     Private Sub AddChipButton_Click(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles AddChipButton.Click
         Dim index As Integer = ListBox1.SelectedIndex
         ListBox1.Items.RemoveAt(index)
@@ -468,16 +468,16 @@ Public Class MainForm
         ReadFolder()
     End Sub
 
-    '•â³ƒ{ƒ^ƒ“
+    'è£œæ­£ãƒœã‚¿ãƒ³
     Private Sub ChipRepairButton_Click(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles ChipRepairButton.Click
         CheckChipNum()
     End Sub
 
-    'ƒ`ƒbƒv–‡”•â³
+    'ãƒãƒƒãƒ—æšæ•°è£œæ­£
     Private Sub CheckChipNum()
         Dim maxchipNumber As Integer = 30 * FolderValueTB.Text - 1
         Dim chip(maxchipNumber) As Integer
-        'ƒ`ƒbƒv‚ğ“Ç‚İ‚Ş
+        'ãƒãƒƒãƒ—ã‚’èª­ã¿è¾¼ã‚€
         For i As Integer = 0 To maxchipNumber
             chip(i) = be.ReadHalfWord(&H2178 + (i * 2) + FolderSelectCB.SelectedIndex * &H3C + be.BaseAddr)
         Next
@@ -497,7 +497,7 @@ Public Class MainForm
             End If
         Next
 
-        'ƒtƒHƒ‹ƒ_‚Ìƒ`ƒbƒv”‚ªŠ”‚ğã‰ñ‚Á‚½‚ç•â³
+        'ãƒ•ã‚©ãƒ«ãƒ€ã®ãƒãƒƒãƒ—æ•°ãŒæ‰€æŒæ•°ã‚’ä¸Šå›ã£ãŸã‚‰è£œæ­£
         For i As Integer = 0 To maxchipNumber
             If rank(i) = 0 Then Exit For
             If be.ReadByte(be.BaseAddr + EXE6DataList.chipAddrList(rankValue(i))) < rank(i) Then
@@ -508,58 +508,58 @@ Public Class MainForm
     End Sub
 #End Region
 
-    'ƒ`ƒbƒv
+    'ãƒãƒƒãƒ—
     Private Sub ChipCB_SelectedIndexChanged(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles ChipCB.SelectedIndexChanged
         be.ChipIndex = ChipCB.SelectedIndex
         ChipTB.Text = be.ChipValue
     End Sub
 
-    'ƒTƒuƒ`ƒbƒv
+    'ã‚µãƒ–ãƒãƒƒãƒ—
     Private Sub SubChipCB_SelectedIndexChanged(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles SubChipCB.SelectedIndexChanged
         be.SubChipIndex = SubChipCB.SelectedIndex
         SubChipTB.Text = be.SubChipValue
         SubChipCkB.Checked = be.SubChipExistFlag
     End Sub
 
-    'ƒiƒrƒJƒX
+    'ãƒŠãƒ“ã‚«ã‚¹
     Private Sub NaviCusCB_SelectedIndexChanged(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles NaviCusCB.SelectedIndexChanged
         be.NaviCusIndex = NaviCusCB.SelectedIndex
         NaviCusTB.Text = be.NaviCusValue
     End Sub
 
-    'ƒL[ƒAƒCƒeƒ€‚Ì‘‚«‚İˆ—
+    'ã‚­ãƒ¼ã‚¢ã‚¤ãƒ†ãƒ ã®æ›¸ãè¾¼ã¿å‡¦ç†
     Private Sub KeyItemLB_ItemCheck()
         For i As Integer = 0 To EXE6DataList.KeyItemList.Length - 1
             be.KeyItemsFlag(i) = KeyItemLB.GetItemChecked(i)
         Next
     End Sub
 
-    'ƒL[ƒAƒCƒeƒ€‚Ì‘‚«‚İ
+    'ã‚­ãƒ¼ã‚¢ã‚¤ãƒ†ãƒ ã®æ›¸ãè¾¼ã¿
     Private Sub KeyItemLB_Leave(ByVal sender As Object, ByVal e As System.EventArgs) Handles KeyItemLB.Leave
         KeyItemLB_ItemCheck()
     End Sub
 
-    'ƒ}ƒbƒvƒŠƒXƒg‚©‚ç“Ç‚İ‚Ş
+    'ãƒãƒƒãƒ—ãƒªã‚¹ãƒˆã‹ã‚‰èª­ã¿è¾¼ã‚€
     Private Sub ReadMapValue()
         MapListCB.SelectedIndex = Array.IndexOf(EXE6DataList.MapListCode, be.MapCodeValue)
     End Sub
 
-    'ƒ}ƒbƒv‚ÌƒRƒ“ƒ{ƒ{ƒbƒNƒX‚ª•ÏX‚³‚ê‚½‚ç‘‚«‚Ş
+    'ãƒãƒƒãƒ—ã®ã‚³ãƒ³ãƒœãƒœãƒƒã‚¯ã‚¹ãŒå¤‰æ›´ã•ã‚ŒãŸã‚‰æ›¸ãè¾¼ã‚€
     Private Sub MapListCB_SelectedIndexChanged(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles MapListCB.SelectedIndexChanged
         be.MapCodeValue = EXE6DataList.MapListCode(MapListCB.SelectedIndex)
     End Sub
 
-    'ƒo[ƒWƒ‡ƒ“î•ñ‚ÌƒtƒH[ƒ€‚ğ•\¦
+    'ãƒãƒ¼ã‚¸ãƒ§ãƒ³æƒ…å ±ã®ãƒ•ã‚©ãƒ¼ãƒ ã‚’è¡¨ç¤º
     Private Sub MenuVersionInfo_Click(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles MenuVersionInfo.Click
         Dim f As New VerInfo
         f.ShowDialog()
         f.Dispose()
     End Sub
 
-    'ŒŸõƒtƒH[ƒ€‚ğ•\¦‚·‚é
+    'æ¤œç´¢ãƒ•ã‚©ãƒ¼ãƒ ã‚’è¡¨ç¤ºã™ã‚‹
     Private Sub MenuItem3_Click(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles MenuItem3.Click
         Dim f As New FindStringForm
-        'ƒtƒH[ƒ€‚Ì
+        'ãƒ•ã‚©ãƒ¼ãƒ ã®
         If FindCM.SourceControl.GetType.Equals(GetType(ComboBox)) Then
             f.Show(CType(FindCM.SourceControl, ComboBox))
         ElseIf FindCM.SourceControl.GetType.Equals(GetType(ListBox)) Then
@@ -569,63 +569,63 @@ Public Class MainForm
         End If
     End Sub
 
-    'DataBindings‚ğ’Ç‰Á
+    'DataBindingsã‚’è¿½åŠ 
     Private Sub SetDatabindings()
         ZennyTB.DataBindings.Add("Text", be, "ZennyValue") 'ZENNY
         BugPieceTB.DataBindings.Add("Text", be, "BugPieceValue") 'BUGPIECE
-        ChipTB.DataBindings.Add("Text", be, "ChipValue") 'ƒ`ƒbƒv
-        'ƒTƒuƒ`ƒbƒv
-        SubChipTB.DataBindings.Add("Text", be, "SubChipValue") '–‡”
-        SubChipCkB.DataBindings.Add("Checked", be, "SubChipExistFlag") '‘¶İƒtƒ‰ƒO
-        MaxOfSubchipNumTB.DataBindings.Add("Text", be, "MaxOfSubChipValue") 'Å‘å–‡”
-        '‰ü‘¢ƒJ[ƒh
+        ChipTB.DataBindings.Add("Text", be, "ChipValue") 'ãƒãƒƒãƒ—
+        'ã‚µãƒ–ãƒãƒƒãƒ—
+        SubChipTB.DataBindings.Add("Text", be, "SubChipValue") 'æšæ•°
+        SubChipCkB.DataBindings.Add("Checked", be, "SubChipExistFlag") 'å­˜åœ¨ãƒ•ãƒ©ã‚°
+        MaxOfSubchipNumTB.DataBindings.Add("Text", be, "MaxOfSubChipValue") 'æœ€å¤§æšæ•°
+        'æ”¹é€ ã‚«ãƒ¼ãƒ‰
         RcDisplayExistFlagCkB.DataBindings.Add("Checked", be, "RemodelCardDisplayExistFlag")
         RcCapacityTB.DataBindings.Add("Text", be, "RemodelCardCapacity")
-        'Šg’£ƒƒ‚ƒŠ
+        'æ‹¡å¼µãƒ¡ãƒ¢ãƒª
         ExtendMemoryTB.DataBindings.Add("Text", be, "ExtendMemoryValue")
         ExtendMemoryCkB.DataBindings.Add("Checked", be, "ExtendMemoryExistFlag")
-        'ŠÔ
+        'æ™‚é–“
         HourTB.DataBindings.Add("Text", be, "HourValue")
         MinuteTB.DataBindings.Add("Text", be, "MinuteValue")
         SecondTB.DataBindings.Add("Text", be, "SecondValue")
         MsecondTB.DataBindings.Add("Text", be, "MsecondValue")
         FolderValueTB.DataBindings.Add("Text", be, "FolderValue")
-        'ƒiƒrƒJƒXƒ^ƒ}ƒCƒU[
+        'ãƒŠãƒ“ã‚«ã‚¹ã‚¿ãƒã‚¤ã‚¶ãƒ¼
         NaviCusTB.DataBindings.Add("Text", be, "NaviCusValue")
         NaviCusCkB.DataBindings.Add("Checked", be, "NaviCusExistFlag")
         NaviCusExistFlagCkB.DataBindings.Add("Checked", be, "NaviCusDisplayExistFlag")
         CompressCommandCkB.DataBindings.Add("Checked", be, "CompressCommandFlag")
     End Sub
 
-    'DataBindings‚ğíœ
+    'DataBindingsã‚’å‰Šé™¤
     Private Sub ClearDatabindings()
         ZennyTB.DataBindings.Clear() 'ZENNY
         BugPieceTB.DataBindings.Clear() 'BUGPIECE
-        ChipTB.DataBindings.Clear() 'ƒ`ƒbƒv
-        'ƒTƒuƒ`ƒbƒv
-        SubChipTB.DataBindings.Clear() '–‡”
-        SubChipCkB.DataBindings.Clear() '‘¶İƒtƒ‰ƒO
-        MaxOfSubchipNumTB.DataBindings.Clear() 'Å‘å–‡”
-        '‰ü‘¢ƒJ[ƒh
+        ChipTB.DataBindings.Clear() 'ãƒãƒƒãƒ—
+        'ã‚µãƒ–ãƒãƒƒãƒ—
+        SubChipTB.DataBindings.Clear() 'æšæ•°
+        SubChipCkB.DataBindings.Clear() 'å­˜åœ¨ãƒ•ãƒ©ã‚°
+        MaxOfSubchipNumTB.DataBindings.Clear() 'æœ€å¤§æšæ•°
+        'æ”¹é€ ã‚«ãƒ¼ãƒ‰
         RcDisplayExistFlagCkB.DataBindings.Clear()
         RcCapacityTB.DataBindings.Clear()
-        'Šg’£ƒƒ‚ƒŠ
+        'æ‹¡å¼µãƒ¡ãƒ¢ãƒª
         ExtendMemoryTB.DataBindings.Clear()
         ExtendMemoryCkB.DataBindings.Clear()
-        'ŠÔ
+        'æ™‚é–“
         HourTB.DataBindings.Clear()
         MinuteTB.DataBindings.Clear()
         SecondTB.DataBindings.Clear()
         MsecondTB.DataBindings.Clear()
         FolderValueTB.DataBindings.Clear()
-        'ƒiƒrƒJƒXƒ^ƒ}ƒCƒU[
+        'ãƒŠãƒ“ã‚«ã‚¹ã‚¿ãƒã‚¤ã‚¶ãƒ¼
         NaviCusTB.DataBindings.Clear()
         NaviCusCkB.DataBindings.Clear()
         NaviCusExistFlagCkB.DataBindings.Clear()
         CompressCommandCkB.DataBindings.Clear()
     End Sub
 
-    'Enabled‚ğ‚Ü‚Æ‚ß‚Äw’è
+    'Enabledã‚’ã¾ã¨ã‚ã¦æŒ‡å®š
     Private Sub SetEnabled(ByVal enable As Boolean)
         nomalGB.Enabled = enable
         ChipGB.Enabled = enable
@@ -633,11 +633,11 @@ Public Class MainForm
         NaviCusGB.Enabled = enable
         RemodelCardGB.Enabled = enable
         KeyItemGB.Enabled = enable
-        MenuEdit.Enabled = enable   '•ÒW
-        MenuFolder.Enabled = enable 'ƒtƒ@ƒCƒ‹->ƒtƒHƒ‹ƒ_
-        MenuFileSave.Enabled = enable 'ƒtƒ@ƒCƒ‹->–¼•t‚¯•Û‘¶
-        MenuFileSaveOverWrite.Enabled = enable 'ƒtƒ@ƒCƒ‹->ã‘‚«•Û‘¶
-        MenuFileClose.Enabled = enable 'ƒtƒ@ƒCƒ‹->•Â‚¶‚é
+        MenuEdit.Enabled = enable   'ç·¨é›†
+        MenuFolder.Enabled = enable 'ãƒ•ã‚¡ã‚¤ãƒ«->ãƒ•ã‚©ãƒ«ãƒ€
+        MenuFileSave.Enabled = enable 'ãƒ•ã‚¡ã‚¤ãƒ«->åä»˜ã‘ä¿å­˜
+        MenuFileSaveOverWrite.Enabled = enable 'ãƒ•ã‚¡ã‚¤ãƒ«->ä¸Šæ›¸ãä¿å­˜
+        MenuFileClose.Enabled = enable 'ãƒ•ã‚¡ã‚¤ãƒ«->é–‰ã˜ã‚‹
 
         MapListGB.Enabled = enable
         FolderGB.Enabled = enable
@@ -648,27 +648,27 @@ Public Class MainForm
         PaGB.Enabled = enable
     End Sub
 
-    'ƒZ[ƒuƒf[ƒ^‚Ìó‘Ô‚ğ’èŠú“I‚ÉXV‚·‚é
+    'ã‚»ãƒ¼ãƒ–ãƒ‡ãƒ¼ã‚¿ã®çŠ¶æ…‹ã‚’å®šæœŸçš„ã«æ›´æ–°ã™ã‚‹
     Private Sub Timer_Tick(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles Timer1.Tick
         If be Is Nothing Then Exit Sub
         StatusDisplay.Text = be.ToString
         LoadFileName.Text = fname
         Select Case loadFlag
             Case 1
-                StatusDisplay.Text &= "ƒtƒ@ƒCƒ‹ƒ^ƒCƒv        :VisualBoyAdvance Battery File"
+                StatusDisplay.Text &= "ãƒ•ã‚¡ã‚¤ãƒ«ã‚¿ã‚¤ãƒ—        :VisualBoyAdvance Battery File"
             Case 2
-                StatusDisplay.Text &= "ƒtƒ@ƒCƒ‹ƒ^ƒCƒv        :ProActionReplay SaveData File"
+                StatusDisplay.Text &= "ãƒ•ã‚¡ã‚¤ãƒ«ã‚¿ã‚¤ãƒ—        :ProActionReplay SaveData File"
             Case 3
-                StatusDisplay.Text &= "ƒtƒ@ƒCƒ‹ƒ^ƒCƒv        :GameShark SnapShot File"
+                StatusDisplay.Text &= "ãƒ•ã‚¡ã‚¤ãƒ«ã‚¿ã‚¤ãƒ—        :GameShark SnapShot File"
         End Select
 
     End Sub
 
-    'ƒtƒH[ƒ€‚ğ•Â‚¶‚é‚Æ‚«‚Ìˆ—
+    'ãƒ•ã‚©ãƒ¼ãƒ ã‚’é–‰ã˜ã‚‹ã¨ãã®å‡¦ç†
     Private Sub MainForm_Closing(ByVal sender As Object, ByVal e As System.ComponentModel.CancelEventArgs) Handles MyBase.Closing
-        'ƒf[ƒ^‚ª•ÏX‚³‚ê‚Ä‚¢‚é‚Ì‚È‚çŒx‚·‚é
+        'ãƒ‡ãƒ¼ã‚¿ãŒå¤‰æ›´ã•ã‚Œã¦ã„ã‚‹ã®ãªã‚‰è­¦å‘Šã™ã‚‹
         If Not be Is Nothing AndAlso be.CheckSumValue <> be.CalcCheckSum Then
-            If MsgBoxResult.No = MsgBox("•ÏX‚ª•Û‘¶‚³‚ê‚Ä‚¢‚Ü‚¹‚ñB" & vbNewLine & "–{“–‚ÉI—¹‚µ‚Ü‚·‚©", MsgBoxStyle.YesNo, "Šm”F") Then
+            If MsgBoxResult.No = MsgBox("å¤‰æ›´ãŒä¿å­˜ã•ã‚Œã¦ã„ã¾ã›ã‚“ã€‚" & vbNewLine & "æœ¬å½“ã«çµ‚äº†ã—ã¾ã™ã‹", MsgBoxStyle.YesNo, "ç¢ºèª") Then
                 e.Cancel = True
             End If
         End If
@@ -684,7 +684,7 @@ Public Class MainForm
         ListBox2.SelectedIndex = 0
         MapListCB.Items.AddRange(EXE6DataList.MapListName)
 
-        'ƒ‰ƒCƒuƒ‰ƒŠ‚Ìƒ`ƒbƒv–¼‚ğ“Ç‚İ‚İ
+        'ãƒ©ã‚¤ãƒ–ãƒ©ãƒªã®ãƒãƒƒãƒ—åã‚’èª­ã¿è¾¼ã¿
         LibraryLB.Items.AddRange(EXE6DataList.LibStandardChipNameList)
         LibSeacretChipLB.Items.AddRange(EXE6DataList.LibSeacretChipNameList)
         LibMegaChipLB.Items.AddRange(EXE6DataList.LibMegaChipNameList)

@@ -1,32 +1,32 @@
 Module EXE6Module
-    'APIİ’è(INI‘€ì—p)----------------------------------------------------------------------------
+    'APIè¨­å®š(INIæ“ä½œç”¨)----------------------------------------------------------------------------
     Private Declare Function GetPrivateProfileString Lib "kernel32" Alias "GetPrivateProfileStringA" (ByVal lpApplicationName As String, ByVal lpKeyName As String, ByVal lpDefault As String, ByVal lpReturnedString As String, ByVal nSize As Integer, ByVal lpFileName As String) As Integer
     Private Declare Function WritePrivateProfileString Lib "kernel32" Alias "WritePrivateProfileStringA" (ByVal lpApplicationName As String, ByVal lpKeyName As String, ByVal lpString As String, ByVal lpFileName As String) As Integer
 
     Public Function WriteStringToINI(ByVal strSection As String, ByVal strEntry As String, ByVal strData As String, Optional ByVal strFile As String = "") As Integer
-        '<‹@”\>
-        '   INIƒtƒ@ƒCƒ‹‚Ö‘‚«‚İ
-        '<–ß‚è’l>
-        '   API‚Ì–ß‚è’l
-        '<ˆø”>
-        '   ARG1(I)     ƒZƒNƒVƒ‡ƒ“
-        '   ARG2(I)     ƒGƒ“ƒgƒŠ
-        '   ARG3(I)     ƒf[ƒ^
-        '   ARG4(I)     INIƒtƒ@ƒCƒ‹–¼
+        '<æ©Ÿèƒ½>
+        '   INIãƒ•ã‚¡ã‚¤ãƒ«ã¸æ›¸ãè¾¼ã¿
+        '<æˆ»ã‚Šå€¤>
+        '   APIã®æˆ»ã‚Šå€¤
+        '<å¼•æ•°>
+        '   ARG1(I)     ã‚»ã‚¯ã‚·ãƒ§ãƒ³
+        '   ARG2(I)     ã‚¨ãƒ³ãƒˆãƒª
+        '   ARG3(I)     ãƒ‡ãƒ¼ã‚¿
+        '   ARG4(I)     INIãƒ•ã‚¡ã‚¤ãƒ«å
         '
         WriteStringToINI = WritePrivateProfileString(strSection, strEntry, strData & Chr(0), strFile)
     End Function
 
     Public Function GetStringFromINI(ByVal strSection As String, ByVal strEntry As String, ByVal strFile As String, Optional ByVal strDefault As String = "") As String
-        '<‹@”\>
-        '   INIƒtƒ@ƒCƒ‹‚©‚ç“Ç‚İ‚İ
-        '<–ß‚è’l>
-        '   “Ç‚İ‚İŒ‹‰Ê(="":–³‚µ)
-        '<ˆø”>
-        '   ARG1(I)     ƒZƒNƒVƒ‡ƒ“
-        '   ARG2(I)     ƒGƒ“ƒgƒŠ
-        '   ARG3(I)     INIƒtƒ@ƒCƒ‹–¼
-        '   ARG4(I)     [ƒfƒtƒHƒ‹ƒgƒf[ƒ^]
+        '<æ©Ÿèƒ½>
+        '   INIãƒ•ã‚¡ã‚¤ãƒ«ã‹ã‚‰èª­ã¿è¾¼ã¿
+        '<æˆ»ã‚Šå€¤>
+        '   èª­ã¿è¾¼ã¿çµæœ(="":ç„¡ã—)
+        '<å¼•æ•°>
+        '   ARG1(I)     ã‚»ã‚¯ã‚·ãƒ§ãƒ³
+        '   ARG2(I)     ã‚¨ãƒ³ãƒˆãƒª
+        '   ARG3(I)     INIãƒ•ã‚¡ã‚¤ãƒ«å
+        '   ARG4(I)     [ãƒ‡ãƒ•ã‚©ãƒ«ãƒˆãƒ‡ãƒ¼ã‚¿]
         '
         Dim intRet As Integer
         Dim strWork As String
@@ -34,7 +34,7 @@ Module EXE6Module
 
         strWork = StrDup(1023, " ") & Chr(0)
         intRet = GetPrivateProfileString(strSection, strEntry, strDefault, strWork, 1023, strFile)
-        '––”ö‚ÌChr(0)‚ğæ‚éˆ×‚Ì×H
+        'æœ«å°¾ã®Chr(0)ã‚’å–ã‚‹ç‚ºã®ç´°å·¥
         strResult = Replace(strWork, Chr(0), "")
         strResult = Trim(strResult)
 

@@ -45,11 +45,11 @@ Public Class EXE6SaveDataEditor
     Public ReadOnly Property VersionInfo() As String
         Get
             If _VersionInfo = 0 Then
-                Return "ƒtƒ@ƒ‹ƒU["
+                Return "ãƒ•ã‚¡ãƒ«ã‚¶ãƒ¼"
             ElseIf _VersionInfo = 1 Then
-                Return "ƒOƒŒƒCƒK"
+                Return "ã‚°ãƒ¬ã‚¤ã‚¬"
             Else
-                Return "•s–¾"
+                Return "ä¸æ˜"
             End If
         End Get
     End Property
@@ -117,7 +117,7 @@ Public Class EXE6SaveDataEditor
         End Set
     End Property
 
-#Region " ƒTƒuƒ`ƒbƒv "
+#Region " ã‚µãƒ–ãƒãƒƒãƒ— "
 
     Private SubshipIndex As Integer
 
@@ -191,7 +191,7 @@ Public Class EXE6SaveDataEditor
 
 #End Region
 
-#Region " ‰ü‘¢ƒJ[ƒh "
+#Region " æ”¹é€ ã‚«ãƒ¼ãƒ‰ "
 
     Public Property RemodelCard(ByVal i As Integer) As Integer
         Get
@@ -281,7 +281,7 @@ Public Class EXE6SaveDataEditor
 
 #End Region
 
-#Region " ƒiƒrƒJƒX "
+#Region " ãƒŠãƒ“ã‚«ã‚¹ "
 
     Public NaviCusIndex As Integer
 
@@ -545,8 +545,8 @@ Public Class EXE6SaveDataEditor
     End Sub
 
     Public Sub SetBeast()
-        If VersionInfo = "ƒOƒŒƒCƒK" Then
-            'ƒOƒŒƒCƒKà–¾
+        If VersionInfo = "ã‚°ãƒ¬ã‚¤ã‚¬" Then
+            'ã‚°ãƒ¬ã‚¤ã‚¬èª¬æ˜
             WriteHalfWord(&H83A + BaseAddr, &H55E4)
             WriteWord(&H83C + BaseAddr, &H4DE443E4)
             WriteWord(&H840 + BaseAddr, &H3C0D343F)
@@ -556,7 +556,7 @@ Public Class EXE6SaveDataEditor
             WriteWord(&H850 + BaseAddr, &HC0C8ACDA)
             WriteWord(&H854 + BaseAddr, &HA7A1AAA2)
             WriteWord(&H858 + BaseAddr, &HE6000000)
-            'ƒOƒŒƒCƒKŠG•¿•\¦
+            'ã‚°ãƒ¬ã‚¤ã‚¬çµµæŸ„è¡¨ç¤º
             WriteHalfWord(&HB12 + BaseAddr, &H7FFF)
             WriteWord(&HB14 + BaseAddr, &H35D3BBF)
             WriteWord(&HB18 + BaseAddr, &H1550E3C)
@@ -566,13 +566,13 @@ Public Class EXE6SaveDataEditor
             WriteWord(&HB28 + BaseAddr, &H478A7FD4)
             WriteWord(&HB2C + BaseAddr, &H19233202)
 
-            'ƒOƒŒƒCƒKƒ`ƒbƒv–¼
+            'ã‚°ãƒ¬ã‚¤ã‚¬ãƒãƒƒãƒ—å
             WriteHalfWord(&H119E + BaseAddr, &H343F)
             WriteWord(&H11A0 + BaseAddr, &HE63C0D)
 
 
-        ElseIf VersionInfo = "ƒtƒ@ƒ‹ƒU[" Then
-            'ƒtƒ@ƒ‹ƒU[
+        ElseIf VersionInfo = "ãƒ•ã‚¡ãƒ«ã‚¶ãƒ¼" Then
+            'ãƒ•ã‚¡ãƒ«ã‚¶ãƒ¼
             WriteHalfWord(&H83A + BaseAddr, &H55E4)
             WriteWord(&H83C + BaseAddr, &H4DE443E4)
             WriteWord(&H840 + BaseAddr, &H44325528)
@@ -582,7 +582,7 @@ Public Class EXE6SaveDataEditor
             WriteWord(&H850 + BaseAddr, &HDAA7E983)
             WriteWord(&H854 + BaseAddr, &HA2B5C8AC)
             WriteWord(&H858 + BaseAddr, &HE6A7DBAB)
-            'ƒtƒ@ƒ‹ƒU[
+            'ãƒ•ã‚¡ãƒ«ã‚¶ãƒ¼
             WriteHalfWord(&HB12 + BaseAddr, &H7FFF)
             WriteWord(&HB14 + BaseAddr, &H9F27B75)
             WriteWord(&HB18 + BaseAddr, &H62EE3542)
@@ -591,7 +591,7 @@ Public Class EXE6SaveDataEditor
             WriteWord(&HB24 + BaseAddr, &H1993027F)
             WriteWord(&HB28 + BaseAddr, &H3D5A6AFE)
             WriteWord(&HB2C + BaseAddr, &H2C6324DD)
-            'ƒtƒ@ƒ‹ƒU[ƒ`ƒbƒv–¼
+            'ãƒ•ã‚¡ãƒ«ã‚¶ãƒ¼ãƒãƒƒãƒ—å
             WriteHalfWord(&H119E + BaseAddr, &H5528)
             WriteWord(&H11A0 + BaseAddr, &HE6794432)
 
@@ -599,7 +599,7 @@ Public Class EXE6SaveDataEditor
     End Sub
 
     Public Sub ResetBeast()
-        'à–¾
+        'èª¬æ˜
         WriteHalfWord(&H83A + BaseAddr, &H7E7E)
         WriteWord(&H83C + BaseAddr, &HE67E7E)
         WriteWord(&H840 + BaseAddr, &H0)
@@ -609,7 +609,7 @@ Public Class EXE6SaveDataEditor
         WriteWord(&H850 + BaseAddr, &H0)
         WriteWord(&H854 + BaseAddr, &H0)
         WriteWord(&H858 + BaseAddr, &H0)
-        'ŠG•¿•\¦
+        'çµµæŸ„è¡¨ç¤º
         WriteHalfWord(&HB12 + BaseAddr, &H0)
         WriteWord(&HB14 + BaseAddr, &H0)
         WriteWord(&HB18 + BaseAddr, &H0)
@@ -618,7 +618,7 @@ Public Class EXE6SaveDataEditor
         WriteWord(&HB24 + BaseAddr, &H0)
         WriteWord(&HB28 + BaseAddr, &H0)
         WriteWord(&HB2C + BaseAddr, &H0)
-        'ƒ`ƒbƒv–¼
+        'ãƒãƒƒãƒ—å
         WriteHalfWord(&H119E + BaseAddr, &H7E7E)
         WriteWord(&H11A0 + BaseAddr, &HE67E7E)
     End Sub
@@ -691,21 +691,21 @@ Public Class EXE6SaveDataEditor
     End Property
 
     ''' <summary>
-    ''' ƒtƒ@ƒCƒ‹‚ğ“Ç‚İ‚İ
+    ''' ãƒ•ã‚¡ã‚¤ãƒ«ã‚’èª­ã¿è¾¼ã¿
     ''' </summary>
-    ''' <param name="fileName">ƒZ[ƒuƒf[ƒ^‚Ìƒtƒ@ƒCƒ‹ƒpƒX</param>
-    ''' <remarks>ƒtƒ@ƒCƒ‹‚©‚ç“Ç‚İ‚İƒoƒbƒtƒ@‚É‘‚«‚İ</remarks>
+    ''' <param name="fileName">ã‚»ãƒ¼ãƒ–ãƒ‡ãƒ¼ã‚¿ã®ãƒ•ã‚¡ã‚¤ãƒ«ãƒ‘ã‚¹</param>
+    ''' <remarks>ãƒ•ã‚¡ã‚¤ãƒ«ã‹ã‚‰èª­ã¿è¾¼ã¿ãƒãƒƒãƒ•ã‚¡ã«æ›¸ãè¾¼ã¿</remarks>
     Public Sub ReadFile(ByVal fileName As String)
-        '“Ç‚İ‚Şƒtƒ@ƒCƒ‹‚Ì–¼‘O
+        'èª­ã¿è¾¼ã‚€ãƒ•ã‚¡ã‚¤ãƒ«ã®åå‰
         'Dim fileName As String = 
-        'ƒtƒ@ƒCƒ‹‚ğŠJ‚­
+        'ãƒ•ã‚¡ã‚¤ãƒ«ã‚’é–‹ã
         Dim fs As New System.IO.FileStream(fileName, _
             System.IO.FileMode.Open, System.IO.FileAccess.Read)
-        'ƒtƒ@ƒCƒ‹‚ğ“Ç‚İ‚ŞƒoƒCƒgŒ^”z—ñ‚ğì¬‚·‚é
+        'ãƒ•ã‚¡ã‚¤ãƒ«ã‚’èª­ã¿è¾¼ã‚€ãƒã‚¤ãƒˆå‹é…åˆ—ã‚’ä½œæˆã™ã‚‹
         Dim bs(fs.Length - 1) As Byte
-        'ƒtƒ@ƒCƒ‹‚Ì“à—e‚ğ‚·‚×‚Ä“Ç‚İ‚Ş
+        'ãƒ•ã‚¡ã‚¤ãƒ«ã®å†…å®¹ã‚’ã™ã¹ã¦èª­ã¿è¾¼ã‚€
         fs.Read(bs, 0, bs.Length)
-        '•Â‚¶‚é
+        'é–‰ã˜ã‚‹
         fs.Close()
         buffer = bs
     End Sub
@@ -713,12 +713,12 @@ Public Class EXE6SaveDataEditor
     Public Sub WriteFile(ByVal fileName As String, Optional ByVal XpsRepairment As Boolean = False)
         UnMask()
         If XpsRepairment Then XpsRepair()
-        'ƒtƒ@ƒCƒ‹‚ğŠJ‚­
+        'ãƒ•ã‚¡ã‚¤ãƒ«ã‚’é–‹ã
         Dim fs As New System.IO.FileStream(fileName, _
             System.IO.FileMode.Create, System.IO.FileAccess.Write)
-        'ƒoƒCƒgŒ^”z—ñ‚Ì“à—e‚ğ‚·‚×‚Ä‘‚«‚Ş
+        'ãƒã‚¤ãƒˆå‹é…åˆ—ã®å†…å®¹ã‚’ã™ã¹ã¦æ›¸ãè¾¼ã‚€
         fs.Write(buffer, 0, buffer.Length)
-        '•Â‚¶‚é
+        'é–‰ã˜ã‚‹
         fs.Close()
         UnMask()
     End Sub
@@ -762,10 +762,10 @@ Public Class EXE6SaveDataEditor
 
     Public Overrides Function ToString() As String
         Dim sb As New System.IO.StringWriter
-        sb.WriteLine("ƒ`ƒFƒbƒNƒTƒ€i•Û‘¶’lj:0x" & ZeroString(ReadWord(_CheckSumAddr), 8))
-        sb.WriteLine("ƒ`ƒFƒbƒNƒTƒ€iÀ‘ª’lj:0x" & ZeroString(CalcCheckSum(), 8))
-        sb.WriteLine("ƒ}ƒXƒN’l              :0x" & ZeroString(maskValue, 8))
-        sb.WriteLine("ƒo[ƒWƒ‡ƒ“            :" & VersionInfo)
+        sb.WriteLine("ãƒã‚§ãƒƒã‚¯ã‚µãƒ ï¼ˆä¿å­˜å€¤ï¼‰:0x" & ZeroString(ReadWord(_CheckSumAddr), 8))
+        sb.WriteLine("ãƒã‚§ãƒƒã‚¯ã‚µãƒ ï¼ˆå®Ÿæ¸¬å€¤ï¼‰:0x" & ZeroString(CalcCheckSum(), 8))
+        sb.WriteLine("ãƒã‚¹ã‚¯å€¤              :0x" & ZeroString(maskValue, 8))
+        sb.WriteLine("ãƒãƒ¼ã‚¸ãƒ§ãƒ³            :" & VersionInfo)
         Return sb.ToString()
     End Function
 

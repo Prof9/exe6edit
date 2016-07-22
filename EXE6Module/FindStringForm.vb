@@ -15,7 +15,7 @@ Public Class FindStringForm
         Me.Show()
     End Sub
 
-    '「次を検索」がクリックされた時
+    '縲梧ｬ｡繧呈､懃ｴ｢縲阪′繧ｯ繝ｪ繝�繧ｯ縺輔ｌ縺滓凾
     Private Sub findButton_Click(ByVal sender As System.Object, _
         ByVal e As System.EventArgs) Handles findButton.Click
         If Not _combobox Is Nothing Then
@@ -67,7 +67,7 @@ Public Class FindStringForm
 
     End Sub
 
-    '「閉じる」がクリックされた時
+    '縲碁哩縺倥ｋ縲阪′繧ｯ繝ｪ繝�繧ｯ縺輔ｌ縺滓凾
     Private Sub closeButton_Click(ByVal sender As Object, _
         ByVal e As System.EventArgs) Handles closeButton.Click
 
