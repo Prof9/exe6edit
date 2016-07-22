@@ -767,6 +767,18 @@ Public Class MainForm
                 controls.Add(c)
             Next c
 
+            'Update ComboBox items if localized resource can be found.
+            Dim comboBox As ComboBox = TryCast(control, ComboBox)
+            If Not comboBox Is Nothing Then
+                For index2 As Integer = 0 To comboBox.Items.Count - 1
+                    Dim name As String = comboBox.Name + ".Items" + If(index2 = 0, "", index2.ToString())
+                    Dim newItem As String = resources.GetString(name)
+                    If Not newItem Is Nothing Then
+                        comboBox.Items(index2) = newItem
+                    End If
+                Next index2
+            End If
+
             index += 1
         End While
 
@@ -782,11 +794,6 @@ Public Class MainForm
 
                 resources.ApplyResources(fieldInfo.GetValue(Me), name, cultureInfo)
             End If
-        Next
-
-        For i As Integer = 0 To SubChipCB.Items.Count - 1
-            Dim name As String = NameOf(SubChipCB) + ".Items" + If(i = 0, "", i.ToString())
-            SubChipCB.Items(i) = resources.GetString(name)
         Next
 
         SetEnabled(Me.enabled)
