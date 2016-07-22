@@ -61,6 +61,52 @@ Namespace My.Resources
         End Property
         
         '''<summary>
+        '''  Looks up a localized string similar to Cybeast Falzar Chip Data.
+        '''</summary>
+        Friend ReadOnly Property MenuFalzarChipData() As String
+            Get
+                Return ResourceManager.GetString("MenuFalzarChipData", resourceCulture)
+            End Get
+        End Property
+        
+        '''<summary>
+        '''  Looks up a localized string similar to Cybeast Gregar Chip Data.
+        '''</summary>
+        Friend ReadOnly Property MenuGregarChipData() As String
+            Get
+                Return ResourceManager.GetString("MenuGregarChipData", resourceCulture)
+            End Get
+        End Property
+        
+        '''<summary>
+        '''  Looks up a localized string similar to Save data is corrupted..
+        '''</summary>
+        Friend ReadOnly Property MsgBoxCorruptSaveData() As String
+            Get
+                Return ResourceManager.GetString("MsgBoxCorruptSaveData", resourceCulture)
+            End Get
+        End Property
+        
+        '''<summary>
+        '''  Looks up a localized string similar to Changes have not been saved.
+        '''Are you sure you want to exit?.
+        '''</summary>
+        Friend ReadOnly Property MsgBoxUnsavedChanges() As String
+            Get
+                Return ResourceManager.GetString("MsgBoxUnsavedChanges", resourceCulture)
+            End Get
+        End Property
+        
+        '''<summary>
+        '''  Looks up a localized string similar to Warning.
+        '''</summary>
+        Friend ReadOnly Property MsgBoxWarning() As String
+            Get
+                Return ResourceManager.GetString("MsgBoxWarning", resourceCulture)
+            End Get
+        End Property
+        
+        '''<summary>
         '''  Looks up a localized string similar to File type:          .
         '''</summary>
         Friend ReadOnly Property StatusFileType() As String

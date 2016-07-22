@@ -117,6 +117,22 @@
   <resheader name="writer">
     <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </resheader>
+  <data name="MenuFalzarChipData" xml:space="preserve">
+    <value>電脳獣ファルザーチップデータ</value>
+  </data>
+  <data name="MenuGregarChipData" xml:space="preserve">
+    <value>電脳獣グレイガチップデータ</value>
+  </data>
+  <data name="MsgBoxCorruptSaveData" xml:space="preserve">
+    <value>セーブデータが壊れています</value>
+  </data>
+  <data name="MsgBoxUnsavedChanges" xml:space="preserve">
+    <value>変更が保存されていません。
+本当に終了しますか</value>
+  </data>
+  <data name="MsgBoxWarning" xml:space="preserve">
+    <value>確認</value>
+  </data>
   <data name="StatusFileType" xml:space="preserve">
     <value>ファイルタイプ:           </value>
   </data>

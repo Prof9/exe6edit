@@ -77,7 +77,7 @@ Public Class MainForm
             be = New EXE6SaveDataEditor(fname, True)
         End If
         If be.CalcCheckSum <> be.CheckSumValue Then
-            MsgBox("セーブデータが壊れています")
+            MsgBox(My.Resources.MsgBoxCorruptSaveData)
         End If
     End Sub
 
@@ -87,10 +87,10 @@ Public Class MainForm
         LibGigaChipLB.Items.Clear()
         If (be.VersionInfo = "VersionGregar") Then
             LibGigaChipLB.Items.AddRange(EXE6DataList.LibGigaChipNameListAtGrayga)
-            MenuBeast.Text = "電脳獣グレイガチップデータ"
+            MenuBeast.Text = My.Resources.MenuGregarChipData
         ElseIf (be.VersionInfo = "VersionFalzar") Then
             LibGigaChipLB.Items.AddRange(EXE6DataList.LibGigaChipNameListAtFalther)
-            MenuBeast.Text = "電脳獣ファルザーチップデータ"
+            MenuBeast.Text = My.Resources.MenuFalzarChipData
         End If
 
         ClearDatabindings()
@@ -185,7 +185,7 @@ Public Class MainForm
     'フォルダー→ファイルへ保存
     Private Sub MenuItem27_Click(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles MenuFolderSave.Click
         SaveFileDialog.FileName = ""
-        SaveFileDialog.Filter = "folder file|*.dmp"
+        SaveFileDialog.Filter = "Folder file|*.dmp"
         SaveFileDialog.ShowDialog()
         If SaveFileDialog.FileName <> "" Then
             Dim fs As New System.IO.FileStream(SaveFileDialog.FileName,
@@ -202,7 +202,7 @@ Public Class MainForm
     'フォルダー→ファイルから読み込み
     Private Sub MenuFolderLoad_Click(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles MenuFolderLoad.Click
         OpenFileDialog.FileName = ""
-        OpenFileDialog.Filter = "folder file|*.dmp"
+        OpenFileDialog.Filter = "Folder file|*.dmp"
         OpenFileDialog.ShowDialog()
         If OpenFileDialog.FileName <> "" Then
             Dim fs As New System.IO.FileStream(OpenFileDialog.FileName,
@@ -708,7 +708,7 @@ Public Class MainForm
     Private Sub MainForm_Closing(ByVal sender As Object, ByVal e As System.ComponentModel.CancelEventArgs) Handles MyBase.Closing
         'データが変更されているのなら警告する
         If Not be Is Nothing AndAlso be.CheckSumValue <> be.CalcCheckSum Then
-            If MsgBoxResult.No = MsgBox("変更が保存されていません。" & vbNewLine & "本当に終了しますか", MsgBoxStyle.YesNo, "確認") Then
+            If MsgBoxResult.No = MsgBox(My.Resources.MsgBoxUnsavedChanges, MsgBoxStyle.YesNo, My.Resources.MsgBoxWarning) Then
                 e.Cancel = True
             End If
         End If
