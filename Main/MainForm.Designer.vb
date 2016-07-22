@@ -865,7 +865,6 @@ Partial Class MainForm
         '
         'MenuEnglish
         '
-        Me.MenuEnglish.Checked = True
         Me.MenuEnglish.Index = 0
         Me.MenuEnglish.RadioCheck = True
         Me.MenuEnglish.Tag = "en"

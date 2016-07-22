@@ -11,6 +11,8 @@ Public Class MainForm
 
     Private loadFlag As Integer = lFlag.NONE
 
+    Private enabled As Boolean
+
     'ロードフラグ列挙体
     Enum lFlag
         NONE = 0    '未ロード
@@ -18,6 +20,36 @@ Public Class MainForm
         PAR = 2     'ProActionReplay Save Data File
         GS = 3      'GameShark SnapShot File
     End Enum
+
+    Public Sub New()
+        MyBase.New()
+
+        'Set previously chosen language.
+        Dim lang As String = Thread.CurrentThread.CurrentUICulture.TwoLetterISOLanguageName
+        If My.Settings.Language IsNot Nothing And My.Settings.Language.Length > 0 Then
+            lang = My.Settings.Language
+            Thread.CurrentThread.CurrentUICulture = New CultureInfo(My.Settings.Language)
+        End If
+
+        'This call is required by the Windows Form Designer.
+        InitializeComponent()
+
+        'Check menu item corresponding to currently chosen language.
+        Dim found As Boolean = False
+        For Each menuItem As MenuItem In MenuLanguage.MenuItems
+            If menuItem.Tag = lang Then
+                found = True
+                menuItem.Checked = True
+                Exit For
+            End If
+        Next
+        If Not found Then
+            MenuEnglish.Checked = True
+        End If
+
+        'Add any initialization after the InitializeComponent() call
+        '==> Put your pre-execution steps here.
+    End Sub
 
 #Region "メインメニュー のクリック処理"
     '開く
@@ -632,6 +664,8 @@ Public Class MainForm
 
     'Enabledをまとめて指定
     Private Sub SetEnabled(ByVal enable As Boolean)
+        Me.enabled = enable
+
         normalGB.Enabled = enable
         ChipGB.Enabled = enable
         SubChipGB.Enabled = enable
@@ -698,10 +732,12 @@ Public Class MainForm
 
     Private Sub UpdateLanguage(sender As Object, e As EventArgs) Handles MenuJapanese.Click, MenuEnglish.Click
         Me.SuspendLayout()
-
         'Get menu item and culture name.
         Dim newMenuItem As MenuItem = sender
         Dim cultureName As String = newMenuItem.Tag
+
+        'Save new language in settings.
+        My.Settings.Language = cultureName
 
         'Uncheck all language items, then check this one.
         For Each otherItem As MenuItem In newMenuItem.Parent.MenuItems
@@ -747,6 +783,13 @@ Public Class MainForm
                 resources.ApplyResources(fieldInfo.GetValue(Me), name, cultureInfo)
             End If
         Next
+
+        For i As Integer = 0 To SubChipCB.Items.Count - 1
+            Dim name As String = NameOf(SubChipCB) + ".Items" + If(i = 0, "", i.ToString())
+            SubChipCB.Items(i) = resources.GetString(name)
+        Next
+
+        SetEnabled(Me.enabled)
 
         Me.ResumeLayout()
     End Sub
