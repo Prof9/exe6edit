@@ -45,11 +45,11 @@ Public Class EXE6SaveDataEditor
     Public ReadOnly Property VersionInfo() As String
         Get
             If _VersionInfo = 0 Then
-                Return "ファルザー"
+                Return "VersionGregar"
             ElseIf _VersionInfo = 1 Then
-                Return "グレイガ"
+                Return "VersionFalzar"
             Else
-                Return "不明"
+                Return "VersionUnknown"
             End If
         End Get
     End Property
@@ -545,7 +545,7 @@ Public Class EXE6SaveDataEditor
     End Sub
 
     Public Sub SetBeast()
-        If VersionInfo = "グレイガ" Then
+        If VersionInfo = "VersionGregar" Then
             'グレイガ説明
             WriteHalfWord(&H83A + BaseAddr, &H55E4)
             WriteWord(&H83C + BaseAddr, &H4DE443E4)
@@ -571,7 +571,7 @@ Public Class EXE6SaveDataEditor
             WriteWord(&H11A0 + BaseAddr, &HE63C0D)
 
 
-        ElseIf VersionInfo = "ファルザー" Then
+        ElseIf VersionInfo = "VersionFalzar" Then
             'ファルザー
             WriteHalfWord(&H83A + BaseAddr, &H55E4)
             WriteWord(&H83C + BaseAddr, &H4DE443E4)
@@ -762,10 +762,10 @@ Public Class EXE6SaveDataEditor
 
     Public Overrides Function ToString() As String
         Dim sb As New System.IO.StringWriter
-        sb.WriteLine("チェックサム（保存値）:0x" & ZeroString(ReadWord(_CheckSumAddr), 8))
-        sb.WriteLine("チェックサム（実測値）:0x" & ZeroString(CalcCheckSum(), 8))
-        sb.WriteLine("マスク値              :0x" & ZeroString(maskValue, 8))
-        sb.WriteLine("バージョン            :" & VersionInfo)
+        sb.WriteLine(My.Resources.StatusChecksumSaveFile & "0x" & ZeroString(ReadWord(_CheckSumAddr), 8))
+        sb.WriteLine(My.Resources.StatusChecksumCalculated & "0x" & ZeroString(CalcCheckSum(), 8))
+        sb.WriteLine(My.Resources.StatusMaskValue & "0x" & ZeroString(maskValue, 8))
+        sb.WriteLine(My.Resources.StatusVersion & My.Resources.ResourceManager.GetString(VersionInfo))
         Return sb.ToString()
     End Function
 

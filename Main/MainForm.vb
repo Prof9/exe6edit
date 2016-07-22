@@ -85,10 +85,10 @@ Public Class MainForm
     Private Sub Initializer()
 
         LibGigaChipLB.Items.Clear()
-        If (be.VersionInfo = "グレイガ") Then
+        If (be.VersionInfo = "VersionGregar") Then
             LibGigaChipLB.Items.AddRange(EXE6DataList.LibGigaChipNameListAtGrayga)
             MenuBeast.Text = "電脳獣グレイガチップデータ"
-        ElseIf (be.VersionInfo = "ファルザー") Then
+        ElseIf (be.VersionInfo = "VersionFalzar") Then
             LibGigaChipLB.Items.AddRange(EXE6DataList.LibGigaChipNameListAtFalther)
             MenuBeast.Text = "電脳獣ファルザーチップデータ"
         End If
@@ -355,11 +355,11 @@ Public Class MainForm
     '
     Private Sub LibGigaChipLB_SelectedIndexChanged(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles LibGigaChipLB.SelectedIndexChanged
 
-        If (be.VersionInfo = "グレイガ") Then
+        If (be.VersionInfo = "VersionGregar") Then
             For i As Integer = 0 To LibGigaChipLB.Items.Count - 1
                 be.LibraryFlag(EXE6DataList.LibGigaChipFlagListAtGrayga, i) = LibGigaChipLB.GetItemChecked(i)
             Next
-        ElseIf (be.VersionInfo = "ファルザー") Then
+        ElseIf (be.VersionInfo = "VersionFalzar") Then
             For i As Integer = 0 To LibGigaChipLB.Items.Count - 1
                 be.LibraryFlag(EXE6DataList.LibGigaChipFlagListAtFalther, i) = LibGigaChipLB.GetItemChecked(i)
             Next
@@ -392,12 +392,12 @@ Public Class MainForm
         For i As Integer = 0 To LibMegaChipLB.Items.Count - 1
             LibMegaChipLB.SetItemChecked(i, be.LibraryFlag(EXE6DataList.LibMegaChipFlagList, i))
         Next
-        If (be.VersionInfo = "グレイガ") Then
+        If (be.VersionInfo = "VersionGregar") Then
             For i As Integer = 0 To LibGigaChipLB.Items.Count - 1
                 LibGigaChipLB.SetItemChecked(i, be.LibraryFlag(EXE6DataList.LibGigaChipFlagListAtGrayga, i))
             Next
 
-        ElseIf (be.VersionInfo = "ファルザー") Then
+        ElseIf (be.VersionInfo = "VersionFalzar") Then
             For i As Integer = 0 To LibGigaChipLB.Items.Count - 1
                 LibGigaChipLB.SetItemChecked(i, be.LibraryFlag(EXE6DataList.LibGigaChipFlagListAtFalther, i))
             Next
@@ -690,15 +690,16 @@ Public Class MainForm
     'セーブデータの状態を定期的に更新する
     Private Sub Timer_Tick(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles Timer1.Tick
         If be Is Nothing Then Exit Sub
-        StatusDisplay.Text = be.ToString
+        StatusDisplay.Text = be.ToString()
         LoadFileName.Text = fname
+        StatusDisplay.Text &= My.Resources.StatusFileType
         Select Case loadFlag
             Case 1
-                StatusDisplay.Text &= "ファイルタイプ        :VisualBoyAdvance Battery File"
+                StatusDisplay.Text &= "VisualBoyAdvance Battery File"
             Case 2
-                StatusDisplay.Text &= "ファイルタイプ        :ProActionReplay SaveData File"
+                StatusDisplay.Text &= "ProActionReplay SaveData File"
             Case 3
-                StatusDisplay.Text &= "ファイルタイプ        :GameShark SnapShot File"
+                StatusDisplay.Text &= "GameShark SnapShot File"
         End Select
 
     End Sub
