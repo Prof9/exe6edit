@@ -133,7 +133,7 @@
     <value>50</value>
   </data>
   <data name="ChipRepairButton.Text" xml:space="preserve">
-    <value>補正</value>
+    <value>Fix</value>
   </data>
   <data name="&gt;&gt;ChipRepairButton.Name" xml:space="preserve">
     <value>ChipRepairButton</value>
@@ -157,7 +157,7 @@
     <value>49</value>
   </data>
   <data name="Label21.Text" xml:space="preserve">
-    <value>フォルダの種類</value>
+    <value>Folder type</value>
   </data>
   <data name="Label21.TextAlign" type="System.Drawing.ContentAlignment, System.Drawing">
     <value>MiddleLeft</value>
@@ -184,7 +184,7 @@
     <value>48</value>
   </data>
   <data name="Label20.Text" xml:space="preserve">
-    <value>リュック</value>
+    <value>Pack</value>
   </data>
   <data name="Label20.TextAlign" type="System.Drawing.ContentAlignment, System.Drawing">
     <value>MiddleLeft</value>
@@ -223,13 +223,13 @@
     <value>3</value>
   </data>
   <data name="FolderSelectCB.Items" xml:space="preserve">
-    <value>ネットフォルダ</value>
+    <value>Folder 1</value>
   </data>
   <data name="FolderSelectCB.Items1" xml:space="preserve">
-    <value>バンパクフォルダ</value>
+    <value>Folder 2</value>
   </data>
   <data name="FolderSelectCB.Items2" xml:space="preserve">
-    <value>メイジンフォルダ</value>
+    <value>Extra Folder</value>
   </data>
   <data name="FolderSelectCB.Location" type="System.Drawing.Point, System.Drawing">
     <value>8, 43</value>
@@ -259,7 +259,7 @@
     <value>CtrlF</value>
   </data>
   <data name="MenuItem3.Text" xml:space="preserve">
-    <value>検索</value>
+    <value>Find</value>
   </data>
   <data name="ListBox2.Location" type="System.Drawing.Point, System.Drawing">
     <value>216, 69</value>
@@ -316,7 +316,7 @@
     <value>21</value>
   </data>
   <data name="AddChipButton.Text" xml:space="preserve">
-    <value>&lt;-</value>
+    <value>←</value>
   </data>
   <data name="&gt;&gt;AddChipButton.Name" xml:space="preserve">
     <value>AddChipButton</value>
@@ -340,7 +340,7 @@
     <value>34</value>
   </data>
   <data name="Label19.Text" xml:space="preserve">
-    <value>フォルダの数</value>
+    <value>No. of Folders</value>
   </data>
   <data name="Label19.TextAlign" type="System.Drawing.ContentAlignment, System.Drawing">
     <value>MiddleLeft</value>
@@ -370,7 +370,7 @@
     <value>46</value>
   </data>
   <data name="FolderGB.Text" xml:space="preserve">
-    <value>フォルダ</value>
+    <value>Folder</value>
   </data>
   <data name="&gt;&gt;FolderGB.Name" xml:space="preserve">
     <value>FolderGB</value>
@@ -535,7 +535,7 @@
     <value>2</value>
   </data>
   <data name="Label1.Text" xml:space="preserve">
-    <value>ZENNY</value>
+    <value>Zenny</value>
   </data>
   <data name="Label1.TextAlign" type="System.Drawing.ContentAlignment, System.Drawing">
     <value>MiddleLeft</value>
@@ -562,7 +562,7 @@
     <value>3</value>
   </data>
   <data name="Label2.Text" xml:space="preserve">
-    <value>BUGPIECE</value>
+    <value>BugFrags</value>
   </data>
   <data name="Label2.TextAlign" type="System.Drawing.ContentAlignment, System.Drawing">
     <value>MiddleLeft</value>
@@ -694,7 +694,7 @@
     <value>30</value>
   </data>
   <data name="Label10.Text" xml:space="preserve">
-    <value>時間</value>
+    <value>Play Time</value>
   </data>
   <data name="Label10.TextAlign" type="System.Drawing.ContentAlignment, System.Drawing">
     <value>MiddleLeft</value>
@@ -748,7 +748,7 @@
     <value>42</value>
   </data>
   <data name="nomalGB.Text" xml:space="preserve">
-    <value>一般</value>
+    <value>General</value>
   </data>
   <data name="&gt;&gt;nomalGB.Name" xml:space="preserve">
     <value>nomalGB</value>
@@ -793,7 +793,7 @@
     <value>10</value>
   </data>
   <data name="Label16.Text" xml:space="preserve">
-    <value>最大枚数</value>
+    <value>Maximum</value>
   </data>
   <data name="Label16.TextAlign" type="System.Drawing.ContentAlignment, System.Drawing">
     <value>MiddleLeft</value>
@@ -820,7 +820,7 @@
     <value>9</value>
   </data>
   <data name="Label4.Text" xml:space="preserve">
-    <value>種類選択</value>
+    <value>Type</value>
   </data>
   <data name="Label4.TextAlign" type="System.Drawing.ContentAlignment, System.Drawing">
     <value>MiddleLeft</value>
@@ -847,7 +847,7 @@
     <value>8</value>
   </data>
   <data name="SubChipCkB.Text" xml:space="preserve">
-    <value>存在フラグ</value>
+    <value>Unlocked</value>
   </data>
   <data name="&gt;&gt;SubChipCkB.Name" xml:space="preserve">
     <value>SubChipCkB</value>
@@ -862,22 +862,22 @@
     <value>3</value>
   </data>
   <data name="SubChipCB.Items" xml:space="preserve">
-    <value>ミニエネルギー</value>
+    <value>MiniEnrg</value>
   </data>
   <data name="SubChipCB.Items1" xml:space="preserve">
-    <value>フルエネルギー</value>
+    <value>FullEnrg</value>
   </data>
   <data name="SubChipCB.Items2" xml:space="preserve">
-    <value>シノビダッシュ</value>
+    <value>SneakRun</value>
   </data>
   <data name="SubChipCB.Items3" xml:space="preserve">
-    <value>アントラップ</value>
+    <value>Untrap</value>
   </data>
   <data name="SubChipCB.Items4" xml:space="preserve">
-    <value>エネミーサーチ</value>
+    <value>LocEnemy</value>
   </data>
   <data name="SubChipCB.Items5" xml:space="preserve">
-    <value>オープンロック</value>
+    <value>Unlocker</value>
   </data>
   <data name="SubChipCB.Location" type="System.Drawing.Point, System.Drawing">
     <value>104, 17</value>
@@ -901,10 +901,10 @@
     <value>4</value>
   </data>
   <data name="SubChipTB.Location" type="System.Drawing.Point, System.Drawing">
-    <value>40, 43</value>
+    <value>64, 43</value>
   </data>
   <data name="SubChipTB.Size" type="System.Drawing.Size, System.Drawing">
-    <value>96, 20</value>
+    <value>72, 20</value>
   </data>
   <data name="SubChipTB.TabIndex" type="System.Int32, mscorlib">
     <value>6</value>
@@ -925,13 +925,13 @@
     <value>8, 43</value>
   </data>
   <data name="Label3.Size" type="System.Drawing.Size, System.Drawing">
-    <value>32, 21</value>
+    <value>56, 21</value>
   </data>
   <data name="Label3.TabIndex" type="System.Int32, mscorlib">
     <value>5</value>
   </data>
   <data name="Label3.Text" xml:space="preserve">
-    <value>枚数</value>
+    <value>Amount</value>
   </data>
   <data name="Label3.TextAlign" type="System.Drawing.ContentAlignment, System.Drawing">
     <value>MiddleLeft</value>
@@ -961,7 +961,7 @@
     <value>8</value>
   </data>
   <data name="SubChipGB.Text" xml:space="preserve">
-    <value>サブチップ</value>
+    <value>SubChips</value>
   </data>
   <data name="&gt;&gt;SubChipGB.Name" xml:space="preserve">
     <value>SubChipGB</value>
@@ -988,7 +988,7 @@
     <value>9</value>
   </data>
   <data name="Label14.Text" xml:space="preserve">
-    <value>種類選択</value>
+    <value>Type</value>
   </data>
   <data name="Label14.TextAlign" type="System.Drawing.ContentAlignment, System.Drawing">
     <value>MiddleLeft</value>
@@ -1057,7 +1057,7 @@
     <value>5</value>
   </data>
   <data name="Label15.Text" xml:space="preserve">
-    <value>枚数</value>
+    <value>Amount</value>
   </data>
   <data name="Label15.TextAlign" type="System.Drawing.ContentAlignment, System.Drawing">
     <value>MiddleLeft</value>
@@ -1087,7 +1087,7 @@
     <value>10</value>
   </data>
   <data name="ChipGB.Text" xml:space="preserve">
-    <value>チップ</value>
+    <value>Chips</value>
   </data>
   <data name="&gt;&gt;ChipGB.Name" xml:space="preserve">
     <value>ChipGB</value>
@@ -1111,7 +1111,7 @@
     <value>29</value>
   </data>
   <data name="NaviCusExistFlagCkB.Text" xml:space="preserve">
-    <value>ナビカス画面表示</value>
+    <value>NaviCust screen</value>
   </data>
   <data name="&gt;&gt;NaviCusExistFlagCkB.Name" xml:space="preserve">
     <value>NaviCusExistFlagCkB</value>
@@ -1135,7 +1135,7 @@
     <value>28</value>
   </data>
   <data name="ExtendMemoryCkB.Text" xml:space="preserve">
-    <value>存在フラグ</value>
+    <value>Unlocked</value>
   </data>
   <data name="&gt;&gt;ExtendMemoryCkB.Name" xml:space="preserve">
     <value>ExtendMemoryCkB</value>
@@ -1153,13 +1153,13 @@
     <value>8, 17</value>
   </data>
   <data name="Label9.Size" type="System.Drawing.Size, System.Drawing">
-    <value>56, 21</value>
+    <value>80, 21</value>
   </data>
   <data name="Label9.TabIndex" type="System.Int32, mscorlib">
     <value>26</value>
   </data>
   <data name="Label9.Text" xml:space="preserve">
-    <value>拡張メモリ</value>
+    <value>ExpMemory</value>
   </data>
   <data name="Label9.TextAlign" type="System.Drawing.ContentAlignment, System.Drawing">
     <value>MiddleLeft</value>
@@ -1177,10 +1177,10 @@
     <value>2</value>
   </data>
   <data name="ExtendMemoryTB.Location" type="System.Drawing.Point, System.Drawing">
-    <value>64, 17</value>
+    <value>88, 17</value>
   </data>
   <data name="ExtendMemoryTB.Size" type="System.Drawing.Size, System.Drawing">
-    <value>72, 20</value>
+    <value>48, 20</value>
   </data>
   <data name="ExtendMemoryTB.TabIndex" type="System.Int32, mscorlib">
     <value>27</value>
@@ -1207,7 +1207,7 @@
     <value>25</value>
   </data>
   <data name="CompressCommandCkB.Text" xml:space="preserve">
-    <value>圧縮コマンド</value>
+    <value>Compressed</value>
   </data>
   <data name="&gt;&gt;CompressCommandCkB.Name" xml:space="preserve">
     <value>CompressCommandCkB</value>
@@ -1246,13 +1246,13 @@
     <value>8, 95</value>
   </data>
   <data name="Label7.Size" type="System.Drawing.Size, System.Drawing">
-    <value>32, 21</value>
+    <value>56, 21</value>
   </data>
   <data name="Label7.TabIndex" type="System.Int32, mscorlib">
     <value>22</value>
   </data>
   <data name="Label7.Text" xml:space="preserve">
-    <value>枚数</value>
+    <value>Amount</value>
   </data>
   <data name="Label7.TextAlign" type="System.Drawing.ContentAlignment, System.Drawing">
     <value>MiddleLeft</value>
@@ -1270,10 +1270,10 @@
     <value>6</value>
   </data>
   <data name="NaviCusTB.Location" type="System.Drawing.Point, System.Drawing">
-    <value>40, 95</value>
+    <value>64, 95</value>
   </data>
   <data name="NaviCusTB.Size" type="System.Drawing.Size, System.Drawing">
-    <value>96, 20</value>
+    <value>72, 20</value>
   </data>
   <data name="NaviCusTB.TabIndex" type="System.Int32, mscorlib">
     <value>23</value>
@@ -1300,7 +1300,7 @@
     <value>24</value>
   </data>
   <data name="NaviCusCkB.Text" xml:space="preserve">
-    <value>存在フラグ</value>
+    <value>Unlocked</value>
   </data>
   <data name="&gt;&gt;NaviCusCkB.Name" xml:space="preserve">
     <value>NaviCusCkB</value>
@@ -1324,7 +1324,7 @@
     <value>10</value>
   </data>
   <data name="Label8.Text" xml:space="preserve">
-    <value>種類選択</value>
+    <value>Type</value>
   </data>
   <data name="Label8.TextAlign" type="System.Drawing.ContentAlignment, System.Drawing">
     <value>MiddleLeft</value>
@@ -1354,7 +1354,7 @@
     <value>50</value>
   </data>
   <data name="NaviCusGB.Text" xml:space="preserve">
-    <value>ナビカスタマイザー</value>
+    <value>Navi Customizer</value>
   </data>
   <data name="&gt;&gt;NaviCusGB.Name" xml:space="preserve">
     <value>NaviCusGB</value>
@@ -1378,7 +1378,7 @@
     <value>34</value>
   </data>
   <data name="Label18.Text" xml:space="preserve">
-    <value>ファイル名</value>
+    <value>Filename</value>
   </data>
   <data name="Label18.TextAlign" type="System.Drawing.ContentAlignment, System.Drawing">
     <value>MiddleLeft</value>
@@ -1405,7 +1405,7 @@
     <value>0</value>
   </data>
   <data name="TabPage1.Text" xml:space="preserve">
-    <value>全般</value>
+    <value>General</value>
   </data>
   <data name="&gt;&gt;TabPage1.Name" xml:space="preserve">
     <value>TabPage1</value>
@@ -1453,7 +1453,7 @@
     <value>9</value>
   </data>
   <data name="PaGB.Text" xml:space="preserve">
-    <value>Ｐ．Ａ．</value>
+    <value>P.A.</value>
   </data>
   <data name="&gt;&gt;PaGB.Name" xml:space="preserve">
     <value>PaGB</value>
@@ -1501,7 +1501,7 @@
     <value>8</value>
   </data>
   <data name="MegaChipGB.Text" xml:space="preserve">
-    <value>メガクラスチップ</value>
+    <value>Mega Chips</value>
   </data>
   <data name="&gt;&gt;MegaChipGB.Name" xml:space="preserve">
     <value>MegaChipGB</value>
@@ -1549,7 +1549,7 @@
     <value>7</value>
   </data>
   <data name="GigaChipGB.Text" xml:space="preserve">
-    <value>ギガクラスチップ</value>
+    <value>Giga Chips</value>
   </data>
   <data name="&gt;&gt;GigaChipGB.Name" xml:space="preserve">
     <value>GigaChipGB</value>
@@ -1597,7 +1597,7 @@
     <value>6</value>
   </data>
   <data name="SeacretChipGB.Text" xml:space="preserve">
-    <value>シークレットチップ</value>
+    <value>Secret Chips</value>
   </data>
   <data name="&gt;&gt;SeacretChipGB.Name" xml:space="preserve">
     <value>SeacretChipGB</value>
@@ -1645,7 +1645,7 @@
     <value>5</value>
   </data>
   <data name="StandardChipGB.Text" xml:space="preserve">
-    <value>スタンダードチップ</value>
+    <value>Standard Chips</value>
   </data>
   <data name="&gt;&gt;StandardChipGB.Name" xml:space="preserve">
     <value>StandardChipGB</value>
@@ -1669,7 +1669,7 @@
     <value>2</value>
   </data>
   <data name="TabPage3.Text" xml:space="preserve">
-    <value>ライブラリ</value>
+    <value>Library</value>
   </data>
   <data name="&gt;&gt;TabPage3.Name" xml:space="preserve">
     <value>TabPage3</value>
@@ -1714,7 +1714,7 @@
     <value>20</value>
   </data>
   <data name="RcDisplayExistFlagCkB.Text" xml:space="preserve">
-    <value>改造カード画面表示</value>
+    <value>Mod Cards screen</value>
   </data>
   <data name="&gt;&gt;RcDisplayExistFlagCkB.Name" xml:space="preserve">
     <value>RcDisplayExistFlagCkB</value>
@@ -1741,7 +1741,7 @@
     <value>16</value>
   </data>
   <data name="RcAddButton.Text" xml:space="preserve">
-    <value>&lt;-</value>
+    <value>←</value>
   </data>
   <data name="&gt;&gt;RcAddButton.Name" xml:space="preserve">
     <value>RcAddButton</value>
@@ -1768,7 +1768,7 @@
     <value>17</value>
   </data>
   <data name="RcRemoveButton.Text" xml:space="preserve">
-    <value>-&gt;</value>
+    <value>→</value>
   </data>
   <data name="&gt;&gt;RcRemoveButton.Name" xml:space="preserve">
     <value>RcRemoveButton</value>
@@ -1858,7 +1858,7 @@
     <value>12</value>
   </data>
   <data name="Label5.Text" xml:space="preserve">
-    <value>改造カード容量</value>
+    <value>Mod Cards MB</value>
   </data>
   <data name="Label5.TextAlign" type="System.Drawing.ContentAlignment, System.Drawing">
     <value>MiddleLeft</value>
@@ -1885,7 +1885,7 @@
     <value>11</value>
   </data>
   <data name="Label6.Text" xml:space="preserve">
-    <value>改造カード総量</value>
+    <value>No. of Mod Cards</value>
   </data>
   <data name="Label6.TextAlign" type="System.Drawing.ContentAlignment, System.Drawing">
     <value>MiddleLeft</value>
@@ -1915,7 +1915,7 @@
     <value>39</value>
   </data>
   <data name="RemodelCardGB.Text" xml:space="preserve">
-    <value>改造カード</value>
+    <value>Mod Cards</value>
   </data>
   <data name="&gt;&gt;RemodelCardGB.Name" xml:space="preserve">
     <value>RemodelCardGB</value>
@@ -1963,7 +1963,7 @@
     <value>40</value>
   </data>
   <data name="KeyItemGB.Text" xml:space="preserve">
-    <value>キーアイテム</value>
+    <value>Key Items</value>
   </data>
   <data name="&gt;&gt;KeyItemGB.Name" xml:space="preserve">
     <value>KeyItemGB</value>
@@ -2011,7 +2011,7 @@
     <value>48</value>
   </data>
   <data name="MapListGB.Text" xml:space="preserve">
-    <value>マップ変更</value>
+    <value>Current map</value>
   </data>
   <data name="&gt;&gt;MapListGB.Name" xml:space="preserve">
     <value>MapListGB</value>
@@ -2035,7 +2035,7 @@
     <value>1</value>
   </data>
   <data name="TabPage2.Text" xml:space="preserve">
-    <value>その他</value>
+    <value>Other</value>
   </data>
   <data name="&gt;&gt;TabPage2.Name" xml:space="preserve">
     <value>TabPage2</value>
@@ -2083,25 +2083,25 @@
     <value>234, 17</value>
   </metadata>
   <data name="MenuFileOpen.Text" xml:space="preserve">
-    <value>開く(&amp;O)</value>
+    <value>Open... (&amp;O)</value>
   </data>
   <data name="MenuFileSave.Enabled" type="System.Boolean, mscorlib">
     <value>False</value>
   </data>
   <data name="MenuFileSave.Text" xml:space="preserve">
-    <value>名付け保存</value>
+    <value>Save as...</value>
   </data>
   <data name="MenuFileSaveOverWrite.Enabled" type="System.Boolean, mscorlib">
     <value>False</value>
   </data>
   <data name="MenuFileSaveOverWrite.Text" xml:space="preserve">
-    <value>上書き保存</value>
+    <value>Save</value>
   </data>
   <data name="MenuFileClose.Enabled" type="System.Boolean, mscorlib">
     <value>False</value>
   </data>
   <data name="MenuFileClose.Text" xml:space="preserve">
-    <value>閉じる</value>
+    <value>Close</value>
   </data>
   <data name="MenuItem25.Text" xml:space="preserve">
     <value>-</value>
@@ -2110,22 +2110,22 @@
     <value>False</value>
   </data>
   <data name="MenuFolderSave.Text" xml:space="preserve">
-    <value>ファイルへ保存</value>
+    <value>Export to file...</value>
   </data>
   <data name="MenuFolderLoad.Text" xml:space="preserve">
-    <value>ファイルから読み込み</value>
+    <value>Import from file...</value>
   </data>
   <data name="MenuFolder.Text" xml:space="preserve">
-    <value>フォルダ</value>
+    <value>Folder</value>
   </data>
   <data name="MenuItem26.Text" xml:space="preserve">
     <value>-</value>
   </data>
   <data name="MenuExit.Text" xml:space="preserve">
-    <value>終了</value>
+    <value>Exit</value>
   </data>
   <data name="MenuFile.Text" xml:space="preserve">
-    <value>ファイル(&amp;F)</value>
+    <value>File (&amp;F)</value>
   </data>
   <metadata name="MainMenu.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
     <value>321, 17</value>
@@ -2134,64 +2134,64 @@
     <value>False</value>
   </data>
   <data name="MenuItem16.Text" xml:space="preserve">
-    <value>全て</value>
+    <value>All</value>
   </data>
   <data name="MenuItem17.Text" xml:space="preserve">
-    <value>スタンダードのみ</value>
+    <value>Standard only</value>
   </data>
   <data name="MenuItem18.Text" xml:space="preserve">
-    <value>メガクラスのみ</value>
+    <value>Mega only</value>
   </data>
   <data name="MenuItem19.Text" xml:space="preserve">
-    <value>ギガクラスのみ</value>
+    <value>Giga only</value>
   </data>
   <data name="MenuItem20.Text" xml:space="preserve">
-    <value>シークレットのみ</value>
+    <value>Secret only</value>
   </data>
   <data name="MenuItem21.Text" xml:space="preserve">
-    <value>Ｐ．Ａ．のみ</value>
+    <value>P.A. only</value>
   </data>
   <data name="MenuLibrary.Text" xml:space="preserve">
-    <value>データライブラリ全開</value>
+    <value>Full Library</value>
   </data>
   <data name="MenuItem7.Text" xml:space="preserve">
-    <value>データ追加</value>
+    <value>Add data</value>
   </data>
   <data name="MenuItem8.Text" xml:space="preserve">
-    <value>データ削除</value>
+    <value>Delete data</value>
   </data>
   <data name="MenuDoubleBeast.Text" xml:space="preserve">
-    <value>ダブルビーストチップデータ</value>
+    <value>DblBeast Chip Data</value>
   </data>
   <data name="MenuItem1.Text" xml:space="preserve">
-    <value>データ追加</value>
+    <value>Add data</value>
   </data>
   <data name="MenuItem2.Text" xml:space="preserve">
-    <value>データ削除</value>
+    <value>Delete data</value>
   </data>
   <data name="MenuBeast.Text" xml:space="preserve">
-    <value>電脳獣</value>
+    <value>Cybeast Chip Data</value>
   </data>
   <data name="MenuChip.Text" xml:space="preserve">
-    <value>チップ全て×99</value>
+    <value>All Chips ×99</value>
   </data>
   <data name="MenuSubChip.Text" xml:space="preserve">
-    <value>サブチップ全て×8</value>
+    <value>All SubChips ×8</value>
   </data>
   <data name="MenuNaviCus.Text" xml:space="preserve">
-    <value>ナビカス全て×9</value>
+    <value>All NaviCust ×9</value>
   </data>
   <data name="MenuKeyItem.Text" xml:space="preserve">
-    <value>キーアイテム全て所持</value>
+    <value>All Key Items</value>
   </data>
   <data name="MenuEdit.Text" xml:space="preserve">
-    <value>編集(&amp;E)</value>
+    <value>Edit (&amp;E)</value>
   </data>
   <data name="MenuVersionInfo.Text" xml:space="preserve">
-    <value>バージョン情報</value>
+    <value>About</value>
   </data>
   <data name="MenuHelp.Text" xml:space="preserve">
-    <value>ヘルプ(&amp;H)</value>
+    <value>Help (&amp;H)</value>
   </data>
   <metadata name="OpenFileDialog.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
     <value>424, 17</value>

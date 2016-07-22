@@ -1,34 +1,36 @@
-﻿Imports System
+﻿Imports System.Resources
+Imports System
 Imports System.Reflection
 Imports System.Runtime.InteropServices
 
-' アセンブリに関する一般情報は以下の属性セットをとおして制御されます。 
-' アセンブリに関連付けられている情報を変更するには、
-' これらの属性値を変更してください。
+' General Information about an assembly is controlled through the following 
+' set of attributes. Change these attribute values to modify the information
+' associated with an assembly.
 
-' アセンブリ属性の値を確認します。
+' Review the values of the assembly attributes
 
-<Assembly: AssemblyTitle("EXE6 SaveDataEditor")> 
-<Assembly: AssemblyDescription("EXE6 SaveDataEditor")> 
-<Assembly: AssemblyCompany("死者のページ")> 
-<Assembly: AssemblyProduct("EXE6 SaveDataEditor")> 
-<Assembly: AssemblyCopyright("Copyright (C) 2008 haru. All rights reserved.")> 
-<Assembly: AssemblyTrademark("")> 
+<Assembly: AssemblyTitle("EXE6 SaveDataEditor")>
+<Assembly: AssemblyDescription("EXE6 SaveDataEditor")>
+<Assembly: AssemblyCompany("死者のページ")>
+<Assembly: AssemblyProduct("EXE6 SaveDataEditor")>
+<Assembly: AssemblyCopyright("Copyright (C) 2008 haru. All rights reserved.")>
+<Assembly: AssemblyTrademark("")>
 
-<Assembly: ComVisible(False)> 
+<Assembly: ComVisible(False)>
 
-'このプロジェクトが COM に公開される場合、次の GUID がタイプ ライブラリの ID になります。
-<Assembly: Guid("d1c3ffa6-4574-4471-9d9e-adfc32e53f4f")> 
+'The following GUID is for the ID of the typelib if this project is exposed to COM
+<Assembly: Guid("d1c3ffa6-4574-4471-9d9e-adfc32e53f4f")>
 
-' アセンブリのバージョン情報は、以下の 4 つの値で構成されています:
+' Version information for an assembly consists of the following four values:
 '
 '      Major Version
 '      Minor Version 
 '      Build Number
 '      Revision
 '
-' すべての値を指定するか、下のように '*' を使ってビルドおよびリビジョン番号を 
-' 既定値にすることができます:
+' You can specify all the values or you can default the Build and Revision Numbers 
+' by using the '*' as shown below:
 
-<Assembly: AssemblyVersion("2.0.0.0")> 
-<Assembly: AssemblyFileVersion("2.0.0.0")> 
+<Assembly: AssemblyVersion("2.0.0.0")>
+<Assembly: AssemblyFileVersion("2.0.0.0")>
+<Assembly: NeutralResourcesLanguage("")>
