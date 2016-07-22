@@ -133,6 +133,9 @@ Partial Class MainForm
         Me.MenuSubChip = New System.Windows.Forms.MenuItem()
         Me.MenuNaviCust = New System.Windows.Forms.MenuItem()
         Me.MenuKeyItem = New System.Windows.Forms.MenuItem()
+        Me.MenuLanguage = New System.Windows.Forms.MenuItem()
+        Me.MenuEnglish = New System.Windows.Forms.MenuItem()
+        Me.MenuJapanese = New System.Windows.Forms.MenuItem()
         Me.MenuHelp = New System.Windows.Forms.MenuItem()
         Me.MenuVersionInfo = New System.Windows.Forms.MenuItem()
         Me.OpenFileDialog = New System.Windows.Forms.OpenFileDialog()
@@ -162,14 +165,14 @@ Partial Class MainForm
         '
         'Label21
         '
-        resources.ApplyResources(Me.Label21, "Label21")
         Me.Label21.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D
+        resources.ApplyResources(Me.Label21, "Label21")
         Me.Label21.Name = "Label21"
         '
         'Label20
         '
-        resources.ApplyResources(Me.Label20, "Label20")
         Me.Label20.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D
+        resources.ApplyResources(Me.Label20, "Label20")
         Me.Label20.Name = "Label20"
         '
         'FolderValueTB
@@ -179,30 +182,28 @@ Partial Class MainForm
         '
         'FolderSelectCB
         '
-        resources.ApplyResources(Me.FolderSelectCB, "FolderSelectCB")
         Me.FolderSelectCB.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList
         Me.FolderSelectCB.Items.AddRange(New Object() {resources.GetString("FolderSelectCB.Items"), resources.GetString("FolderSelectCB.Items1"), resources.GetString("FolderSelectCB.Items2")})
+        resources.ApplyResources(Me.FolderSelectCB, "FolderSelectCB")
         Me.FolderSelectCB.Name = "FolderSelectCB"
         '
         'ListBox2
         '
-        resources.ApplyResources(Me.ListBox2, "ListBox2")
         Me.ListBox2.ContextMenu = Me.FindCM
+        resources.ApplyResources(Me.ListBox2, "ListBox2")
         Me.ListBox2.Name = "ListBox2"
         '
         'FindCM
         '
         Me.FindCM.MenuItems.AddRange(New System.Windows.Forms.MenuItem() {Me.MenuItem3})
-        resources.ApplyResources(Me.FindCM, "FindCM")
         '
         'MenuItem3
         '
-        resources.ApplyResources(Me.MenuItem3, "MenuItem3")
         Me.MenuItem3.Index = 0
+        resources.ApplyResources(Me.MenuItem3, "MenuItem3")
         '
         'FolderGB
         '
-        resources.ApplyResources(Me.FolderGB, "FolderGB")
         Me.FolderGB.Controls.Add(Me.ChipRepairButton)
         Me.FolderGB.Controls.Add(Me.Label21)
         Me.FolderGB.Controls.Add(Me.Label20)
@@ -212,6 +213,7 @@ Partial Class MainForm
         Me.FolderGB.Controls.Add(Me.ListBox1)
         Me.FolderGB.Controls.Add(Me.AddChipButton)
         Me.FolderGB.Controls.Add(Me.Label19)
+        resources.ApplyResources(Me.FolderGB, "FolderGB")
         Me.FolderGB.Name = "FolderGB"
         Me.FolderGB.TabStop = False
         '
@@ -222,34 +224,33 @@ Partial Class MainForm
         '
         'AddChipButton
         '
-        resources.ApplyResources(Me.AddChipButton, "AddChipButton")
         Me.AddChipButton.DialogResult = System.Windows.Forms.DialogResult.Cancel
+        resources.ApplyResources(Me.AddChipButton, "AddChipButton")
         Me.AddChipButton.Name = "AddChipButton"
         '
         'Label19
         '
-        resources.ApplyResources(Me.Label19, "Label19")
         Me.Label19.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D
+        resources.ApplyResources(Me.Label19, "Label19")
         Me.Label19.Name = "Label19"
         '
         'StatusDisplay
         '
-        resources.ApplyResources(Me.StatusDisplay, "StatusDisplay")
         Me.StatusDisplay.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D
+        resources.ApplyResources(Me.StatusDisplay, "StatusDisplay")
         Me.StatusDisplay.Name = "StatusDisplay"
         '
         'TabControl1
         '
-        resources.ApplyResources(Me.TabControl1, "TabControl1")
         Me.TabControl1.Controls.Add(Me.TabPage1)
         Me.TabControl1.Controls.Add(Me.TabPage3)
         Me.TabControl1.Controls.Add(Me.TabPage2)
+        resources.ApplyResources(Me.TabControl1, "TabControl1")
         Me.TabControl1.Name = "TabControl1"
         Me.TabControl1.SelectedIndex = 0
         '
         'TabPage1
         '
-        resources.ApplyResources(Me.TabPage1, "TabPage1")
         Me.TabPage1.Controls.Add(Me.LoadFileName)
         Me.TabPage1.Controls.Add(Me.normalGB)
         Me.TabPage1.Controls.Add(Me.SubChipGB)
@@ -258,6 +259,7 @@ Partial Class MainForm
         Me.TabPage1.Controls.Add(Me.StatusDisplay)
         Me.TabPage1.Controls.Add(Me.NaviCustGB)
         Me.TabPage1.Controls.Add(Me.Label18)
+        resources.ApplyResources(Me.TabPage1, "TabPage1")
         Me.TabPage1.Name = "TabPage1"
         '
         'LoadFileName
@@ -268,7 +270,6 @@ Partial Class MainForm
         '
         'normalGB
         '
-        resources.ApplyResources(Me.normalGB, "normalGB")
         Me.normalGB.Controls.Add(Me.SecondTB)
         Me.normalGB.Controls.Add(Me.MinuteTB)
         Me.normalGB.Controls.Add(Me.BugFragsTB)
@@ -281,6 +282,7 @@ Partial Class MainForm
         Me.normalGB.Controls.Add(Me.Label11)
         Me.normalGB.Controls.Add(Me.Label10)
         Me.normalGB.Controls.Add(Me.MsecondTB)
+        resources.ApplyResources(Me.normalGB, "normalGB")
         Me.normalGB.Name = "normalGB"
         Me.normalGB.TabStop = False
         '
@@ -306,14 +308,14 @@ Partial Class MainForm
         '
         'Label1
         '
-        resources.ApplyResources(Me.Label1, "Label1")
         Me.Label1.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D
+        resources.ApplyResources(Me.Label1, "Label1")
         Me.Label1.Name = "Label1"
         '
         'Label2
         '
-        resources.ApplyResources(Me.Label2, "Label2")
         Me.Label2.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D
+        resources.ApplyResources(Me.Label2, "Label2")
         Me.Label2.Name = "Label2"
         '
         'ZennyTB
@@ -338,8 +340,8 @@ Partial Class MainForm
         '
         'Label10
         '
-        resources.ApplyResources(Me.Label10, "Label10")
         Me.Label10.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D
+        resources.ApplyResources(Me.Label10, "Label10")
         Me.Label10.Name = "Label10"
         '
         'MsecondTB
@@ -349,7 +351,6 @@ Partial Class MainForm
         '
         'SubChipGB
         '
-        resources.ApplyResources(Me.SubChipGB, "SubChipGB")
         Me.SubChipGB.Controls.Add(Me.MaxOfSubchipNumTB)
         Me.SubChipGB.Controls.Add(Me.Label16)
         Me.SubChipGB.Controls.Add(Me.Label4)
@@ -357,6 +358,7 @@ Partial Class MainForm
         Me.SubChipGB.Controls.Add(Me.SubChipCB)
         Me.SubChipGB.Controls.Add(Me.SubChipTB)
         Me.SubChipGB.Controls.Add(Me.Label3)
+        resources.ApplyResources(Me.SubChipGB, "SubChipGB")
         Me.SubChipGB.Name = "SubChipGB"
         Me.SubChipGB.TabStop = False
         '
@@ -367,14 +369,14 @@ Partial Class MainForm
         '
         'Label16
         '
-        resources.ApplyResources(Me.Label16, "Label16")
         Me.Label16.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D
+        resources.ApplyResources(Me.Label16, "Label16")
         Me.Label16.Name = "Label16"
         '
         'Label4
         '
-        resources.ApplyResources(Me.Label4, "Label4")
         Me.Label4.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D
+        resources.ApplyResources(Me.Label4, "Label4")
         Me.Label4.Name = "Label4"
         '
         'SubChipCkB
@@ -384,10 +386,10 @@ Partial Class MainForm
         '
         'SubChipCB
         '
-        resources.ApplyResources(Me.SubChipCB, "SubChipCB")
         Me.SubChipCB.ContextMenu = Me.FindCM
         Me.SubChipCB.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList
         Me.SubChipCB.Items.AddRange(New Object() {resources.GetString("SubChipCB.Items"), resources.GetString("SubChipCB.Items1"), resources.GetString("SubChipCB.Items2"), resources.GetString("SubChipCB.Items3"), resources.GetString("SubChipCB.Items4"), resources.GetString("SubChipCB.Items5")})
+        resources.ApplyResources(Me.SubChipCB, "SubChipCB")
         Me.SubChipCB.Name = "SubChipCB"
         '
         'SubChipTB
@@ -397,31 +399,31 @@ Partial Class MainForm
         '
         'Label3
         '
-        resources.ApplyResources(Me.Label3, "Label3")
         Me.Label3.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D
+        resources.ApplyResources(Me.Label3, "Label3")
         Me.Label3.Name = "Label3"
         '
         'ChipGB
         '
-        resources.ApplyResources(Me.ChipGB, "ChipGB")
         Me.ChipGB.Controls.Add(Me.Label14)
         Me.ChipGB.Controls.Add(Me.ChipCB)
         Me.ChipGB.Controls.Add(Me.ChipTB)
         Me.ChipGB.Controls.Add(Me.Label15)
+        resources.ApplyResources(Me.ChipGB, "ChipGB")
         Me.ChipGB.Name = "ChipGB"
         Me.ChipGB.TabStop = False
         '
         'Label14
         '
-        resources.ApplyResources(Me.Label14, "Label14")
         Me.Label14.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D
+        resources.ApplyResources(Me.Label14, "Label14")
         Me.Label14.Name = "Label14"
         '
         'ChipCB
         '
-        resources.ApplyResources(Me.ChipCB, "ChipCB")
         Me.ChipCB.ContextMenu = Me.FindCM
         Me.ChipCB.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList
+        resources.ApplyResources(Me.ChipCB, "ChipCB")
         Me.ChipCB.Name = "ChipCB"
         '
         'ChipTB
@@ -431,13 +433,12 @@ Partial Class MainForm
         '
         'Label15
         '
-        resources.ApplyResources(Me.Label15, "Label15")
         Me.Label15.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D
+        resources.ApplyResources(Me.Label15, "Label15")
         Me.Label15.Name = "Label15"
         '
         'NaviCustGB
         '
-        resources.ApplyResources(Me.NaviCustGB, "NaviCustGB")
         Me.NaviCustGB.Controls.Add(Me.NaviCustExistFlagCkB)
         Me.NaviCustGB.Controls.Add(Me.ExpandMemoryCkB)
         Me.NaviCustGB.Controls.Add(Me.Label9)
@@ -448,6 +449,7 @@ Partial Class MainForm
         Me.NaviCustGB.Controls.Add(Me.NaviCustTB)
         Me.NaviCustGB.Controls.Add(Me.NaviCustCkB)
         Me.NaviCustGB.Controls.Add(Me.Label8)
+        resources.ApplyResources(Me.NaviCustGB, "NaviCustGB")
         Me.NaviCustGB.Name = "NaviCustGB"
         Me.NaviCustGB.TabStop = False
         '
@@ -463,8 +465,8 @@ Partial Class MainForm
         '
         'Label9
         '
-        resources.ApplyResources(Me.Label9, "Label9")
         Me.Label9.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D
+        resources.ApplyResources(Me.Label9, "Label9")
         Me.Label9.Name = "Label9"
         '
         'ExpandMemoryTB
@@ -479,15 +481,15 @@ Partial Class MainForm
         '
         'NaviCustCB
         '
-        resources.ApplyResources(Me.NaviCustCB, "NaviCustCB")
         Me.NaviCustCB.ContextMenu = Me.FindCM
         Me.NaviCustCB.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList
+        resources.ApplyResources(Me.NaviCustCB, "NaviCustCB")
         Me.NaviCustCB.Name = "NaviCustCB"
         '
         'Label7
         '
-        resources.ApplyResources(Me.Label7, "Label7")
         Me.Label7.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D
+        resources.ApplyResources(Me.Label7, "Label7")
         Me.Label7.Name = "Label7"
         '
         'NaviCustTB
@@ -502,107 +504,106 @@ Partial Class MainForm
         '
         'Label8
         '
-        resources.ApplyResources(Me.Label8, "Label8")
         Me.Label8.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D
+        resources.ApplyResources(Me.Label8, "Label8")
         Me.Label8.Name = "Label8"
         '
         'Label18
         '
-        resources.ApplyResources(Me.Label18, "Label18")
         Me.Label18.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D
+        resources.ApplyResources(Me.Label18, "Label18")
         Me.Label18.Name = "Label18"
         '
         'TabPage3
         '
-        resources.ApplyResources(Me.TabPage3, "TabPage3")
         Me.TabPage3.Controls.Add(Me.PaGB)
         Me.TabPage3.Controls.Add(Me.MegaChipGB)
         Me.TabPage3.Controls.Add(Me.GigaChipGB)
         Me.TabPage3.Controls.Add(Me.SecretChipGB)
         Me.TabPage3.Controls.Add(Me.StandardChipGB)
+        resources.ApplyResources(Me.TabPage3, "TabPage3")
         Me.TabPage3.Name = "TabPage3"
         '
         'PaGB
         '
-        resources.ApplyResources(Me.PaGB, "PaGB")
         Me.PaGB.Controls.Add(Me.LibPaLB)
+        resources.ApplyResources(Me.PaGB, "PaGB")
         Me.PaGB.Name = "PaGB"
         Me.PaGB.TabStop = False
         '
         'LibPaLB
         '
-        resources.ApplyResources(Me.LibPaLB, "LibPaLB")
         Me.LibPaLB.CheckOnClick = True
         Me.LibPaLB.ContextMenu = Me.FindCM
+        resources.ApplyResources(Me.LibPaLB, "LibPaLB")
         Me.LibPaLB.Name = "LibPaLB"
         '
         'MegaChipGB
         '
-        resources.ApplyResources(Me.MegaChipGB, "MegaChipGB")
         Me.MegaChipGB.Controls.Add(Me.LibMegaChipLB)
+        resources.ApplyResources(Me.MegaChipGB, "MegaChipGB")
         Me.MegaChipGB.Name = "MegaChipGB"
         Me.MegaChipGB.TabStop = False
         '
         'LibMegaChipLB
         '
-        resources.ApplyResources(Me.LibMegaChipLB, "LibMegaChipLB")
         Me.LibMegaChipLB.CheckOnClick = True
         Me.LibMegaChipLB.ContextMenu = Me.FindCM
+        resources.ApplyResources(Me.LibMegaChipLB, "LibMegaChipLB")
         Me.LibMegaChipLB.Name = "LibMegaChipLB"
         '
         'GigaChipGB
         '
-        resources.ApplyResources(Me.GigaChipGB, "GigaChipGB")
         Me.GigaChipGB.Controls.Add(Me.LibGigaChipLB)
+        resources.ApplyResources(Me.GigaChipGB, "GigaChipGB")
         Me.GigaChipGB.Name = "GigaChipGB"
         Me.GigaChipGB.TabStop = False
         '
         'LibGigaChipLB
         '
-        resources.ApplyResources(Me.LibGigaChipLB, "LibGigaChipLB")
         Me.LibGigaChipLB.CheckOnClick = True
         Me.LibGigaChipLB.ContextMenu = Me.FindCM
+        resources.ApplyResources(Me.LibGigaChipLB, "LibGigaChipLB")
         Me.LibGigaChipLB.Name = "LibGigaChipLB"
         '
         'SecretChipGB
         '
-        resources.ApplyResources(Me.SecretChipGB, "SecretChipGB")
         Me.SecretChipGB.Controls.Add(Me.LibSecretChipLB)
+        resources.ApplyResources(Me.SecretChipGB, "SecretChipGB")
         Me.SecretChipGB.Name = "SecretChipGB"
         Me.SecretChipGB.TabStop = False
         '
         'LibSecretChipLB
         '
-        resources.ApplyResources(Me.LibSecretChipLB, "LibSecretChipLB")
         Me.LibSecretChipLB.CheckOnClick = True
         Me.LibSecretChipLB.ContextMenu = Me.FindCM
+        resources.ApplyResources(Me.LibSecretChipLB, "LibSecretChipLB")
         Me.LibSecretChipLB.Name = "LibSecretChipLB"
         '
         'StandardChipGB
         '
-        resources.ApplyResources(Me.StandardChipGB, "StandardChipGB")
         Me.StandardChipGB.Controls.Add(Me.LibraryLB)
+        resources.ApplyResources(Me.StandardChipGB, "StandardChipGB")
         Me.StandardChipGB.Name = "StandardChipGB"
         Me.StandardChipGB.TabStop = False
         '
         'LibraryLB
         '
-        resources.ApplyResources(Me.LibraryLB, "LibraryLB")
         Me.LibraryLB.CheckOnClick = True
         Me.LibraryLB.ContextMenu = Me.FindCM
+        resources.ApplyResources(Me.LibraryLB, "LibraryLB")
         Me.LibraryLB.Name = "LibraryLB"
         '
         'TabPage2
         '
-        resources.ApplyResources(Me.TabPage2, "TabPage2")
         Me.TabPage2.Controls.Add(Me.RemodelCardGB)
         Me.TabPage2.Controls.Add(Me.KeyItemGB)
         Me.TabPage2.Controls.Add(Me.MapListGB)
+        resources.ApplyResources(Me.TabPage2, "TabPage2")
         Me.TabPage2.Name = "TabPage2"
         '
         'RemodelCardGB
         '
-        resources.ApplyResources(Me.RemodelCardGB, "RemodelCardGB")
         Me.RemodelCardGB.Controls.Add(Me.RcList)
         Me.RemodelCardGB.Controls.Add(Me.RcDisplayExistFlagCkB)
         Me.RemodelCardGB.Controls.Add(Me.RcAddButton)
@@ -612,6 +613,7 @@ Partial Class MainForm
         Me.RemodelCardGB.Controls.Add(Me.RcCountTB)
         Me.RemodelCardGB.Controls.Add(Me.Label5)
         Me.RemodelCardGB.Controls.Add(Me.Label6)
+        resources.ApplyResources(Me.RemodelCardGB, "RemodelCardGB")
         Me.RemodelCardGB.Name = "RemodelCardGB"
         Me.RemodelCardGB.TabStop = False
         '
@@ -637,8 +639,8 @@ Partial Class MainForm
         '
         'RcCardList
         '
-        resources.ApplyResources(Me.RcCardList, "RcCardList")
         Me.RcCardList.ContextMenu = Me.FindCM
+        resources.ApplyResources(Me.RcCardList, "RcCardList")
         Me.RcCardList.Name = "RcCardList"
         '
         'RcCapacityTB
@@ -654,42 +656,42 @@ Partial Class MainForm
         '
         'Label5
         '
-        resources.ApplyResources(Me.Label5, "Label5")
         Me.Label5.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D
+        resources.ApplyResources(Me.Label5, "Label5")
         Me.Label5.Name = "Label5"
         '
         'Label6
         '
-        resources.ApplyResources(Me.Label6, "Label6")
         Me.Label6.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D
+        resources.ApplyResources(Me.Label6, "Label6")
         Me.Label6.Name = "Label6"
         '
         'KeyItemGB
         '
-        resources.ApplyResources(Me.KeyItemGB, "KeyItemGB")
         Me.KeyItemGB.Controls.Add(Me.KeyItemLB)
+        resources.ApplyResources(Me.KeyItemGB, "KeyItemGB")
         Me.KeyItemGB.Name = "KeyItemGB"
         Me.KeyItemGB.TabStop = False
         '
         'KeyItemLB
         '
-        resources.ApplyResources(Me.KeyItemLB, "KeyItemLB")
         Me.KeyItemLB.CheckOnClick = True
         Me.KeyItemLB.ContextMenu = Me.FindCM
+        resources.ApplyResources(Me.KeyItemLB, "KeyItemLB")
         Me.KeyItemLB.Name = "KeyItemLB"
         '
         'MapListGB
         '
-        resources.ApplyResources(Me.MapListGB, "MapListGB")
         Me.MapListGB.Controls.Add(Me.MapListCB)
+        resources.ApplyResources(Me.MapListGB, "MapListGB")
         Me.MapListGB.Name = "MapListGB"
         Me.MapListGB.TabStop = False
         '
         'MapListCB
         '
-        resources.ApplyResources(Me.MapListCB, "MapListCB")
         Me.MapListCB.ContextMenu = Me.FindCM
         Me.MapListCB.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList
+        resources.ApplyResources(Me.MapListCB, "MapListCB")
         Me.MapListCB.Name = "MapListCB"
         '
         'SaveFileDialog
@@ -702,14 +704,14 @@ Partial Class MainForm
         '
         'MenuFile
         '
-        resources.ApplyResources(Me.MenuFile, "MenuFile")
         Me.MenuFile.Index = 0
         Me.MenuFile.MenuItems.AddRange(New System.Windows.Forms.MenuItem() {Me.MenuFileOpen, Me.MenuFileSave, Me.MenuFileSaveOverWrite, Me.MenuFileClose, Me.MenuItem25, Me.MenuFolder, Me.MenuItem26, Me.MenuExit})
+        resources.ApplyResources(Me.MenuFile, "MenuFile")
         '
         'MenuFileOpen
         '
-        resources.ApplyResources(Me.MenuFileOpen, "MenuFileOpen")
         Me.MenuFileOpen.Index = 0
+        resources.ApplyResources(Me.MenuFileOpen, "MenuFileOpen")
         '
         'MenuFileSave
         '
@@ -728,8 +730,8 @@ Partial Class MainForm
         '
         'MenuItem25
         '
-        resources.ApplyResources(Me.MenuItem25, "MenuItem25")
         Me.MenuItem25.Index = 4
+        resources.ApplyResources(Me.MenuItem25, "MenuItem25")
         '
         'MenuFolder
         '
@@ -739,28 +741,27 @@ Partial Class MainForm
         '
         'MenuFolderSave
         '
-        resources.ApplyResources(Me.MenuFolderSave, "MenuFolderSave")
         Me.MenuFolderSave.Index = 0
+        resources.ApplyResources(Me.MenuFolderSave, "MenuFolderSave")
         '
         'MenuFolderLoad
         '
-        resources.ApplyResources(Me.MenuFolderLoad, "MenuFolderLoad")
         Me.MenuFolderLoad.Index = 1
+        resources.ApplyResources(Me.MenuFolderLoad, "MenuFolderLoad")
         '
         'MenuItem26
         '
-        resources.ApplyResources(Me.MenuItem26, "MenuItem26")
         Me.MenuItem26.Index = 6
+        resources.ApplyResources(Me.MenuItem26, "MenuItem26")
         '
         'MenuExit
         '
-        resources.ApplyResources(Me.MenuExit, "MenuExit")
         Me.MenuExit.Index = 7
+        resources.ApplyResources(Me.MenuExit, "MenuExit")
         '
         'MainMenu
         '
-        Me.MainMenu.MenuItems.AddRange(New System.Windows.Forms.MenuItem() {Me.MenuFile, Me.MenuEdit, Me.MenuHelp})
-        resources.ApplyResources(Me.MainMenu, "MainMenu")
+        Me.MainMenu.MenuItems.AddRange(New System.Windows.Forms.MenuItem() {Me.MenuFile, Me.MenuEdit, Me.MenuLanguage, Me.MenuHelp})
         '
         'MenuEdit
         '
@@ -770,102 +771,123 @@ Partial Class MainForm
         '
         'MenuLibrary
         '
-        resources.ApplyResources(Me.MenuLibrary, "MenuLibrary")
         Me.MenuLibrary.Index = 0
         Me.MenuLibrary.MenuItems.AddRange(New System.Windows.Forms.MenuItem() {Me.MenuItem16, Me.MenuItem17, Me.MenuItem18, Me.MenuItem19, Me.MenuItem20, Me.MenuItem21})
+        resources.ApplyResources(Me.MenuLibrary, "MenuLibrary")
         '
         'MenuItem16
         '
-        resources.ApplyResources(Me.MenuItem16, "MenuItem16")
         Me.MenuItem16.Index = 0
+        resources.ApplyResources(Me.MenuItem16, "MenuItem16")
         '
         'MenuItem17
         '
-        resources.ApplyResources(Me.MenuItem17, "MenuItem17")
         Me.MenuItem17.Index = 1
+        resources.ApplyResources(Me.MenuItem17, "MenuItem17")
         '
         'MenuItem18
         '
-        resources.ApplyResources(Me.MenuItem18, "MenuItem18")
         Me.MenuItem18.Index = 2
+        resources.ApplyResources(Me.MenuItem18, "MenuItem18")
         '
         'MenuItem19
         '
-        resources.ApplyResources(Me.MenuItem19, "MenuItem19")
         Me.MenuItem19.Index = 3
+        resources.ApplyResources(Me.MenuItem19, "MenuItem19")
         '
         'MenuItem20
         '
-        resources.ApplyResources(Me.MenuItem20, "MenuItem20")
         Me.MenuItem20.Index = 4
+        resources.ApplyResources(Me.MenuItem20, "MenuItem20")
         '
         'MenuItem21
         '
-        resources.ApplyResources(Me.MenuItem21, "MenuItem21")
         Me.MenuItem21.Index = 5
+        resources.ApplyResources(Me.MenuItem21, "MenuItem21")
         '
         'MenuDoubleBeast
         '
-        resources.ApplyResources(Me.MenuDoubleBeast, "MenuDoubleBeast")
         Me.MenuDoubleBeast.Index = 1
         Me.MenuDoubleBeast.MenuItems.AddRange(New System.Windows.Forms.MenuItem() {Me.MenuItem7, Me.MenuItem8})
+        resources.ApplyResources(Me.MenuDoubleBeast, "MenuDoubleBeast")
         '
         'MenuItem7
         '
-        resources.ApplyResources(Me.MenuItem7, "MenuItem7")
         Me.MenuItem7.Index = 0
+        resources.ApplyResources(Me.MenuItem7, "MenuItem7")
         '
         'MenuItem8
         '
-        resources.ApplyResources(Me.MenuItem8, "MenuItem8")
         Me.MenuItem8.Index = 1
+        resources.ApplyResources(Me.MenuItem8, "MenuItem8")
         '
         'MenuBeast
         '
-        resources.ApplyResources(Me.MenuBeast, "MenuBeast")
         Me.MenuBeast.Index = 2
         Me.MenuBeast.MenuItems.AddRange(New System.Windows.Forms.MenuItem() {Me.MenuItem1, Me.MenuItem2})
+        resources.ApplyResources(Me.MenuBeast, "MenuBeast")
         '
         'MenuItem1
         '
-        resources.ApplyResources(Me.MenuItem1, "MenuItem1")
         Me.MenuItem1.Index = 0
+        resources.ApplyResources(Me.MenuItem1, "MenuItem1")
         '
         'MenuItem2
         '
-        resources.ApplyResources(Me.MenuItem2, "MenuItem2")
         Me.MenuItem2.Index = 1
+        resources.ApplyResources(Me.MenuItem2, "MenuItem2")
         '
         'MenuChip
         '
-        resources.ApplyResources(Me.MenuChip, "MenuChip")
         Me.MenuChip.Index = 3
+        resources.ApplyResources(Me.MenuChip, "MenuChip")
         '
         'MenuSubChip
         '
-        resources.ApplyResources(Me.MenuSubChip, "MenuSubChip")
         Me.MenuSubChip.Index = 4
+        resources.ApplyResources(Me.MenuSubChip, "MenuSubChip")
         '
         'MenuNaviCust
         '
-        resources.ApplyResources(Me.MenuNaviCust, "MenuNaviCust")
         Me.MenuNaviCust.Index = 5
+        resources.ApplyResources(Me.MenuNaviCust, "MenuNaviCust")
         '
         'MenuKeyItem
         '
-        resources.ApplyResources(Me.MenuKeyItem, "MenuKeyItem")
         Me.MenuKeyItem.Index = 6
+        resources.ApplyResources(Me.MenuKeyItem, "MenuKeyItem")
+        '
+        'MenuLanguage
+        '
+        Me.MenuLanguage.Index = 2
+        Me.MenuLanguage.MenuItems.AddRange(New System.Windows.Forms.MenuItem() {Me.MenuEnglish, Me.MenuJapanese})
+        resources.ApplyResources(Me.MenuLanguage, "MenuLanguage")
+        '
+        'MenuEnglish
+        '
+        Me.MenuEnglish.Checked = True
+        Me.MenuEnglish.Index = 0
+        Me.MenuEnglish.RadioCheck = True
+        Me.MenuEnglish.Tag = "en"
+        resources.ApplyResources(Me.MenuEnglish, "MenuEnglish")
+        '
+        'MenuJapanese
+        '
+        Me.MenuJapanese.Index = 1
+        Me.MenuJapanese.RadioCheck = True
+        Me.MenuJapanese.Tag = "ja"
+        resources.ApplyResources(Me.MenuJapanese, "MenuJapanese")
         '
         'MenuHelp
         '
-        resources.ApplyResources(Me.MenuHelp, "MenuHelp")
-        Me.MenuHelp.Index = 2
+        Me.MenuHelp.Index = 3
         Me.MenuHelp.MenuItems.AddRange(New System.Windows.Forms.MenuItem() {Me.MenuVersionInfo})
+        resources.ApplyResources(Me.MenuHelp, "MenuHelp")
         '
         'MenuVersionInfo
         '
-        resources.ApplyResources(Me.MenuVersionInfo, "MenuVersionInfo")
         Me.MenuVersionInfo.Index = 0
+        resources.ApplyResources(Me.MenuVersionInfo, "MenuVersionInfo")
         '
         'OpenFileDialog
         '
@@ -1023,4 +1045,7 @@ Partial Class MainForm
     Friend WithEvents MenuBeast As System.Windows.Forms.MenuItem
     Friend WithEvents MenuItem1 As System.Windows.Forms.MenuItem
     Friend WithEvents MenuItem2 As System.Windows.Forms.MenuItem
+    Friend WithEvents MenuLanguage As MenuItem
+    Friend WithEvents MenuEnglish As MenuItem
+    Friend WithEvents MenuJapanese As MenuItem
 End Class

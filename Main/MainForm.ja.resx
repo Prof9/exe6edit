@@ -138,14 +138,29 @@
   <data name="MenuItem3.Text" xml:space="preserve">
     <value>検索</value>
   </data>
-  <data name="Label19.Text" xml:space="preserve">
-    <value>フォルダの数</value>
-  </data>
   <data name="FolderGB.Text" xml:space="preserve">
     <value>フォルダ</value>
   </data>
+  <data name="Label19.Text" xml:space="preserve">
+    <value>フォルダの数</value>
+  </data>
+  <data name="TabPage1.Text" xml:space="preserve">
+    <value>全般</value>
+  </data>
   <data name="normalGB.Text" xml:space="preserve">
     <value>一般</value>
+  </data>
+  <data name="Label1.Text" xml:space="preserve">
+    <value>ZENNY</value>
+  </data>
+  <data name="Label2.Text" xml:space="preserve">
+    <value>BUGPIECE</value>
+  </data>
+  <data name="Label10.Text" xml:space="preserve">
+    <value>時間</value>
+  </data>
+  <data name="SubChipGB.Text" xml:space="preserve">
+    <value>サブチップ</value>
   </data>
   <data name="Label16.Text" xml:space="preserve">
     <value>最大枚数</value>
@@ -177,8 +192,8 @@
   <data name="Label3.Text" xml:space="preserve">
     <value>枚数</value>
   </data>
-  <data name="SubChipGB.Text" xml:space="preserve">
-    <value>サブチップ</value>
+  <data name="ChipGB.Text" xml:space="preserve">
+    <value>チップ</value>
   </data>
   <data name="Label14.Text" xml:space="preserve">
     <value>種類選択</value>
@@ -186,8 +201,8 @@
   <data name="Label15.Text" xml:space="preserve">
     <value>枚数</value>
   </data>
-  <data name="ChipGB.Text" xml:space="preserve">
-    <value>チップ</value>
+  <data name="NaviCustGB.Text" xml:space="preserve">
+    <value>ナビカスタマイザー</value>
   </data>
   <data name="NaviCustExistFlagCkB.Text" xml:space="preserve">
     <value>ナビカス画面表示</value>
@@ -210,14 +225,11 @@
   <data name="Label8.Text" xml:space="preserve">
     <value>種類選択</value>
   </data>
-  <data name="NaviCustGB.Text" xml:space="preserve">
-    <value>ナビカスタマイザー</value>
-  </data>
   <data name="Label18.Text" xml:space="preserve">
     <value>ファイル名</value>
   </data>
-  <data name="TabPage1.Text" xml:space="preserve">
-    <value>全般</value>
+  <data name="TabPage3.Text" xml:space="preserve">
+    <value>ライブラリ</value>
   </data>
   <data name="PaGB.Text" xml:space="preserve">
     <value>Ｐ．Ａ．</value>
@@ -234,8 +246,11 @@
   <data name="StandardChipGB.Text" xml:space="preserve">
     <value>スタンダードチップ</value>
   </data>
-  <data name="TabPage3.Text" xml:space="preserve">
-    <value>ライブラリ</value>
+  <data name="TabPage2.Text" xml:space="preserve">
+    <value>その他</value>
+  </data>
+  <data name="RemodelCardGB.Text" xml:space="preserve">
+    <value>改造カード</value>
   </data>
   <data name="RcDisplayExistFlagCkB.Text" xml:space="preserve">
     <value>改造カード画面表示</value>
@@ -246,26 +261,11 @@
   <data name="Label6.Text" xml:space="preserve">
     <value>改造カード総量</value>
   </data>
-  <data name="RemodelCardGB.Text" xml:space="preserve">
-    <value>改造カード</value>
-  </data>
   <data name="KeyItemGB.Text" xml:space="preserve">
     <value>マップ変更</value>
   </data>
   <data name="MapListGB.Text" xml:space="preserve">
     <value>マップ変更</value>
-  </data>
-  <data name="TabPage2.Text" xml:space="preserve">
-    <value>その他</value>
-  </data>
-  <data name="Label1.Text" xml:space="preserve">
-    <value>ZENNY</value>
-  </data>
-  <data name="Label2.Text" xml:space="preserve">
-    <value>BUGPIECE</value>
-  </data>
-  <data name="Label10.Text" xml:space="preserve">
-    <value>時間</value>
   </data>
   <data name="MenuFile.Text" xml:space="preserve">
     <value>ファイル(&amp;F)</value>
@@ -347,6 +347,9 @@
   </data>
   <data name="MenuKeyItem.Text" xml:space="preserve">
     <value>キーアイテム全て所持</value>
+  </data>
+  <data name="MenuLanguage.Text" xml:space="preserve">
+    <value>言語(&amp;L)</value>
   </data>
   <data name="MenuHelp.Text" xml:space="preserve">
     <value>ヘルプ(&amp;H)</value>

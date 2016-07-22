@@ -1,3 +1,8 @@
+Imports System.Collections.Generic
+Imports System.ComponentModel
+Imports System.Globalization
+Imports System.Reflection
+Imports System.Threading
 Imports EXE6DataList
 
 Public Class MainForm
@@ -689,5 +694,60 @@ Public Class MainForm
         LibSecretChipLB.Items.AddRange(EXE6DataList.LibSeacretChipNameList)
         LibMegaChipLB.Items.AddRange(EXE6DataList.LibMegaChipNameList)
         LibPaLB.Items.AddRange(EXE6DataList.LibPaNameList)
+    End Sub
+
+    Private Sub UpdateLanguage(sender As Object, e As EventArgs) Handles MenuJapanese.Click, MenuEnglish.Click
+        Me.SuspendLayout()
+
+        'Get menu item and culture name.
+        Dim newMenuItem As MenuItem = sender
+        Dim cultureName As String = newMenuItem.Tag
+
+        'Uncheck all language items, then check this one.
+        For Each otherItem As MenuItem In newMenuItem.Parent.MenuItems
+            otherItem.Checked = False
+        Next
+        newMenuItem.Checked = True
+
+        'Set the new UI culture.
+        Dim cultureInfo As CultureInfo = New CultureInfo(cultureName)
+        Thread.CurrentThread.CurrentUICulture = cultureInfo
+
+        Dim resources As ComponentResourceManager = New ComponentResourceManager(Me.GetType())
+
+        'Add all top-level controls and menu items to the collection.
+        Dim controls As List(Of Control) = New List(Of Control)()
+        For Each c As Control In Me.Controls
+            controls.Add(c)
+        Next c
+
+        'Iterate through all controls, and update their text.
+        Dim index As Integer = 0
+        While index < controls.Count
+            Dim control As Control = controls.Item(index)
+            resources.ApplyResources(control, control.Name, cultureInfo)
+
+            For Each c As Control In control.Controls
+                controls.Add(c)
+            Next c
+
+            index += 1
+        End While
+
+        'Iterate through all menu items, and update their text.
+        For Each fieldInfo As FieldInfo In Me.GetType().GetFields(BindingFlags.Instance Or BindingFlags.NonPublic)
+            If fieldInfo.FieldType Is GetType(MenuItem) Then
+                Dim name As String = fieldInfo.Name
+                Dim nameStart As Integer = 0
+                While name(nameStart) = "_"
+                    nameStart += 1
+                End While
+                name = name.Substring(nameStart)
+
+                resources.ApplyResources(fieldInfo.GetValue(Me), name, cultureInfo)
+            End If
+        Next
+
+        Me.ResumeLayout()
     End Sub
 End Class
