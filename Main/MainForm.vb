@@ -61,7 +61,7 @@ Public Class MainForm
         For i As Integer = 0 To EXE6DataList.KeyItemList.Length - 1
             KeyItemLB.SetItemChecked(i, be.KeyItemsFlag(i))
         Next
-        NaviCusCB.SelectedIndex = 0
+        NaviCustCB.SelectedIndex = 0
         SubChipCB.SelectedIndex = 0
         ChipCB.SelectedIndex = 0
         RcCardList.SelectedIndex = 0
@@ -107,7 +107,7 @@ Public Class MainForm
     Private Sub SaveFile(ByVal FileName As String)
 
         CheckTextBox(ZennyTB, be.ZennyValue)
-        CheckTextBox(BugPieceTB, be.BugPieceValue)
+        CheckTextBox(BugFragsTB, be.BugPieceValue)
         CheckTextBox(ChipTB, be.ChipValue)
         ''サブチップ
         CheckTextBox(SubChipTB, be.SubChipValue) '存在フラグ
@@ -115,7 +115,7 @@ Public Class MainForm
         ''改造カード
         CheckTextBox(RcCapacityTB, be.RemodelCardCapacity)
         ''拡張メモリ
-        CheckTextBox(ExtendMemoryTB, be.ExtendMemoryValue)
+        CheckTextBox(ExpandMemoryTB, be.ExtendMemoryValue)
         ''時間
         CheckTextBox(HourTB, be.HourValue)
         CheckTextBox(MinuteTB, be.MinuteValue)
@@ -124,7 +124,7 @@ Public Class MainForm
 
         CheckTextBox(FolderValueTB, be.FolderValue)
         ''ナビカスタマイザー
-        CheckTextBox(NaviCusTB, be.NaviCusValue)
+        CheckTextBox(NaviCustTB, be.NaviCusValue)
 
 
         WriteRemodelCard() '改造カードを書き込む
@@ -229,10 +229,10 @@ Public Class MainForm
 
     'ライブラリ全開→シークレットのみ
     Private Sub MenuItem20_Click(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles MenuItem20.Click
-        For i As Integer = 0 To LibSeacretChipLB.Items.Count - 1
-            LibSeacretChipLB.SetItemChecked(i, True)
+        For i As Integer = 0 To LibSecretChipLB.Items.Count - 1
+            LibSecretChipLB.SetItemChecked(i, True)
         Next
-        LibSeacretChipLB_SelectedIndexChanged(LibSeacretChipLB, New System.EventArgs)
+        LibSeacretChipLB_SelectedIndexChanged(LibSecretChipLB, New System.EventArgs)
     End Sub
 
     'ライブラリ全開→Ｐ．Ａ．のみ
@@ -282,13 +282,13 @@ Public Class MainForm
     End Sub
 
     'ナビカス全て９
-    Private Sub MenuItem14_Click(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles MenuNaviCus.Click
+    Private Sub MenuItem14_Click(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles MenuNaviCust.Click
         For i As Integer = 0 To EXE6DataList.NaviCusName.Length - 1
             be.NaviCusExistFlag(i) = True
             be.NaviCusValue(i) = 9
         Next
-        NaviCusTB.Text = be.NaviCusValue
-        NaviCusCkB.Checked = True
+        NaviCustTB.Text = be.NaviCusValue
+        NaviCustCkB.Checked = True
     End Sub
 
     'キーアイテム全て
@@ -309,9 +309,9 @@ Public Class MainForm
     End Sub
 
     '
-    Private Sub LibSeacretChipLB_SelectedIndexChanged(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles LibSeacretChipLB.SelectedIndexChanged
-        For i As Integer = 0 To LibSeacretChipLB.Items.Count - 1
-            be.LibraryFlag(EXE6DataList.LibSeacretChipFlagList, i) = LibSeacretChipLB.GetItemChecked(i)
+    Private Sub LibSeacretChipLB_SelectedIndexChanged(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles LibSecretChipLB.SelectedIndexChanged
+        For i As Integer = 0 To LibSecretChipLB.Items.Count - 1
+            be.LibraryFlag(EXE6DataList.LibSeacretChipFlagList, i) = LibSecretChipLB.GetItemChecked(i)
         Next
     End Sub
 
@@ -349,8 +349,8 @@ Public Class MainForm
         For i As Integer = 0 To LibraryLB.Items.Count - 1
             LibraryLB.SetItemChecked(i, be.LibraryFlag(EXE6DataList.LibStandardChipFlagList, i))
         Next
-        For i As Integer = 0 To LibSeacretChipLB.Items.Count - 1
-            LibSeacretChipLB.SetItemChecked(i, be.LibraryFlag(EXE6DataList.LibSeacretChipFlagList, i))
+        For i As Integer = 0 To LibSecretChipLB.Items.Count - 1
+            LibSecretChipLB.SetItemChecked(i, be.LibraryFlag(EXE6DataList.LibSeacretChipFlagList, i))
         Next
         For i As Integer = 0 To LibMegaChipLB.Items.Count - 1
             LibMegaChipLB.SetItemChecked(i, be.LibraryFlag(EXE6DataList.LibMegaChipFlagList, i))
@@ -522,9 +522,9 @@ Public Class MainForm
     End Sub
 
     'ナビカス
-    Private Sub NaviCusCB_SelectedIndexChanged(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles NaviCusCB.SelectedIndexChanged
-        be.NaviCusIndex = NaviCusCB.SelectedIndex
-        NaviCusTB.Text = be.NaviCusValue
+    Private Sub NaviCusCB_SelectedIndexChanged(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles NaviCustCB.SelectedIndexChanged
+        be.NaviCusIndex = NaviCustCB.SelectedIndex
+        NaviCustTB.Text = be.NaviCusValue
     End Sub
 
     'キーアイテムの書き込み処理
@@ -572,7 +572,7 @@ Public Class MainForm
     'DataBindingsを追加
     Private Sub SetDatabindings()
         ZennyTB.DataBindings.Add("Text", be, "ZennyValue") 'ZENNY
-        BugPieceTB.DataBindings.Add("Text", be, "BugPieceValue") 'BUGPIECE
+        BugFragsTB.DataBindings.Add("Text", be, "BugPieceValue") 'BUGPIECE
         ChipTB.DataBindings.Add("Text", be, "ChipValue") 'チップ
         'サブチップ
         SubChipTB.DataBindings.Add("Text", be, "SubChipValue") '枚数
@@ -582,8 +582,8 @@ Public Class MainForm
         RcDisplayExistFlagCkB.DataBindings.Add("Checked", be, "RemodelCardDisplayExistFlag")
         RcCapacityTB.DataBindings.Add("Text", be, "RemodelCardCapacity")
         '拡張メモリ
-        ExtendMemoryTB.DataBindings.Add("Text", be, "ExtendMemoryValue")
-        ExtendMemoryCkB.DataBindings.Add("Checked", be, "ExtendMemoryExistFlag")
+        ExpandMemoryTB.DataBindings.Add("Text", be, "ExtendMemoryValue")
+        ExpandMemoryCkB.DataBindings.Add("Checked", be, "ExtendMemoryExistFlag")
         '時間
         HourTB.DataBindings.Add("Text", be, "HourValue")
         MinuteTB.DataBindings.Add("Text", be, "MinuteValue")
@@ -591,16 +591,16 @@ Public Class MainForm
         MsecondTB.DataBindings.Add("Text", be, "MsecondValue")
         FolderValueTB.DataBindings.Add("Text", be, "FolderValue")
         'ナビカスタマイザー
-        NaviCusTB.DataBindings.Add("Text", be, "NaviCusValue")
-        NaviCusCkB.DataBindings.Add("Checked", be, "NaviCusExistFlag")
-        NaviCusExistFlagCkB.DataBindings.Add("Checked", be, "NaviCusDisplayExistFlag")
+        NaviCustTB.DataBindings.Add("Text", be, "NaviCusValue")
+        NaviCustCkB.DataBindings.Add("Checked", be, "NaviCusExistFlag")
+        NaviCustExistFlagCkB.DataBindings.Add("Checked", be, "NaviCusDisplayExistFlag")
         CompressCommandCkB.DataBindings.Add("Checked", be, "CompressCommandFlag")
     End Sub
 
     'DataBindingsを削除
     Private Sub ClearDatabindings()
         ZennyTB.DataBindings.Clear() 'ZENNY
-        BugPieceTB.DataBindings.Clear() 'BUGPIECE
+        BugFragsTB.DataBindings.Clear() 'BUGPIECE
         ChipTB.DataBindings.Clear() 'チップ
         'サブチップ
         SubChipTB.DataBindings.Clear() '枚数
@@ -610,8 +610,8 @@ Public Class MainForm
         RcDisplayExistFlagCkB.DataBindings.Clear()
         RcCapacityTB.DataBindings.Clear()
         '拡張メモリ
-        ExtendMemoryTB.DataBindings.Clear()
-        ExtendMemoryCkB.DataBindings.Clear()
+        ExpandMemoryTB.DataBindings.Clear()
+        ExpandMemoryCkB.DataBindings.Clear()
         '時間
         HourTB.DataBindings.Clear()
         MinuteTB.DataBindings.Clear()
@@ -619,18 +619,18 @@ Public Class MainForm
         MsecondTB.DataBindings.Clear()
         FolderValueTB.DataBindings.Clear()
         'ナビカスタマイザー
-        NaviCusTB.DataBindings.Clear()
-        NaviCusCkB.DataBindings.Clear()
-        NaviCusExistFlagCkB.DataBindings.Clear()
+        NaviCustTB.DataBindings.Clear()
+        NaviCustCkB.DataBindings.Clear()
+        NaviCustExistFlagCkB.DataBindings.Clear()
         CompressCommandCkB.DataBindings.Clear()
     End Sub
 
     'Enabledをまとめて指定
     Private Sub SetEnabled(ByVal enable As Boolean)
-        nomalGB.Enabled = enable
+        normalGB.Enabled = enable
         ChipGB.Enabled = enable
         SubChipGB.Enabled = enable
-        NaviCusGB.Enabled = enable
+        NaviCustGB.Enabled = enable
         RemodelCardGB.Enabled = enable
         KeyItemGB.Enabled = enable
         MenuEdit.Enabled = enable   '編集
@@ -644,7 +644,7 @@ Public Class MainForm
         StandardChipGB.Enabled = enable
         MegaChipGB.Enabled = enable
         GigaChipGB.Enabled = enable
-        SeacretChipGB.Enabled = enable
+        SecretChipGB.Enabled = enable
         PaGB.Enabled = enable
     End Sub
 
@@ -677,7 +677,7 @@ Public Class MainForm
     Private Sub MainForm_Load(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles MyBase.Load
 
         RcCardList.Items.AddRange(EXE6DataList.RemodelCardList)
-        NaviCusCB.Items.AddRange(EXE6DataList.NaviCusName)
+        NaviCustCB.Items.AddRange(EXE6DataList.NaviCusName)
         KeyItemLB.Items.AddRange(EXE6DataList.KeyItemList)
         ChipCB.Items.AddRange(EXE6DataList.ChipNameList)
         ListBox2.Items.AddRange(EXE6DataList.ChipNameList)
@@ -686,7 +686,7 @@ Public Class MainForm
 
         'ライブラリのチップ名を読み込み
         LibraryLB.Items.AddRange(EXE6DataList.LibStandardChipNameList)
-        LibSeacretChipLB.Items.AddRange(EXE6DataList.LibSeacretChipNameList)
+        LibSecretChipLB.Items.AddRange(EXE6DataList.LibSeacretChipNameList)
         LibMegaChipLB.Items.AddRange(EXE6DataList.LibMegaChipNameList)
         LibPaLB.Items.AddRange(EXE6DataList.LibPaNameList)
     End Sub

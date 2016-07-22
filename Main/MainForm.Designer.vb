@@ -37,10 +37,10 @@ Partial Class MainForm
         Me.TabControl1 = New System.Windows.Forms.TabControl()
         Me.TabPage1 = New System.Windows.Forms.TabPage()
         Me.LoadFileName = New System.Windows.Forms.TextBox()
-        Me.nomalGB = New System.Windows.Forms.GroupBox()
+        Me.normalGB = New System.Windows.Forms.GroupBox()
         Me.SecondTB = New System.Windows.Forms.TextBox()
         Me.MinuteTB = New System.Windows.Forms.TextBox()
-        Me.BugPieceTB = New System.Windows.Forms.TextBox()
+        Me.BugFragsTB = New System.Windows.Forms.TextBox()
         Me.HourTB = New System.Windows.Forms.TextBox()
         Me.Label1 = New System.Windows.Forms.Label()
         Me.Label2 = New System.Windows.Forms.Label()
@@ -63,16 +63,16 @@ Partial Class MainForm
         Me.ChipCB = New System.Windows.Forms.ComboBox()
         Me.ChipTB = New System.Windows.Forms.TextBox()
         Me.Label15 = New System.Windows.Forms.Label()
-        Me.NaviCusGB = New System.Windows.Forms.GroupBox()
-        Me.NaviCusExistFlagCkB = New System.Windows.Forms.CheckBox()
-        Me.ExtendMemoryCkB = New System.Windows.Forms.CheckBox()
+        Me.NaviCustGB = New System.Windows.Forms.GroupBox()
+        Me.NaviCustExistFlagCkB = New System.Windows.Forms.CheckBox()
+        Me.ExpandMemoryCkB = New System.Windows.Forms.CheckBox()
         Me.Label9 = New System.Windows.Forms.Label()
-        Me.ExtendMemoryTB = New System.Windows.Forms.TextBox()
+        Me.ExpandMemoryTB = New System.Windows.Forms.TextBox()
         Me.CompressCommandCkB = New System.Windows.Forms.CheckBox()
-        Me.NaviCusCB = New System.Windows.Forms.ComboBox()
+        Me.NaviCustCB = New System.Windows.Forms.ComboBox()
         Me.Label7 = New System.Windows.Forms.Label()
-        Me.NaviCusTB = New System.Windows.Forms.TextBox()
-        Me.NaviCusCkB = New System.Windows.Forms.CheckBox()
+        Me.NaviCustTB = New System.Windows.Forms.TextBox()
+        Me.NaviCustCkB = New System.Windows.Forms.CheckBox()
         Me.Label8 = New System.Windows.Forms.Label()
         Me.Label18 = New System.Windows.Forms.Label()
         Me.TabPage3 = New System.Windows.Forms.TabPage()
@@ -82,8 +82,8 @@ Partial Class MainForm
         Me.LibMegaChipLB = New System.Windows.Forms.CheckedListBox()
         Me.GigaChipGB = New System.Windows.Forms.GroupBox()
         Me.LibGigaChipLB = New System.Windows.Forms.CheckedListBox()
-        Me.SeacretChipGB = New System.Windows.Forms.GroupBox()
-        Me.LibSeacretChipLB = New System.Windows.Forms.CheckedListBox()
+        Me.SecretChipGB = New System.Windows.Forms.GroupBox()
+        Me.LibSecretChipLB = New System.Windows.Forms.CheckedListBox()
         Me.StandardChipGB = New System.Windows.Forms.GroupBox()
         Me.LibraryLB = New System.Windows.Forms.CheckedListBox()
         Me.TabPage2 = New System.Windows.Forms.TabPage()
@@ -131,7 +131,7 @@ Partial Class MainForm
         Me.MenuItem2 = New System.Windows.Forms.MenuItem()
         Me.MenuChip = New System.Windows.Forms.MenuItem()
         Me.MenuSubChip = New System.Windows.Forms.MenuItem()
-        Me.MenuNaviCus = New System.Windows.Forms.MenuItem()
+        Me.MenuNaviCust = New System.Windows.Forms.MenuItem()
         Me.MenuKeyItem = New System.Windows.Forms.MenuItem()
         Me.MenuHelp = New System.Windows.Forms.MenuItem()
         Me.MenuVersionInfo = New System.Windows.Forms.MenuItem()
@@ -139,15 +139,15 @@ Partial Class MainForm
         Me.FolderGB.SuspendLayout()
         Me.TabControl1.SuspendLayout()
         Me.TabPage1.SuspendLayout()
-        Me.nomalGB.SuspendLayout()
+        Me.normalGB.SuspendLayout()
         Me.SubChipGB.SuspendLayout()
         Me.ChipGB.SuspendLayout()
-        Me.NaviCusGB.SuspendLayout()
+        Me.NaviCustGB.SuspendLayout()
         Me.TabPage3.SuspendLayout()
         Me.PaGB.SuspendLayout()
         Me.MegaChipGB.SuspendLayout()
         Me.GigaChipGB.SuspendLayout()
-        Me.SeacretChipGB.SuspendLayout()
+        Me.SecretChipGB.SuspendLayout()
         Me.StandardChipGB.SuspendLayout()
         Me.TabPage2.SuspendLayout()
         Me.RemodelCardGB.SuspendLayout()
@@ -249,12 +249,12 @@ Partial Class MainForm
         'TabPage1
         '
         Me.TabPage1.Controls.Add(Me.LoadFileName)
-        Me.TabPage1.Controls.Add(Me.nomalGB)
+        Me.TabPage1.Controls.Add(Me.normalGB)
         Me.TabPage1.Controls.Add(Me.SubChipGB)
         Me.TabPage1.Controls.Add(Me.ChipGB)
         Me.TabPage1.Controls.Add(Me.FolderGB)
         Me.TabPage1.Controls.Add(Me.StatusDisplay)
-        Me.TabPage1.Controls.Add(Me.NaviCusGB)
+        Me.TabPage1.Controls.Add(Me.NaviCustGB)
         Me.TabPage1.Controls.Add(Me.Label18)
         resources.ApplyResources(Me.TabPage1, "TabPage1")
         Me.TabPage1.Name = "TabPage1"
@@ -265,23 +265,23 @@ Partial Class MainForm
         Me.LoadFileName.Name = "LoadFileName"
         Me.LoadFileName.ReadOnly = True
         '
-        'nomalGB
+        'normalGB
         '
-        Me.nomalGB.Controls.Add(Me.SecondTB)
-        Me.nomalGB.Controls.Add(Me.MinuteTB)
-        Me.nomalGB.Controls.Add(Me.BugPieceTB)
-        Me.nomalGB.Controls.Add(Me.HourTB)
-        Me.nomalGB.Controls.Add(Me.Label1)
-        Me.nomalGB.Controls.Add(Me.Label2)
-        Me.nomalGB.Controls.Add(Me.ZennyTB)
-        Me.nomalGB.Controls.Add(Me.Label13)
-        Me.nomalGB.Controls.Add(Me.Label12)
-        Me.nomalGB.Controls.Add(Me.Label11)
-        Me.nomalGB.Controls.Add(Me.Label10)
-        Me.nomalGB.Controls.Add(Me.MsecondTB)
-        resources.ApplyResources(Me.nomalGB, "nomalGB")
-        Me.nomalGB.Name = "nomalGB"
-        Me.nomalGB.TabStop = False
+        Me.normalGB.Controls.Add(Me.SecondTB)
+        Me.normalGB.Controls.Add(Me.MinuteTB)
+        Me.normalGB.Controls.Add(Me.BugFragsTB)
+        Me.normalGB.Controls.Add(Me.HourTB)
+        Me.normalGB.Controls.Add(Me.Label1)
+        Me.normalGB.Controls.Add(Me.Label2)
+        Me.normalGB.Controls.Add(Me.ZennyTB)
+        Me.normalGB.Controls.Add(Me.Label13)
+        Me.normalGB.Controls.Add(Me.Label12)
+        Me.normalGB.Controls.Add(Me.Label11)
+        Me.normalGB.Controls.Add(Me.Label10)
+        Me.normalGB.Controls.Add(Me.MsecondTB)
+        resources.ApplyResources(Me.normalGB, "normalGB")
+        Me.normalGB.Name = "normalGB"
+        Me.normalGB.TabStop = False
         '
         'SecondTB
         '
@@ -293,10 +293,10 @@ Partial Class MainForm
         resources.ApplyResources(Me.MinuteTB, "MinuteTB")
         Me.MinuteTB.Name = "MinuteTB"
         '
-        'BugPieceTB
+        'BugFragsTB
         '
-        resources.ApplyResources(Me.BugPieceTB, "BugPieceTB")
-        Me.BugPieceTB.Name = "BugPieceTB"
+        resources.ApplyResources(Me.BugFragsTB, "BugFragsTB")
+        Me.BugFragsTB.Name = "BugFragsTB"
         '
         'HourTB
         '
@@ -434,31 +434,31 @@ Partial Class MainForm
         resources.ApplyResources(Me.Label15, "Label15")
         Me.Label15.Name = "Label15"
         '
-        'NaviCusGB
+        'NaviCustGB
         '
-        Me.NaviCusGB.Controls.Add(Me.NaviCusExistFlagCkB)
-        Me.NaviCusGB.Controls.Add(Me.ExtendMemoryCkB)
-        Me.NaviCusGB.Controls.Add(Me.Label9)
-        Me.NaviCusGB.Controls.Add(Me.ExtendMemoryTB)
-        Me.NaviCusGB.Controls.Add(Me.CompressCommandCkB)
-        Me.NaviCusGB.Controls.Add(Me.NaviCusCB)
-        Me.NaviCusGB.Controls.Add(Me.Label7)
-        Me.NaviCusGB.Controls.Add(Me.NaviCusTB)
-        Me.NaviCusGB.Controls.Add(Me.NaviCusCkB)
-        Me.NaviCusGB.Controls.Add(Me.Label8)
-        resources.ApplyResources(Me.NaviCusGB, "NaviCusGB")
-        Me.NaviCusGB.Name = "NaviCusGB"
-        Me.NaviCusGB.TabStop = False
+        Me.NaviCustGB.Controls.Add(Me.NaviCustExistFlagCkB)
+        Me.NaviCustGB.Controls.Add(Me.ExpandMemoryCkB)
+        Me.NaviCustGB.Controls.Add(Me.Label9)
+        Me.NaviCustGB.Controls.Add(Me.ExpandMemoryTB)
+        Me.NaviCustGB.Controls.Add(Me.CompressCommandCkB)
+        Me.NaviCustGB.Controls.Add(Me.NaviCustCB)
+        Me.NaviCustGB.Controls.Add(Me.Label7)
+        Me.NaviCustGB.Controls.Add(Me.NaviCustTB)
+        Me.NaviCustGB.Controls.Add(Me.NaviCustCkB)
+        Me.NaviCustGB.Controls.Add(Me.Label8)
+        resources.ApplyResources(Me.NaviCustGB, "NaviCustGB")
+        Me.NaviCustGB.Name = "NaviCustGB"
+        Me.NaviCustGB.TabStop = False
         '
-        'NaviCusExistFlagCkB
+        'NaviCustExistFlagCkB
         '
-        resources.ApplyResources(Me.NaviCusExistFlagCkB, "NaviCusExistFlagCkB")
-        Me.NaviCusExistFlagCkB.Name = "NaviCusExistFlagCkB"
+        resources.ApplyResources(Me.NaviCustExistFlagCkB, "NaviCustExistFlagCkB")
+        Me.NaviCustExistFlagCkB.Name = "NaviCustExistFlagCkB"
         '
-        'ExtendMemoryCkB
+        'ExpandMemoryCkB
         '
-        resources.ApplyResources(Me.ExtendMemoryCkB, "ExtendMemoryCkB")
-        Me.ExtendMemoryCkB.Name = "ExtendMemoryCkB"
+        resources.ApplyResources(Me.ExpandMemoryCkB, "ExpandMemoryCkB")
+        Me.ExpandMemoryCkB.Name = "ExpandMemoryCkB"
         '
         'Label9
         '
@@ -466,22 +466,22 @@ Partial Class MainForm
         resources.ApplyResources(Me.Label9, "Label9")
         Me.Label9.Name = "Label9"
         '
-        'ExtendMemoryTB
+        'ExpandMemoryTB
         '
-        resources.ApplyResources(Me.ExtendMemoryTB, "ExtendMemoryTB")
-        Me.ExtendMemoryTB.Name = "ExtendMemoryTB"
+        resources.ApplyResources(Me.ExpandMemoryTB, "ExpandMemoryTB")
+        Me.ExpandMemoryTB.Name = "ExpandMemoryTB"
         '
         'CompressCommandCkB
         '
         resources.ApplyResources(Me.CompressCommandCkB, "CompressCommandCkB")
         Me.CompressCommandCkB.Name = "CompressCommandCkB"
         '
-        'NaviCusCB
+        'NaviCustCB
         '
-        Me.NaviCusCB.ContextMenu = Me.FindCM
-        Me.NaviCusCB.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList
-        resources.ApplyResources(Me.NaviCusCB, "NaviCusCB")
-        Me.NaviCusCB.Name = "NaviCusCB"
+        Me.NaviCustCB.ContextMenu = Me.FindCM
+        Me.NaviCustCB.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList
+        resources.ApplyResources(Me.NaviCustCB, "NaviCustCB")
+        Me.NaviCustCB.Name = "NaviCustCB"
         '
         'Label7
         '
@@ -489,15 +489,15 @@ Partial Class MainForm
         resources.ApplyResources(Me.Label7, "Label7")
         Me.Label7.Name = "Label7"
         '
-        'NaviCusTB
+        'NaviCustTB
         '
-        resources.ApplyResources(Me.NaviCusTB, "NaviCusTB")
-        Me.NaviCusTB.Name = "NaviCusTB"
+        resources.ApplyResources(Me.NaviCustTB, "NaviCustTB")
+        Me.NaviCustTB.Name = "NaviCustTB"
         '
-        'NaviCusCkB
+        'NaviCustCkB
         '
-        resources.ApplyResources(Me.NaviCusCkB, "NaviCusCkB")
-        Me.NaviCusCkB.Name = "NaviCusCkB"
+        resources.ApplyResources(Me.NaviCustCkB, "NaviCustCkB")
+        Me.NaviCustCkB.Name = "NaviCustCkB"
         '
         'Label8
         '
@@ -516,7 +516,7 @@ Partial Class MainForm
         Me.TabPage3.Controls.Add(Me.PaGB)
         Me.TabPage3.Controls.Add(Me.MegaChipGB)
         Me.TabPage3.Controls.Add(Me.GigaChipGB)
-        Me.TabPage3.Controls.Add(Me.SeacretChipGB)
+        Me.TabPage3.Controls.Add(Me.SecretChipGB)
         Me.TabPage3.Controls.Add(Me.StandardChipGB)
         resources.ApplyResources(Me.TabPage3, "TabPage3")
         Me.TabPage3.Name = "TabPage3"
@@ -563,19 +563,19 @@ Partial Class MainForm
         resources.ApplyResources(Me.LibGigaChipLB, "LibGigaChipLB")
         Me.LibGigaChipLB.Name = "LibGigaChipLB"
         '
-        'SeacretChipGB
+        'SecretChipGB
         '
-        Me.SeacretChipGB.Controls.Add(Me.LibSeacretChipLB)
-        resources.ApplyResources(Me.SeacretChipGB, "SeacretChipGB")
-        Me.SeacretChipGB.Name = "SeacretChipGB"
-        Me.SeacretChipGB.TabStop = False
+        Me.SecretChipGB.Controls.Add(Me.LibSecretChipLB)
+        resources.ApplyResources(Me.SecretChipGB, "SecretChipGB")
+        Me.SecretChipGB.Name = "SecretChipGB"
+        Me.SecretChipGB.TabStop = False
         '
-        'LibSeacretChipLB
+        'LibSecretChipLB
         '
-        Me.LibSeacretChipLB.CheckOnClick = True
-        Me.LibSeacretChipLB.ContextMenu = Me.FindCM
-        resources.ApplyResources(Me.LibSeacretChipLB, "LibSeacretChipLB")
-        Me.LibSeacretChipLB.Name = "LibSeacretChipLB"
+        Me.LibSecretChipLB.CheckOnClick = True
+        Me.LibSecretChipLB.ContextMenu = Me.FindCM
+        resources.ApplyResources(Me.LibSecretChipLB, "LibSecretChipLB")
+        Me.LibSecretChipLB.Name = "LibSecretChipLB"
         '
         'StandardChipGB
         '
@@ -764,7 +764,7 @@ Partial Class MainForm
         '
         resources.ApplyResources(Me.MenuEdit, "MenuEdit")
         Me.MenuEdit.Index = 1
-        Me.MenuEdit.MenuItems.AddRange(New System.Windows.Forms.MenuItem() {Me.MenuLibrary, Me.MenuDoubleBeast, Me.MenuBeast, Me.MenuChip, Me.MenuSubChip, Me.MenuNaviCus, Me.MenuKeyItem})
+        Me.MenuEdit.MenuItems.AddRange(New System.Windows.Forms.MenuItem() {Me.MenuLibrary, Me.MenuDoubleBeast, Me.MenuBeast, Me.MenuChip, Me.MenuSubChip, Me.MenuNaviCust, Me.MenuKeyItem})
         '
         'MenuLibrary
         '
@@ -844,10 +844,10 @@ Partial Class MainForm
         Me.MenuSubChip.Index = 4
         resources.ApplyResources(Me.MenuSubChip, "MenuSubChip")
         '
-        'MenuNaviCus
+        'MenuNaviCust
         '
-        Me.MenuNaviCus.Index = 5
-        resources.ApplyResources(Me.MenuNaviCus, "MenuNaviCus")
+        Me.MenuNaviCust.Index = 5
+        resources.ApplyResources(Me.MenuNaviCust, "MenuNaviCust")
         '
         'MenuKeyItem
         '
@@ -884,19 +884,19 @@ Partial Class MainForm
         Me.TabControl1.ResumeLayout(False)
         Me.TabPage1.ResumeLayout(False)
         Me.TabPage1.PerformLayout()
-        Me.nomalGB.ResumeLayout(False)
-        Me.nomalGB.PerformLayout()
+        Me.normalGB.ResumeLayout(False)
+        Me.normalGB.PerformLayout()
         Me.SubChipGB.ResumeLayout(False)
         Me.SubChipGB.PerformLayout()
         Me.ChipGB.ResumeLayout(False)
         Me.ChipGB.PerformLayout()
-        Me.NaviCusGB.ResumeLayout(False)
-        Me.NaviCusGB.PerformLayout()
+        Me.NaviCustGB.ResumeLayout(False)
+        Me.NaviCustGB.PerformLayout()
         Me.TabPage3.ResumeLayout(False)
         Me.PaGB.ResumeLayout(False)
         Me.MegaChipGB.ResumeLayout(False)
         Me.GigaChipGB.ResumeLayout(False)
-        Me.SeacretChipGB.ResumeLayout(False)
+        Me.SecretChipGB.ResumeLayout(False)
         Me.StandardChipGB.ResumeLayout(False)
         Me.TabPage2.ResumeLayout(False)
         Me.RemodelCardGB.ResumeLayout(False)
@@ -922,10 +922,10 @@ Partial Class MainForm
     Friend WithEvents TabControl1 As System.Windows.Forms.TabControl
     Friend WithEvents TabPage1 As System.Windows.Forms.TabPage
     Friend WithEvents LoadFileName As System.Windows.Forms.TextBox
-    Friend WithEvents nomalGB As System.Windows.Forms.GroupBox
+    Friend WithEvents normalGB As System.Windows.Forms.GroupBox
     Friend WithEvents SecondTB As System.Windows.Forms.TextBox
     Friend WithEvents MinuteTB As System.Windows.Forms.TextBox
-    Friend WithEvents BugPieceTB As System.Windows.Forms.TextBox
+    Friend WithEvents BugFragsTB As System.Windows.Forms.TextBox
     Friend WithEvents HourTB As System.Windows.Forms.TextBox
     Friend WithEvents Label1 As System.Windows.Forms.Label
     Friend WithEvents Label2 As System.Windows.Forms.Label
@@ -948,16 +948,16 @@ Partial Class MainForm
     Friend WithEvents ChipCB As System.Windows.Forms.ComboBox
     Friend WithEvents ChipTB As System.Windows.Forms.TextBox
     Friend WithEvents Label15 As System.Windows.Forms.Label
-    Friend WithEvents NaviCusGB As System.Windows.Forms.GroupBox
-    Friend WithEvents NaviCusExistFlagCkB As System.Windows.Forms.CheckBox
-    Friend WithEvents ExtendMemoryCkB As System.Windows.Forms.CheckBox
+    Friend WithEvents NaviCustGB As System.Windows.Forms.GroupBox
+    Friend WithEvents NaviCustExistFlagCkB As System.Windows.Forms.CheckBox
+    Friend WithEvents ExpandMemoryCkB As System.Windows.Forms.CheckBox
     Friend WithEvents Label9 As System.Windows.Forms.Label
-    Friend WithEvents ExtendMemoryTB As System.Windows.Forms.TextBox
+    Friend WithEvents ExpandMemoryTB As System.Windows.Forms.TextBox
     Friend WithEvents CompressCommandCkB As System.Windows.Forms.CheckBox
-    Friend WithEvents NaviCusCB As System.Windows.Forms.ComboBox
+    Friend WithEvents NaviCustCB As System.Windows.Forms.ComboBox
     Friend WithEvents Label7 As System.Windows.Forms.Label
-    Friend WithEvents NaviCusTB As System.Windows.Forms.TextBox
-    Friend WithEvents NaviCusCkB As System.Windows.Forms.CheckBox
+    Friend WithEvents NaviCustTB As System.Windows.Forms.TextBox
+    Friend WithEvents NaviCustCkB As System.Windows.Forms.CheckBox
     Friend WithEvents Label8 As System.Windows.Forms.Label
     Friend WithEvents Label18 As System.Windows.Forms.Label
     Friend WithEvents TabPage3 As System.Windows.Forms.TabPage
@@ -967,8 +967,8 @@ Partial Class MainForm
     Friend WithEvents LibMegaChipLB As System.Windows.Forms.CheckedListBox
     Friend WithEvents GigaChipGB As System.Windows.Forms.GroupBox
     Friend WithEvents LibGigaChipLB As System.Windows.Forms.CheckedListBox
-    Friend WithEvents SeacretChipGB As System.Windows.Forms.GroupBox
-    Friend WithEvents LibSeacretChipLB As System.Windows.Forms.CheckedListBox
+    Friend WithEvents SecretChipGB As System.Windows.Forms.GroupBox
+    Friend WithEvents LibSecretChipLB As System.Windows.Forms.CheckedListBox
     Friend WithEvents StandardChipGB As System.Windows.Forms.GroupBox
     Friend WithEvents LibraryLB As System.Windows.Forms.CheckedListBox
     Friend WithEvents TabPage2 As System.Windows.Forms.TabPage
@@ -1013,7 +1013,7 @@ Partial Class MainForm
     Friend WithEvents MenuItem8 As System.Windows.Forms.MenuItem
     Friend WithEvents MenuChip As System.Windows.Forms.MenuItem
     Friend WithEvents MenuSubChip As System.Windows.Forms.MenuItem
-    Friend WithEvents MenuNaviCus As System.Windows.Forms.MenuItem
+    Friend WithEvents MenuNaviCust As System.Windows.Forms.MenuItem
     Friend WithEvents MenuKeyItem As System.Windows.Forms.MenuItem
     Friend WithEvents MenuHelp As System.Windows.Forms.MenuItem
     Friend WithEvents MenuVersionInfo As System.Windows.Forms.MenuItem

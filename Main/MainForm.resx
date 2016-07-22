@@ -448,7 +448,7 @@
     <value>System.Windows.Forms.TextBox, System.Windows.Forms, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </data>
   <data name="&gt;&gt;SecondTB.Parent" xml:space="preserve">
-    <value>nomalGB</value>
+    <value>normalGB</value>
   </data>
   <data name="&gt;&gt;SecondTB.ZOrder" xml:space="preserve">
     <value>0</value>
@@ -472,33 +472,33 @@
     <value>System.Windows.Forms.TextBox, System.Windows.Forms, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </data>
   <data name="&gt;&gt;MinuteTB.Parent" xml:space="preserve">
-    <value>nomalGB</value>
+    <value>normalGB</value>
   </data>
   <data name="&gt;&gt;MinuteTB.ZOrder" xml:space="preserve">
     <value>1</value>
   </data>
-  <data name="BugPieceTB.Location" type="System.Drawing.Point, System.Drawing">
+  <data name="BugFragsTB.Location" type="System.Drawing.Point, System.Drawing">
     <value>104, 43</value>
   </data>
-  <data name="BugPieceTB.MaxLength" type="System.Int32, mscorlib">
+  <data name="BugFragsTB.MaxLength" type="System.Int32, mscorlib">
     <value>4</value>
   </data>
-  <data name="BugPieceTB.Size" type="System.Drawing.Size, System.Drawing">
+  <data name="BugFragsTB.Size" type="System.Drawing.Size, System.Drawing">
     <value>100, 20</value>
   </data>
-  <data name="BugPieceTB.TabIndex" type="System.Int32, mscorlib">
+  <data name="BugFragsTB.TabIndex" type="System.Int32, mscorlib">
     <value>4</value>
   </data>
-  <data name="&gt;&gt;BugPieceTB.Name" xml:space="preserve">
-    <value>BugPieceTB</value>
+  <data name="&gt;&gt;BugFragsTB.Name" xml:space="preserve">
+    <value>BugFragsTB</value>
   </data>
-  <data name="&gt;&gt;BugPieceTB.Type" xml:space="preserve">
+  <data name="&gt;&gt;BugFragsTB.Type" xml:space="preserve">
     <value>System.Windows.Forms.TextBox, System.Windows.Forms, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </data>
-  <data name="&gt;&gt;BugPieceTB.Parent" xml:space="preserve">
-    <value>nomalGB</value>
+  <data name="&gt;&gt;BugFragsTB.Parent" xml:space="preserve">
+    <value>normalGB</value>
   </data>
-  <data name="&gt;&gt;BugPieceTB.ZOrder" xml:space="preserve">
+  <data name="&gt;&gt;BugFragsTB.ZOrder" xml:space="preserve">
     <value>2</value>
   </data>
   <data name="HourTB.Location" type="System.Drawing.Point, System.Drawing">
@@ -520,7 +520,7 @@
     <value>System.Windows.Forms.TextBox, System.Windows.Forms, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </data>
   <data name="&gt;&gt;HourTB.Parent" xml:space="preserve">
-    <value>nomalGB</value>
+    <value>normalGB</value>
   </data>
   <data name="&gt;&gt;HourTB.ZOrder" xml:space="preserve">
     <value>3</value>
@@ -547,7 +547,7 @@
     <value>System.Windows.Forms.Label, System.Windows.Forms, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </data>
   <data name="&gt;&gt;Label1.Parent" xml:space="preserve">
-    <value>nomalGB</value>
+    <value>normalGB</value>
   </data>
   <data name="&gt;&gt;Label1.ZOrder" xml:space="preserve">
     <value>4</value>
@@ -574,7 +574,7 @@
     <value>System.Windows.Forms.Label, System.Windows.Forms, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </data>
   <data name="&gt;&gt;Label2.Parent" xml:space="preserve">
-    <value>nomalGB</value>
+    <value>normalGB</value>
   </data>
   <data name="&gt;&gt;Label2.ZOrder" xml:space="preserve">
     <value>5</value>
@@ -598,7 +598,7 @@
     <value>System.Windows.Forms.TextBox, System.Windows.Forms, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </data>
   <data name="&gt;&gt;ZennyTB.Parent" xml:space="preserve">
-    <value>nomalGB</value>
+    <value>normalGB</value>
   </data>
   <data name="&gt;&gt;ZennyTB.ZOrder" xml:space="preserve">
     <value>6</value>
@@ -625,7 +625,7 @@
     <value>System.Windows.Forms.Label, System.Windows.Forms, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </data>
   <data name="&gt;&gt;Label13.Parent" xml:space="preserve">
-    <value>nomalGB</value>
+    <value>normalGB</value>
   </data>
   <data name="&gt;&gt;Label13.ZOrder" xml:space="preserve">
     <value>7</value>
@@ -652,7 +652,7 @@
     <value>System.Windows.Forms.Label, System.Windows.Forms, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </data>
   <data name="&gt;&gt;Label12.Parent" xml:space="preserve">
-    <value>nomalGB</value>
+    <value>normalGB</value>
   </data>
   <data name="&gt;&gt;Label12.ZOrder" xml:space="preserve">
     <value>8</value>
@@ -679,7 +679,7 @@
     <value>System.Windows.Forms.Label, System.Windows.Forms, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </data>
   <data name="&gt;&gt;Label11.Parent" xml:space="preserve">
-    <value>nomalGB</value>
+    <value>normalGB</value>
   </data>
   <data name="&gt;&gt;Label11.ZOrder" xml:space="preserve">
     <value>9</value>
@@ -706,7 +706,7 @@
     <value>System.Windows.Forms.Label, System.Windows.Forms, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </data>
   <data name="&gt;&gt;Label10.Parent" xml:space="preserve">
-    <value>nomalGB</value>
+    <value>normalGB</value>
   </data>
   <data name="&gt;&gt;Label10.ZOrder" xml:space="preserve">
     <value>10</value>
@@ -730,36 +730,36 @@
     <value>System.Windows.Forms.TextBox, System.Windows.Forms, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </data>
   <data name="&gt;&gt;MsecondTB.Parent" xml:space="preserve">
-    <value>nomalGB</value>
+    <value>normalGB</value>
   </data>
   <data name="&gt;&gt;MsecondTB.ZOrder" xml:space="preserve">
     <value>11</value>
   </data>
-  <data name="nomalGB.Enabled" type="System.Boolean, mscorlib">
+  <data name="normalGB.Enabled" type="System.Boolean, mscorlib">
     <value>False</value>
   </data>
-  <data name="nomalGB.Location" type="System.Drawing.Point, System.Drawing">
+  <data name="normalGB.Location" type="System.Drawing.Point, System.Drawing">
     <value>8, 9</value>
   </data>
-  <data name="nomalGB.Size" type="System.Drawing.Size, System.Drawing">
+  <data name="normalGB.Size" type="System.Drawing.Size, System.Drawing">
     <value>232, 104</value>
   </data>
-  <data name="nomalGB.TabIndex" type="System.Int32, mscorlib">
+  <data name="normalGB.TabIndex" type="System.Int32, mscorlib">
     <value>42</value>
   </data>
-  <data name="nomalGB.Text" xml:space="preserve">
+  <data name="normalGB.Text" xml:space="preserve">
     <value>General</value>
   </data>
-  <data name="&gt;&gt;nomalGB.Name" xml:space="preserve">
-    <value>nomalGB</value>
+  <data name="&gt;&gt;normalGB.Name" xml:space="preserve">
+    <value>normalGB</value>
   </data>
-  <data name="&gt;&gt;nomalGB.Type" xml:space="preserve">
+  <data name="&gt;&gt;normalGB.Type" xml:space="preserve">
     <value>System.Windows.Forms.GroupBox, System.Windows.Forms, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </data>
-  <data name="&gt;&gt;nomalGB.Parent" xml:space="preserve">
+  <data name="&gt;&gt;normalGB.Parent" xml:space="preserve">
     <value>TabPage1</value>
   </data>
-  <data name="&gt;&gt;nomalGB.ZOrder" xml:space="preserve">
+  <data name="&gt;&gt;normalGB.ZOrder" xml:space="preserve">
     <value>1</value>
   </data>
   <data name="MaxOfSubchipNumTB.Location" type="System.Drawing.Point, System.Drawing">
@@ -1101,52 +1101,52 @@
   <data name="&gt;&gt;ChipGB.ZOrder" xml:space="preserve">
     <value>3</value>
   </data>
-  <data name="NaviCusExistFlagCkB.Location" type="System.Drawing.Point, System.Drawing">
+  <data name="NaviCustExistFlagCkB.Location" type="System.Drawing.Point, System.Drawing">
     <value>104, 43</value>
   </data>
-  <data name="NaviCusExistFlagCkB.Size" type="System.Drawing.Size, System.Drawing">
+  <data name="NaviCustExistFlagCkB.Size" type="System.Drawing.Size, System.Drawing">
     <value>112, 21</value>
   </data>
-  <data name="NaviCusExistFlagCkB.TabIndex" type="System.Int32, mscorlib">
+  <data name="NaviCustExistFlagCkB.TabIndex" type="System.Int32, mscorlib">
     <value>29</value>
   </data>
-  <data name="NaviCusExistFlagCkB.Text" xml:space="preserve">
+  <data name="NaviCustExistFlagCkB.Text" xml:space="preserve">
     <value>NaviCust screen</value>
   </data>
-  <data name="&gt;&gt;NaviCusExistFlagCkB.Name" xml:space="preserve">
-    <value>NaviCusExistFlagCkB</value>
+  <data name="&gt;&gt;NaviCustExistFlagCkB.Name" xml:space="preserve">
+    <value>NaviCustExistFlagCkB</value>
   </data>
-  <data name="&gt;&gt;NaviCusExistFlagCkB.Type" xml:space="preserve">
+  <data name="&gt;&gt;NaviCustExistFlagCkB.Type" xml:space="preserve">
     <value>System.Windows.Forms.CheckBox, System.Windows.Forms, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </data>
-  <data name="&gt;&gt;NaviCusExistFlagCkB.Parent" xml:space="preserve">
-    <value>NaviCusGB</value>
+  <data name="&gt;&gt;NaviCustExistFlagCkB.Parent" xml:space="preserve">
+    <value>NaviCustGB</value>
   </data>
-  <data name="&gt;&gt;NaviCusExistFlagCkB.ZOrder" xml:space="preserve">
+  <data name="&gt;&gt;NaviCustExistFlagCkB.ZOrder" xml:space="preserve">
     <value>0</value>
   </data>
-  <data name="ExtendMemoryCkB.Location" type="System.Drawing.Point, System.Drawing">
+  <data name="ExpandMemoryCkB.Location" type="System.Drawing.Point, System.Drawing">
     <value>144, 17</value>
   </data>
-  <data name="ExtendMemoryCkB.Size" type="System.Drawing.Size, System.Drawing">
+  <data name="ExpandMemoryCkB.Size" type="System.Drawing.Size, System.Drawing">
     <value>80, 21</value>
   </data>
-  <data name="ExtendMemoryCkB.TabIndex" type="System.Int32, mscorlib">
+  <data name="ExpandMemoryCkB.TabIndex" type="System.Int32, mscorlib">
     <value>28</value>
   </data>
-  <data name="ExtendMemoryCkB.Text" xml:space="preserve">
+  <data name="ExpandMemoryCkB.Text" xml:space="preserve">
     <value>Unlocked</value>
   </data>
-  <data name="&gt;&gt;ExtendMemoryCkB.Name" xml:space="preserve">
-    <value>ExtendMemoryCkB</value>
+  <data name="&gt;&gt;ExpandMemoryCkB.Name" xml:space="preserve">
+    <value>ExpandMemoryCkB</value>
   </data>
-  <data name="&gt;&gt;ExtendMemoryCkB.Type" xml:space="preserve">
+  <data name="&gt;&gt;ExpandMemoryCkB.Type" xml:space="preserve">
     <value>System.Windows.Forms.CheckBox, System.Windows.Forms, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </data>
-  <data name="&gt;&gt;ExtendMemoryCkB.Parent" xml:space="preserve">
-    <value>NaviCusGB</value>
+  <data name="&gt;&gt;ExpandMemoryCkB.Parent" xml:space="preserve">
+    <value>NaviCustGB</value>
   </data>
-  <data name="&gt;&gt;ExtendMemoryCkB.ZOrder" xml:space="preserve">
+  <data name="&gt;&gt;ExpandMemoryCkB.ZOrder" xml:space="preserve">
     <value>1</value>
   </data>
   <data name="Label9.Location" type="System.Drawing.Point, System.Drawing">
@@ -1171,30 +1171,30 @@
     <value>System.Windows.Forms.Label, System.Windows.Forms, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </data>
   <data name="&gt;&gt;Label9.Parent" xml:space="preserve">
-    <value>NaviCusGB</value>
+    <value>NaviCustGB</value>
   </data>
   <data name="&gt;&gt;Label9.ZOrder" xml:space="preserve">
     <value>2</value>
   </data>
-  <data name="ExtendMemoryTB.Location" type="System.Drawing.Point, System.Drawing">
+  <data name="ExpandMemoryTB.Location" type="System.Drawing.Point, System.Drawing">
     <value>88, 17</value>
   </data>
-  <data name="ExtendMemoryTB.Size" type="System.Drawing.Size, System.Drawing">
+  <data name="ExpandMemoryTB.Size" type="System.Drawing.Size, System.Drawing">
     <value>48, 20</value>
   </data>
-  <data name="ExtendMemoryTB.TabIndex" type="System.Int32, mscorlib">
+  <data name="ExpandMemoryTB.TabIndex" type="System.Int32, mscorlib">
     <value>27</value>
   </data>
-  <data name="&gt;&gt;ExtendMemoryTB.Name" xml:space="preserve">
-    <value>ExtendMemoryTB</value>
+  <data name="&gt;&gt;ExpandMemoryTB.Name" xml:space="preserve">
+    <value>ExpandMemoryTB</value>
   </data>
-  <data name="&gt;&gt;ExtendMemoryTB.Type" xml:space="preserve">
+  <data name="&gt;&gt;ExpandMemoryTB.Type" xml:space="preserve">
     <value>System.Windows.Forms.TextBox, System.Windows.Forms, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </data>
-  <data name="&gt;&gt;ExtendMemoryTB.Parent" xml:space="preserve">
-    <value>NaviCusGB</value>
+  <data name="&gt;&gt;ExpandMemoryTB.Parent" xml:space="preserve">
+    <value>NaviCustGB</value>
   </data>
-  <data name="&gt;&gt;ExtendMemoryTB.ZOrder" xml:space="preserve">
+  <data name="&gt;&gt;ExpandMemoryTB.ZOrder" xml:space="preserve">
     <value>3</value>
   </data>
   <data name="CompressCommandCkB.Location" type="System.Drawing.Point, System.Drawing">
@@ -1216,30 +1216,30 @@
     <value>System.Windows.Forms.CheckBox, System.Windows.Forms, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </data>
   <data name="&gt;&gt;CompressCommandCkB.Parent" xml:space="preserve">
-    <value>NaviCusGB</value>
+    <value>NaviCustGB</value>
   </data>
   <data name="&gt;&gt;CompressCommandCkB.ZOrder" xml:space="preserve">
     <value>4</value>
   </data>
-  <data name="NaviCusCB.Location" type="System.Drawing.Point, System.Drawing">
+  <data name="NaviCustCB.Location" type="System.Drawing.Point, System.Drawing">
     <value>104, 69</value>
   </data>
-  <data name="NaviCusCB.Size" type="System.Drawing.Size, System.Drawing">
+  <data name="NaviCustCB.Size" type="System.Drawing.Size, System.Drawing">
     <value>121, 21</value>
   </data>
-  <data name="NaviCusCB.TabIndex" type="System.Int32, mscorlib">
+  <data name="NaviCustCB.TabIndex" type="System.Int32, mscorlib">
     <value>21</value>
   </data>
-  <data name="&gt;&gt;NaviCusCB.Name" xml:space="preserve">
-    <value>NaviCusCB</value>
+  <data name="&gt;&gt;NaviCustCB.Name" xml:space="preserve">
+    <value>NaviCustCB</value>
   </data>
-  <data name="&gt;&gt;NaviCusCB.Type" xml:space="preserve">
+  <data name="&gt;&gt;NaviCustCB.Type" xml:space="preserve">
     <value>System.Windows.Forms.ComboBox, System.Windows.Forms, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </data>
-  <data name="&gt;&gt;NaviCusCB.Parent" xml:space="preserve">
-    <value>NaviCusGB</value>
+  <data name="&gt;&gt;NaviCustCB.Parent" xml:space="preserve">
+    <value>NaviCustGB</value>
   </data>
-  <data name="&gt;&gt;NaviCusCB.ZOrder" xml:space="preserve">
+  <data name="&gt;&gt;NaviCustCB.ZOrder" xml:space="preserve">
     <value>5</value>
   </data>
   <data name="Label7.Location" type="System.Drawing.Point, System.Drawing">
@@ -1264,54 +1264,54 @@
     <value>System.Windows.Forms.Label, System.Windows.Forms, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </data>
   <data name="&gt;&gt;Label7.Parent" xml:space="preserve">
-    <value>NaviCusGB</value>
+    <value>NaviCustGB</value>
   </data>
   <data name="&gt;&gt;Label7.ZOrder" xml:space="preserve">
     <value>6</value>
   </data>
-  <data name="NaviCusTB.Location" type="System.Drawing.Point, System.Drawing">
+  <data name="NaviCustTB.Location" type="System.Drawing.Point, System.Drawing">
     <value>64, 95</value>
   </data>
-  <data name="NaviCusTB.Size" type="System.Drawing.Size, System.Drawing">
+  <data name="NaviCustTB.Size" type="System.Drawing.Size, System.Drawing">
     <value>72, 20</value>
   </data>
-  <data name="NaviCusTB.TabIndex" type="System.Int32, mscorlib">
+  <data name="NaviCustTB.TabIndex" type="System.Int32, mscorlib">
     <value>23</value>
   </data>
-  <data name="&gt;&gt;NaviCusTB.Name" xml:space="preserve">
-    <value>NaviCusTB</value>
+  <data name="&gt;&gt;NaviCustTB.Name" xml:space="preserve">
+    <value>NaviCustTB</value>
   </data>
-  <data name="&gt;&gt;NaviCusTB.Type" xml:space="preserve">
+  <data name="&gt;&gt;NaviCustTB.Type" xml:space="preserve">
     <value>System.Windows.Forms.TextBox, System.Windows.Forms, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </data>
-  <data name="&gt;&gt;NaviCusTB.Parent" xml:space="preserve">
-    <value>NaviCusGB</value>
+  <data name="&gt;&gt;NaviCustTB.Parent" xml:space="preserve">
+    <value>NaviCustGB</value>
   </data>
-  <data name="&gt;&gt;NaviCusTB.ZOrder" xml:space="preserve">
+  <data name="&gt;&gt;NaviCustTB.ZOrder" xml:space="preserve">
     <value>7</value>
   </data>
-  <data name="NaviCusCkB.Location" type="System.Drawing.Point, System.Drawing">
+  <data name="NaviCustCkB.Location" type="System.Drawing.Point, System.Drawing">
     <value>144, 95</value>
   </data>
-  <data name="NaviCusCkB.Size" type="System.Drawing.Size, System.Drawing">
+  <data name="NaviCustCkB.Size" type="System.Drawing.Size, System.Drawing">
     <value>80, 21</value>
   </data>
-  <data name="NaviCusCkB.TabIndex" type="System.Int32, mscorlib">
+  <data name="NaviCustCkB.TabIndex" type="System.Int32, mscorlib">
     <value>24</value>
   </data>
-  <data name="NaviCusCkB.Text" xml:space="preserve">
+  <data name="NaviCustCkB.Text" xml:space="preserve">
     <value>Unlocked</value>
   </data>
-  <data name="&gt;&gt;NaviCusCkB.Name" xml:space="preserve">
-    <value>NaviCusCkB</value>
+  <data name="&gt;&gt;NaviCustCkB.Name" xml:space="preserve">
+    <value>NaviCustCkB</value>
   </data>
-  <data name="&gt;&gt;NaviCusCkB.Type" xml:space="preserve">
+  <data name="&gt;&gt;NaviCustCkB.Type" xml:space="preserve">
     <value>System.Windows.Forms.CheckBox, System.Windows.Forms, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </data>
-  <data name="&gt;&gt;NaviCusCkB.Parent" xml:space="preserve">
-    <value>NaviCusGB</value>
+  <data name="&gt;&gt;NaviCustCkB.Parent" xml:space="preserve">
+    <value>NaviCustGB</value>
   </data>
-  <data name="&gt;&gt;NaviCusCkB.ZOrder" xml:space="preserve">
+  <data name="&gt;&gt;NaviCustCkB.ZOrder" xml:space="preserve">
     <value>8</value>
   </data>
   <data name="Label8.Location" type="System.Drawing.Point, System.Drawing">
@@ -1336,36 +1336,36 @@
     <value>System.Windows.Forms.Label, System.Windows.Forms, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </data>
   <data name="&gt;&gt;Label8.Parent" xml:space="preserve">
-    <value>NaviCusGB</value>
+    <value>NaviCustGB</value>
   </data>
   <data name="&gt;&gt;Label8.ZOrder" xml:space="preserve">
     <value>9</value>
   </data>
-  <data name="NaviCusGB.Enabled" type="System.Boolean, mscorlib">
+  <data name="NaviCustGB.Enabled" type="System.Boolean, mscorlib">
     <value>False</value>
   </data>
-  <data name="NaviCusGB.Location" type="System.Drawing.Point, System.Drawing">
+  <data name="NaviCustGB.Location" type="System.Drawing.Point, System.Drawing">
     <value>8, 303</value>
   </data>
-  <data name="NaviCusGB.Size" type="System.Drawing.Size, System.Drawing">
+  <data name="NaviCustGB.Size" type="System.Drawing.Size, System.Drawing">
     <value>232, 121</value>
   </data>
-  <data name="NaviCusGB.TabIndex" type="System.Int32, mscorlib">
+  <data name="NaviCustGB.TabIndex" type="System.Int32, mscorlib">
     <value>50</value>
   </data>
-  <data name="NaviCusGB.Text" xml:space="preserve">
+  <data name="NaviCustGB.Text" xml:space="preserve">
     <value>Navi Customizer</value>
   </data>
-  <data name="&gt;&gt;NaviCusGB.Name" xml:space="preserve">
-    <value>NaviCusGB</value>
+  <data name="&gt;&gt;NaviCustGB.Name" xml:space="preserve">
+    <value>NaviCustGB</value>
   </data>
-  <data name="&gt;&gt;NaviCusGB.Type" xml:space="preserve">
+  <data name="&gt;&gt;NaviCustGB.Type" xml:space="preserve">
     <value>System.Windows.Forms.GroupBox, System.Windows.Forms, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </data>
-  <data name="&gt;&gt;NaviCusGB.Parent" xml:space="preserve">
+  <data name="&gt;&gt;NaviCustGB.Parent" xml:space="preserve">
     <value>TabPage1</value>
   </data>
-  <data name="&gt;&gt;NaviCusGB.ZOrder" xml:space="preserve">
+  <data name="&gt;&gt;NaviCustGB.ZOrder" xml:space="preserve">
     <value>6</value>
   </data>
   <data name="Label18.Location" type="System.Drawing.Point, System.Drawing">
@@ -1563,52 +1563,52 @@
   <data name="&gt;&gt;GigaChipGB.ZOrder" xml:space="preserve">
     <value>2</value>
   </data>
-  <data name="LibSeacretChipLB.Location" type="System.Drawing.Point, System.Drawing">
+  <data name="LibSecretChipLB.Location" type="System.Drawing.Point, System.Drawing">
     <value>8, 17</value>
   </data>
-  <data name="LibSeacretChipLB.Size" type="System.Drawing.Size, System.Drawing">
+  <data name="LibSecretChipLB.Size" type="System.Drawing.Size, System.Drawing">
     <value>128, 259</value>
   </data>
-  <data name="LibSeacretChipLB.TabIndex" type="System.Int32, mscorlib">
+  <data name="LibSecretChipLB.TabIndex" type="System.Int32, mscorlib">
     <value>1</value>
   </data>
-  <data name="&gt;&gt;LibSeacretChipLB.Name" xml:space="preserve">
-    <value>LibSeacretChipLB</value>
+  <data name="&gt;&gt;LibSecretChipLB.Name" xml:space="preserve">
+    <value>LibSecretChipLB</value>
   </data>
-  <data name="&gt;&gt;LibSeacretChipLB.Type" xml:space="preserve">
+  <data name="&gt;&gt;LibSecretChipLB.Type" xml:space="preserve">
     <value>System.Windows.Forms.CheckedListBox, System.Windows.Forms, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </data>
-  <data name="&gt;&gt;LibSeacretChipLB.Parent" xml:space="preserve">
-    <value>SeacretChipGB</value>
+  <data name="&gt;&gt;LibSecretChipLB.Parent" xml:space="preserve">
+    <value>SecretChipGB</value>
   </data>
-  <data name="&gt;&gt;LibSeacretChipLB.ZOrder" xml:space="preserve">
+  <data name="&gt;&gt;LibSecretChipLB.ZOrder" xml:space="preserve">
     <value>0</value>
   </data>
-  <data name="SeacretChipGB.Enabled" type="System.Boolean, mscorlib">
+  <data name="SecretChipGB.Enabled" type="System.Boolean, mscorlib">
     <value>False</value>
   </data>
-  <data name="SeacretChipGB.Location" type="System.Drawing.Point, System.Drawing">
+  <data name="SecretChipGB.Location" type="System.Drawing.Point, System.Drawing">
     <value>168, 9</value>
   </data>
-  <data name="SeacretChipGB.Size" type="System.Drawing.Size, System.Drawing">
+  <data name="SecretChipGB.Size" type="System.Drawing.Size, System.Drawing">
     <value>144, 295</value>
   </data>
-  <data name="SeacretChipGB.TabIndex" type="System.Int32, mscorlib">
+  <data name="SecretChipGB.TabIndex" type="System.Int32, mscorlib">
     <value>6</value>
   </data>
-  <data name="SeacretChipGB.Text" xml:space="preserve">
+  <data name="SecretChipGB.Text" xml:space="preserve">
     <value>Secret Chips</value>
   </data>
-  <data name="&gt;&gt;SeacretChipGB.Name" xml:space="preserve">
-    <value>SeacretChipGB</value>
+  <data name="&gt;&gt;SecretChipGB.Name" xml:space="preserve">
+    <value>SecretChipGB</value>
   </data>
-  <data name="&gt;&gt;SeacretChipGB.Type" xml:space="preserve">
+  <data name="&gt;&gt;SecretChipGB.Type" xml:space="preserve">
     <value>System.Windows.Forms.GroupBox, System.Windows.Forms, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </data>
-  <data name="&gt;&gt;SeacretChipGB.Parent" xml:space="preserve">
+  <data name="&gt;&gt;SecretChipGB.Parent" xml:space="preserve">
     <value>TabPage3</value>
   </data>
-  <data name="&gt;&gt;SeacretChipGB.ZOrder" xml:space="preserve">
+  <data name="&gt;&gt;SecretChipGB.ZOrder" xml:space="preserve">
     <value>3</value>
   </data>
   <data name="LibraryLB.Location" type="System.Drawing.Point, System.Drawing">
@@ -2178,7 +2178,7 @@
   <data name="MenuSubChip.Text" xml:space="preserve">
     <value>All SubChips ×8</value>
   </data>
-  <data name="MenuNaviCus.Text" xml:space="preserve">
+  <data name="MenuNaviCust.Text" xml:space="preserve">
     <value>All NaviCust ×9</value>
   </data>
   <data name="MenuKeyItem.Text" xml:space="preserve">
@@ -2403,10 +2403,10 @@
   <data name="&gt;&gt;MenuSubChip.Type" xml:space="preserve">
     <value>System.Windows.Forms.MenuItem, System.Windows.Forms, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </data>
-  <data name="&gt;&gt;MenuNaviCus.Name" xml:space="preserve">
-    <value>MenuNaviCus</value>
+  <data name="&gt;&gt;MenuNaviCust.Name" xml:space="preserve">
+    <value>MenuNaviCust</value>
   </data>
-  <data name="&gt;&gt;MenuNaviCus.Type" xml:space="preserve">
+  <data name="&gt;&gt;MenuNaviCust.Type" xml:space="preserve">
     <value>System.Windows.Forms.MenuItem, System.Windows.Forms, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </data>
   <data name="&gt;&gt;MenuKeyItem.Name" xml:space="preserve">
