@@ -133,6 +133,12 @@
       <AutoGen>True</AutoGen>
       <DependentUpon>Application.myapp</DependentUpon>
     </Compile>
+    <EmbeddedResource Include="MainForm.ja.resx">
+      <DependentUpon>MainForm.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="VerInfo.ja.resx">
+      <DependentUpon>VerInfo.vb</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="VerInfo.resx">
       <SubType>Designer</SubType>
       <DependentUpon>VerInfo.vb</DependentUpon>

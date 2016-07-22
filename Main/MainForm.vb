@@ -151,7 +151,7 @@ Public Class MainForm
         SaveFileDialog.Filter = "folder file|*.dmp"
         SaveFileDialog.ShowDialog()
         If SaveFileDialog.FileName <> "" Then
-            Dim fs As New System.IO.FileStream(SaveFileDialog.FileName, _
+            Dim fs As New System.IO.FileStream(SaveFileDialog.FileName,
                 System.IO.FileMode.Create, System.IO.FileAccess.Write)
             Dim bw As New System.IO.BinaryWriter(fs)
             For i As Integer = 0 To 29
@@ -168,7 +168,7 @@ Public Class MainForm
         OpenFileDialog.Filter = "folder file|*.dmp"
         OpenFileDialog.ShowDialog()
         If OpenFileDialog.FileName <> "" Then
-            Dim fs As New System.IO.FileStream(OpenFileDialog.FileName, _
+            Dim fs As New System.IO.FileStream(OpenFileDialog.FileName,
                 System.IO.FileMode.Open, System.IO.FileAccess.Read)
             Dim br As New System.IO.BinaryReader(fs)
             For i As Integer = 0 To 29

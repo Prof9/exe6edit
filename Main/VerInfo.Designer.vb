@@ -35,9 +35,9 @@ Partial Class VerInfo
         '
         'LinkLabel1
         '
+        resources.ApplyResources(Me.LinkLabel1, "LinkLabel1")
         Me.LinkLabel1.FlatStyle = System.Windows.Forms.FlatStyle.System
         Me.LinkLabel1.LinkColor = System.Drawing.Color.FromArgb(CType(CType(0, Byte), Integer), CType(CType(0, Byte), Integer), CType(CType(255, Byte), Integer))
-        resources.ApplyResources(Me.LinkLabel1, "LinkLabel1")
         Me.LinkLabel1.Name = "LinkLabel1"
         Me.LinkLabel1.TabStop = True
         '
@@ -53,8 +53,8 @@ Partial Class VerInfo
         '
         'Button1
         '
-        Me.Button1.Cursor = System.Windows.Forms.Cursors.Default
         resources.ApplyResources(Me.Button1, "Button1")
+        Me.Button1.Cursor = System.Windows.Forms.Cursors.Default
         Me.Button1.Name = "Button1"
         '
         'Label2
