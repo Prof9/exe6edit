@@ -274,16 +274,16 @@
     <value>開く(&amp;O)</value>
   </data>
   <data name="MenuFileSave.Text" xml:space="preserve">
-    <value>名付け保存</value>
+    <value>名付け保存(&amp;A)</value>
   </data>
   <data name="MenuFileSaveOverWrite.Text" xml:space="preserve">
-    <value>上書き保存</value>
+    <value>上書き保存(&amp;S)</value>
   </data>
   <data name="MenuFileClose.Text" xml:space="preserve">
-    <value>閉じる</value>
+    <value>閉じる(&amp;C)</value>
   </data>
   <data name="MenuFolder.Text" xml:space="preserve">
-    <value>フォルダ</value>
+    <value>フォルダ(&amp;F)</value>
   </data>
   <data name="MenuFolderSave.Text" xml:space="preserve">
     <value>ファイルへ保存</value>
@@ -292,7 +292,7 @@
     <value>ファイルから読み込み</value>
   </data>
   <data name="MenuExit.Text" xml:space="preserve">
-    <value>終了</value>
+    <value>終了(&amp;X)</value>
   </data>
   <data name="MenuEdit.Text" xml:space="preserve">
     <value>編集(&amp;E)</value>
@@ -355,6 +355,6 @@
     <value>ヘルプ(&amp;H)</value>
   </data>
   <data name="MenuVersionInfo.Text" xml:space="preserve">
-    <value>バージョン情報</value>
+    <value>バージョン情報(&amp;A)</value>
   </data>
 </root>
