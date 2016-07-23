@@ -86,10 +86,10 @@ Public Class MainForm
 
         LibGigaChipLB.Items.Clear()
         If (be.VersionInfo = "VersionGregar") Then
-            LibGigaChipLB.Items.AddRange(EXE6DataList.LibGigaChipNameListAtGrayga)
+            LibGigaChipLB.Items.AddRange(EXE6DataList.LibGigaChipNameListGregar)
             MenuBeast.Text = My.Resources.MenuGregarChipData
         ElseIf (be.VersionInfo = "VersionFalzar") Then
-            LibGigaChipLB.Items.AddRange(EXE6DataList.LibGigaChipNameListAtFalther)
+            LibGigaChipLB.Items.AddRange(EXE6DataList.LibGigaChipNameListFalzar)
             MenuBeast.Text = My.Resources.MenuFalzarChipData
         End If
 
@@ -320,7 +320,7 @@ Public Class MainForm
 
     'ナビカス全て９
     Private Sub MenuItem14_Click(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles MenuNaviCust.Click
-        For i As Integer = 0 To EXE6DataList.NaviCusName.Length - 1
+        For i As Integer = 0 To EXE6DataList.NaviCustName.Length - 1
             be.NaviCusExistFlag(i) = True
             be.NaviCusValue(i) = 9
         Next
@@ -348,7 +348,7 @@ Public Class MainForm
     '
     Private Sub LibSeacretChipLB_SelectedIndexChanged(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles LibSecretChipLB.SelectedIndexChanged
         For i As Integer = 0 To LibSecretChipLB.Items.Count - 1
-            be.LibraryFlag(EXE6DataList.LibSeacretChipFlagList, i) = LibSecretChipLB.GetItemChecked(i)
+            be.LibraryFlag(EXE6DataList.LibSecretChipFlagList, i) = LibSecretChipLB.GetItemChecked(i)
         Next
     End Sub
 
@@ -357,11 +357,11 @@ Public Class MainForm
 
         If (be.VersionInfo = "VersionGregar") Then
             For i As Integer = 0 To LibGigaChipLB.Items.Count - 1
-                be.LibraryFlag(EXE6DataList.LibGigaChipFlagListAtGrayga, i) = LibGigaChipLB.GetItemChecked(i)
+                be.LibraryFlag(EXE6DataList.LibGigaChipFlagListGregar, i) = LibGigaChipLB.GetItemChecked(i)
             Next
         ElseIf (be.VersionInfo = "VersionFalzar") Then
             For i As Integer = 0 To LibGigaChipLB.Items.Count - 1
-                be.LibraryFlag(EXE6DataList.LibGigaChipFlagListAtFalther, i) = LibGigaChipLB.GetItemChecked(i)
+                be.LibraryFlag(EXE6DataList.LibGigaChipFlagListFalzar, i) = LibGigaChipLB.GetItemChecked(i)
             Next
         End If
 
@@ -387,19 +387,19 @@ Public Class MainForm
             LibraryLB.SetItemChecked(i, be.LibraryFlag(EXE6DataList.LibStandardChipFlagList, i))
         Next
         For i As Integer = 0 To LibSecretChipLB.Items.Count - 1
-            LibSecretChipLB.SetItemChecked(i, be.LibraryFlag(EXE6DataList.LibSeacretChipFlagList, i))
+            LibSecretChipLB.SetItemChecked(i, be.LibraryFlag(EXE6DataList.LibSecretChipFlagList, i))
         Next
         For i As Integer = 0 To LibMegaChipLB.Items.Count - 1
             LibMegaChipLB.SetItemChecked(i, be.LibraryFlag(EXE6DataList.LibMegaChipFlagList, i))
         Next
         If (be.VersionInfo = "VersionGregar") Then
             For i As Integer = 0 To LibGigaChipLB.Items.Count - 1
-                LibGigaChipLB.SetItemChecked(i, be.LibraryFlag(EXE6DataList.LibGigaChipFlagListAtGrayga, i))
+                LibGigaChipLB.SetItemChecked(i, be.LibraryFlag(EXE6DataList.LibGigaChipFlagListGregar, i))
             Next
 
         ElseIf (be.VersionInfo = "VersionFalzar") Then
             For i As Integer = 0 To LibGigaChipLB.Items.Count - 1
-                LibGigaChipLB.SetItemChecked(i, be.LibraryFlag(EXE6DataList.LibGigaChipFlagListAtFalther, i))
+                LibGigaChipLB.SetItemChecked(i, be.LibraryFlag(EXE6DataList.LibGigaChipFlagListFalzar, i))
             Next
         End If
 
@@ -717,7 +717,7 @@ Public Class MainForm
     Private Sub MainForm_Load(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles MyBase.Load
 
         RcCardList.Items.AddRange(EXE6DataList.RemodelCardList)
-        NaviCustCB.Items.AddRange(EXE6DataList.NaviCusName)
+        NaviCustCB.Items.AddRange(EXE6DataList.NaviCustName)
         KeyItemLB.Items.AddRange(EXE6DataList.KeyItemList)
         ChipCB.Items.AddRange(EXE6DataList.ChipNameList)
         ListBox2.Items.AddRange(EXE6DataList.ChipNameList)
@@ -726,7 +726,7 @@ Public Class MainForm
 
         'ライブラリのチップ名を読み込み
         LibraryLB.Items.AddRange(EXE6DataList.LibStandardChipNameList)
-        LibSecretChipLB.Items.AddRange(EXE6DataList.LibSeacretChipNameList)
+        LibSecretChipLB.Items.AddRange(EXE6DataList.LibSecretChipNameList)
         LibMegaChipLB.Items.AddRange(EXE6DataList.LibMegaChipNameList)
         LibPaLB.Items.AddRange(EXE6DataList.LibPaNameList)
     End Sub

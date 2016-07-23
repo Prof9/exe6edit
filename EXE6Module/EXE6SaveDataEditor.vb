@@ -313,12 +313,12 @@ Public Class EXE6SaveDataEditor
 
     Public Property NaviCusValue(ByVal i As Integer) As Integer
         Get
-            Return ReadByte(EXE6DataList.NaviCusAddr(i, 2) + _baseAddr)
+            Return ReadByte(EXE6DataList.NaviCustAddr(i, 2) + _baseAddr)
         End Get
         Set(ByVal Value As Integer)
             If Value < 0 Then Value = 0
             If Value > 9 Then Value = 9
-            WriteByte(EXE6DataList.NaviCusAddr(i, 2) + _baseAddr, Value)
+            WriteByte(EXE6DataList.NaviCustAddr(i, 2) + _baseAddr, Value)
         End Set
     End Property
 
@@ -333,8 +333,8 @@ Public Class EXE6SaveDataEditor
 
     Public Property NaviCusExistFlag(ByVal i As Integer) As Boolean
         Get
-            If (ReadByte(EXE6DataList.NaviCusAddr(i, 0) + NaviCusIndex + _baseAddr) Xor CheckValue(0)) _
-                = ReadByte(EXE6DataList.NaviCusAddr(i, 1) + NaviCusIndex + _baseAddr) Then
+            If (ReadByte(EXE6DataList.NaviCustAddr(i, 0) + NaviCusIndex + _baseAddr) Xor CheckValue(0)) _
+                = ReadByte(EXE6DataList.NaviCustAddr(i, 1) + NaviCusIndex + _baseAddr) Then
                 Return True
             Else
                 Return False
@@ -342,11 +342,11 @@ Public Class EXE6SaveDataEditor
         End Get
         Set(ByVal Value As Boolean)
             If Value = True Then
-                WriteByte(EXE6DataList.NaviCusAddr(i, 1) + NaviCusIndex + _baseAddr, _
-                ReadByte(EXE6DataList.NaviCusAddr(i, 0) + NaviCusIndex + _baseAddr) Xor CheckValue(0))
+                WriteByte(EXE6DataList.NaviCustAddr(i, 1) + NaviCusIndex + _baseAddr, _
+                ReadByte(EXE6DataList.NaviCustAddr(i, 0) + NaviCusIndex + _baseAddr) Xor CheckValue(0))
             Else
-                WriteByte(EXE6DataList.NaviCusAddr(i, 1) + NaviCusIndex + _baseAddr, _
-                (ReadByte(EXE6DataList.NaviCusAddr(i, 0) + NaviCusIndex + _baseAddr) Xor CheckValue(0) + 1))
+                WriteByte(EXE6DataList.NaviCustAddr(i, 1) + NaviCusIndex + _baseAddr, _
+                (ReadByte(EXE6DataList.NaviCustAddr(i, 0) + NaviCusIndex + _baseAddr) Xor CheckValue(0) + 1))
             End If
         End Set
     End Property
