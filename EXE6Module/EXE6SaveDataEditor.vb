@@ -1,5 +1,7 @@
 
 Public Class EXE6SaveDataEditor
+    Dim dataList As EXE6DataList = New EXE6DataList()
+
     Public Sub New(ByVal fileName As String, Optional ByVal Xps As Boolean = False)
         ReadFile(fileName)
         If Xps Then GetXpsBaseAddr()
@@ -342,10 +344,10 @@ Public Class EXE6SaveDataEditor
         End Get
         Set(ByVal Value As Boolean)
             If Value = True Then
-                WriteByte(EXE6DataList.NaviCustAddr(i, 1) + NaviCusIndex + _baseAddr, _
+                WriteByte(EXE6DataList.NaviCustAddr(i, 1) + NaviCusIndex + _baseAddr,
                 ReadByte(EXE6DataList.NaviCustAddr(i, 0) + NaviCusIndex + _baseAddr) Xor CheckValue(0))
             Else
-                WriteByte(EXE6DataList.NaviCustAddr(i, 1) + NaviCusIndex + _baseAddr, _
+                WriteByte(EXE6DataList.NaviCustAddr(i, 1) + NaviCusIndex + _baseAddr,
                 (ReadByte(EXE6DataList.NaviCustAddr(i, 0) + NaviCusIndex + _baseAddr) Xor CheckValue(0) + 1))
             End If
         End Set
@@ -498,7 +500,7 @@ Public Class EXE6SaveDataEditor
     End Property
 
     Public Sub SetAllChip(Optional ByVal num As Integer = 99)
-        For i As Integer = 0 To EXE6DataList.ChipNameList.Length - 1
+        For i As Integer = 0 To dataList.ChipNameList().Length - 1
             WriteByte(EXE6DataList.chipAddrList(i) + _baseAddr, num)
         Next
     End Sub
@@ -625,11 +627,11 @@ Public Class EXE6SaveDataEditor
 
     Public Property CompressCommandFlag() As Boolean
         Get
-            If (&HFFFFFF0FL = ReadWord(&H2154 + _baseAddr) And &HFFFFFF0FL) AndAlso _
-                (&HFFFFFFFFL = ReadWord(&H2158 + _baseAddr) And &HFFFFFFFFL) AndAlso _
-                (&HFFFFFFFFL = ReadWord(&H215C + _baseAddr) And &HFFFFFFFFL) AndAlso _
-                (&HFFFFFFFFL = ReadWord(&H2160 + _baseAddr) And &HFFFFFFFFL) AndAlso _
-                (&HFF00F0FFL = ReadWord(&H2164 + _baseAddr) And &HFF00F0FFL) AndAlso _
+            If (&HFFFFFF0FL = ReadWord(&H2154 + _baseAddr) And &HFFFFFF0FL) AndAlso
+                (&HFFFFFFFFL = ReadWord(&H2158 + _baseAddr) And &HFFFFFFFFL) AndAlso
+                (&HFFFFFFFFL = ReadWord(&H215C + _baseAddr) And &HFFFFFFFFL) AndAlso
+                (&HFFFFFFFFL = ReadWord(&H2160 + _baseAddr) And &HFFFFFFFFL) AndAlso
+                (&HFF00F0FFL = ReadWord(&H2164 + _baseAddr) And &HFF00F0FFL) AndAlso
                 (&HF0L = ReadByte(&H2168 + _baseAddr) And &HF0L) Then
                 Return True
             Else
@@ -699,7 +701,7 @@ Public Class EXE6SaveDataEditor
         '読み込むファイルの名前
         'Dim fileName As String = 
         'ファイルを開く
-        Dim fs As New System.IO.FileStream(fileName, _
+        Dim fs As New System.IO.FileStream(fileName,
             System.IO.FileMode.Open, System.IO.FileAccess.Read)
         'ファイルを読み込むバイト型配列を作成する
         Dim bs(fs.Length - 1) As Byte
@@ -714,7 +716,7 @@ Public Class EXE6SaveDataEditor
         UnMask()
         If XpsRepairment Then XpsRepair()
         'ファイルを開く
-        Dim fs As New System.IO.FileStream(fileName, _
+        Dim fs As New System.IO.FileStream(fileName,
             System.IO.FileMode.Create, System.IO.FileAccess.Write)
         'バイト型配列の内容をすべて書き込む
         fs.Write(buffer, 0, buffer.Length)

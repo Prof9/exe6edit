@@ -107,6 +107,7 @@
     <Compile Include="EXE6DataList.vb">
       <SubType>Code</SubType>
     </Compile>
+    <Compile Include="EXE6DataListJP.vb" />
     <Compile Include="EXE6Module.vb">
       <SubType>Code</SubType>
     </Compile>

@@ -3,11 +3,11 @@ Imports System.ComponentModel
 Imports System.Globalization
 Imports System.Reflection
 Imports System.Threading
-Imports EXE6DataList
 
 Public Class MainForm
     Private fname As String
     Private be As EXE6SaveDataEditor
+    Private dataList As EXE6DataList
 
     Private loadFlag As Integer = lFlag.NONE
 
@@ -83,19 +83,9 @@ Public Class MainForm
 
     'ファイルの読み込み
     Private Sub Initializer()
-
-        LibGigaChipLB.Items.Clear()
-        If (be.VersionInfo = "VersionGregar") Then
-            LibGigaChipLB.Items.AddRange(EXE6DataList.LibGigaChipNameListGregar)
-            MenuBeast.Text = My.Resources.MenuGregarChipData
-        ElseIf (be.VersionInfo = "VersionFalzar") Then
-            LibGigaChipLB.Items.AddRange(EXE6DataList.LibGigaChipNameListFalzar)
-            MenuBeast.Text = My.Resources.MenuFalzarChipData
-        End If
-
         ClearDatabindings()
         SetDatabindings()
-        For i As Integer = 0 To EXE6DataList.KeyItemList.Length - 1
+        For i As Integer = 0 To dataList.KeyItemList.Length - 1
             KeyItemLB.SetItemChecked(i, be.KeyItemsFlag(i))
         Next
         NaviCustCB.SelectedIndex = 0
@@ -320,7 +310,7 @@ Public Class MainForm
 
     'ナビカス全て９
     Private Sub MenuItem14_Click(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles MenuNaviCust.Click
-        For i As Integer = 0 To EXE6DataList.NaviCustName.Length - 1
+        For i As Integer = 0 To dataList.NaviCustName.Length - 1
             be.NaviCusExistFlag(i) = True
             be.NaviCusValue(i) = 9
         Next
@@ -495,7 +485,7 @@ Public Class MainForm
                 End If
 
             Next
-            ListBox1.Items.Add(EXE6DataList.ChipNameList(index))
+            ListBox1.Items.Add(dataList.ChipNameList(index))
         Next
         ListBox1.SelectedIndex = 0
     End Sub
@@ -566,7 +556,7 @@ Public Class MainForm
 
     'キーアイテムの書き込み処理
     Private Sub KeyItemLB_ItemCheck()
-        For i As Integer = 0 To EXE6DataList.KeyItemList.Length - 1
+        For i As Integer = 0 To dataList.KeyItemList.Length - 1
             be.KeyItemsFlag(i) = KeyItemLB.GetItemChecked(i)
         Next
     End Sub
@@ -715,20 +705,57 @@ Public Class MainForm
     End Sub
 
     Private Sub MainForm_Load(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles MyBase.Load
+        If MenuJapanese.Checked Then
+            dataList = New EXE6DataListJP()
+        Else
+            dataList = New EXE6DataList()
+        End If
 
-        RcCardList.Items.AddRange(EXE6DataList.RemodelCardList)
-        NaviCustCB.Items.AddRange(EXE6DataList.NaviCustName)
-        KeyItemLB.Items.AddRange(EXE6DataList.KeyItemList)
-        ChipCB.Items.AddRange(EXE6DataList.ChipNameList)
-        ListBox2.Items.AddRange(EXE6DataList.ChipNameList)
+        RcCardList.Items.Clear()
+        RcCardList.Items.AddRange(dataList.RemodelCardList)
+
+        Dim naviCustIndex As Integer = NaviCustCB.SelectedIndex
+        NaviCustCB.Items.Clear()
+        NaviCustCB.Items.AddRange(dataList.NaviCustName)
+        NaviCustCB.SelectedIndex = naviCustIndex
+
+        KeyItemLB.Items.Clear()
+        KeyItemLB.Items.AddRange(dataList.KeyItemList)
+
+        Dim chipIndex As Integer = ChipCB.SelectedIndex
+        ChipCB.Items.Clear()
+        ChipCB.Items.AddRange(dataList.ChipNameList)
+        ChipCB.SelectedIndex = chipIndex
+
+        ListBox2.Items.Clear()
+        ListBox2.Items.AddRange(dataList.ChipNameList)
         ListBox2.SelectedIndex = 0
-        MapListCB.Items.AddRange(EXE6DataList.MapListName)
+
+        Dim mapIndex As Integer = MapListCB.SelectedIndex
+        MapListCB.Items.Clear()
+        MapListCB.Items.AddRange(dataList.MapListName)
+        MapListCB.SelectedIndex = mapIndex
 
         'ライブラリのチップ名を読み込み
-        LibraryLB.Items.AddRange(EXE6DataList.LibStandardChipNameList)
-        LibSecretChipLB.Items.AddRange(EXE6DataList.LibSecretChipNameList)
-        LibMegaChipLB.Items.AddRange(EXE6DataList.LibMegaChipNameList)
-        LibPaLB.Items.AddRange(EXE6DataList.LibPaNameList)
+        LibraryLB.Items.Clear()
+        LibraryLB.Items.AddRange(dataList.LibStandardChipNameList)
+        LibSecretChipLB.Items.Clear()
+        LibSecretChipLB.Items.AddRange(dataList.LibSecretChipNameList)
+        LibMegaChipLB.Items.Clear()
+        LibMegaChipLB.Items.AddRange(dataList.LibMegaChipNameList)
+        LibPaLB.Items.Clear()
+        LibPaLB.Items.AddRange(dataList.LibPaNameList)
+
+        If Not be Is Nothing Then
+            LibGigaChipLB.Items.Clear()
+            If (be.VersionInfo = "VersionGregar") Then
+                LibGigaChipLB.Items.AddRange(dataList.LibGigaChipNameListGregar)
+                MenuBeast.Text = My.Resources.MenuGregarChipData
+            ElseIf (be.VersionInfo = "VersionFalzar") Then
+                LibGigaChipLB.Items.AddRange(dataList.LibGigaChipNameListFalzar)
+                MenuBeast.Text = My.Resources.MenuFalzarChipData
+            End If
+        End If
     End Sub
 
     Private Sub UpdateLanguage(sender As Object, e As EventArgs) Handles MenuJapanese.Click, MenuEnglish.Click
@@ -796,6 +823,12 @@ Public Class MainForm
                 resources.ApplyResources(fieldInfo.GetValue(Me), name, cultureInfo)
             End If
         Next
+
+        MainForm_Load(Nothing, Nothing)
+        If Not be Is Nothing Then
+            ReadFolder()
+            ReadRemodelCard()
+        End If
 
         SetEnabled(Me.enabled)
 
