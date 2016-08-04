@@ -9,11 +9,11 @@ Imports System.Runtime.InteropServices
 
 ' Review the values of the assembly attributes
 
-<Assembly: AssemblyTitle("EXE6 SaveDataEditor")>
-<Assembly: AssemblyDescription("EXE6 SaveDataEditor")>
-<Assembly: AssemblyCompany("死者のページ")>
-<Assembly: AssemblyProduct("EXE6 SaveDataEditor")>
-<Assembly: AssemblyCopyright("Copyright (C) 2008 haru. All rights reserved.")>
+<Assembly: AssemblyTitle("EXE6 SaveDataEditor Mod")>
+<Assembly: AssemblyDescription("EXE6 SaveDataEditor Mod")>
+<Assembly: AssemblyCompany("")>
+<Assembly: AssemblyProduct("EXE6 SaveDataEditor Mod")>
+<Assembly: AssemblyCopyright("")>
 <Assembly: AssemblyTrademark("")>
 
 <Assembly: ComVisible(False)>
@@ -31,6 +31,6 @@ Imports System.Runtime.InteropServices
 ' You can specify all the values or you can default the Build and Revision Numbers 
 ' by using the '*' as shown below:
 
-<Assembly: AssemblyVersion("2.0.0.0")>
-<Assembly: AssemblyFileVersion("2.0.0.0")>
+<Assembly: AssemblyVersion("1.0.0.0")>
+<Assembly: AssemblyFileVersion("1.0.0.0")>
 <Assembly: NeutralResourcesLanguage("")>
