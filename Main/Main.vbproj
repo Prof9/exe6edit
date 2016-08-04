@@ -20,7 +20,7 @@
     <DefaultTargetSchema>IE50</DefaultTargetSchema>
     <DelaySign>false</DelaySign>
     <OutputType>WinExe</OutputType>
-    <OptionCompare>Binary</OptionCompare>
+    <OptionCompare>Text</OptionCompare>
     <OptionExplicit>On</OptionExplicit>
     <OptionStrict>Off</OptionStrict>
     <RootNamespace>Main</RootNamespace>
@@ -217,7 +217,8 @@
   <PropertyGroup>
     <PreBuildEvent>
     </PreBuildEvent>
-    <PostBuildEvent>
-    </PostBuildEvent>
+    <PostBuildEvent>copy $(SolutionDir)license.txt $(TargetDir)license.txt
+copy $(SolutionDir)readme-original.txt $(TargetDir)readme-original.txt
+copy $(SolutionDir)readme.md $(TargetDir)readme.txt</PostBuildEvent>
   </PropertyGroup>
 </Project>
