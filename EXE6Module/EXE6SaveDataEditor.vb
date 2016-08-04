@@ -47,9 +47,9 @@ Public Class EXE6SaveDataEditor
     Public ReadOnly Property VersionInfo() As String
         Get
             If _VersionInfo = 0 Then
-                Return "VersionGregar"
-            ElseIf _VersionInfo = 1 Then
                 Return "VersionFalzar"
+            ElseIf _VersionInfo = 1 Then
+                Return "VersionGregar"
             Else
                 Return "VersionUnknown"
             End If
@@ -506,123 +506,123 @@ Public Class EXE6SaveDataEditor
     End Sub
 
     Public Sub SetDoubleBeast()
-        WriteHalfWord(&H7D6 + _baseAddr, &HA4B7)
-        WriteWord(&H7D8 + _baseAddr, &H14C1A79F)
-        WriteWord(&H7DC + _baseAddr, &HB8E9AB4D)
-        WriteWord(&H7E0 + _baseAddr, &H1CA1A8A2)
-        WriteWord(&H7E4 + _baseAddr, &HE983164D)
-        WriteWord(&H7E8 + _baseAddr, &H48B0B9BE)
-        WriteWord(&H7EC + _baseAddr, &HB2E4324E)
-        WriteWord(&H7F0 + _baseAddr, &HE6B3E4)
-        WriteHalfWord(&H1186 + _baseAddr, &H4E48)
-        WriteWord(&H1188 + _baseAddr, &H19824B32)
-        WriteHalfWord(&H118C + _baseAddr, &HE61B)
-        WriteWord(&HAF0 + _baseAddr, &H139F7D7F)
-        WriteWord(&HAF4 + _baseAddr, &HD1F225E)
-        WriteWord(&HAF8 + _baseAddr, &H41D000B1)
-        WriteWord(&HAFC + _baseAddr, &H13303D0D)
-        WriteWord(&HB00 + _baseAddr, &H77FF6199)
-        WriteWord(&HB04 + _baseAddr, &H39A84EA8)
-        WriteWord(&HB08 + _baseAddr, &H5AF92103)
-        WriteWord(&HB0C + _baseAddr, &HC615F30)
+        ResetDoubleBeast()
+
+        'Write name.
+        WriteWord(&H1180 + _baseAddr, (4 + 2 + 8) << 8)
+        WriteHalfWord(&H1184 + _baseAddr, &H2)
+        WriteBytes(&H1186 + _baseAddr, {
+            &H48, &H4E, &H32, &H4B, &H82, &H19, &H1B, &HE6
+        })
+
+        'Write description.
+        WriteWord(&H7D0 + _baseAddr, (4 + 2 + 29) << 8)
+        WriteHalfWord(&H7D4 + _baseAddr, &H2)
+        WriteBytes(&H7D6 + _baseAddr, {
+            &HB7, &HA4, &H9F, &HA7, &HC1, &H14, &H4D, &HAB, &HE9,
+            &HB8, &HA2, &HA8, &HA1, &H1C, &H4D, &H16, &H83, &HE9,
+            &HBE, &HB9, &HB0, &H48, &H4E, &H32, &HE4, &HB2, &HE4, &HB3, &HE6
+        })
+
+        'Write palette.
+        WriteHalfWords(&HAF0 + _baseAddr, {
+            &H7D7F, &H139F, &H225E, &HD1F, &HB1, &H41D0, &H3D0D, &H1330,
+            &H6199, &H77FF, &H4EA8, &H39A8, &H2103, &H5AF9, &H5F30, &HC61
+        })
     End Sub
 
     Public Sub ResetDoubleBeast()
-        WriteHalfWord(&H7D6 + _baseAddr, &H7E7E)
-        WriteWord(&H7D8 + _baseAddr, &HE67E7EE)
-        WriteWord(&H7DC + _baseAddr, &H0)
-        WriteWord(&H7E0 + _baseAddr, &H0)
-        WriteWord(&H7E4 + _baseAddr, &H0)
-        WriteHalfWord(&H1186 + _baseAddr, &H7E7E)
-        WriteWord(&H1188 + _baseAddr, &HE67E7EE)
-        WriteHalfWord(&H118C + _baseAddr, &H0)
-        WriteWord(&HAF0 + _baseAddr, &H0)
-        WriteWord(&HAF4 + _baseAddr, &H0)
-        WriteWord(&HAF8 + _baseAddr, &H0)
-        WriteWord(&HAFC + _baseAddr, &H0)
-        WriteWord(&HB00 + _baseAddr, &H0)
-        WriteWord(&HB04 + _baseAddr, &H0)
-        WriteWord(&HB08 + _baseAddr, &H0)
-        WriteWord(&HB0C + _baseAddr, &H0)
+        'Reset name.
+        WriteWord(&H1180 + _baseAddr, &H0)
+        WriteHalfWord(&H1184 + _baseAddr, &H2)
+        WriteBytes(&H1186 + _baseAddr, {
+            &H7E, &H7E, &H7E, &H7E, &HE6
+        })
+        WriteZeroBytes(&H118B + _baseAddr, 18 - 5)
+
+        'Reset description.
+        WriteWord(&H7D0 + _baseAddr, &H0)
+        WriteHalfWord(&H7D4 + _baseAddr, &H2)
+        WriteBytes(&H7D6 + _baseAddr, {
+            &H7E, &H7E, &H7E, &H7E, &HE6
+        })
+        WriteZeroBytes(&H7DB + _baseAddr, 64 - 5)
+
+        'Reset palette.
+        WriteZeroBytes(&HAF0 + _baseAddr, 16 * 2)
     End Sub
 
     Public Sub SetBeast()
+        ResetBeast()
+
         If VersionInfo = "VersionGregar" Then
-            'グレイガ説明
-            WriteHalfWord(&H83A + BaseAddr, &H55E4)
-            WriteWord(&H83C + BaseAddr, &H4DE443E4)
-            WriteWord(&H840 + BaseAddr, &H3C0D343F)
-            WriteWord(&H844 + BaseAddr, &H344EE9CE)
-            WriteWord(&H848 + BaseAddr, &HE4B2E419)
-            WriteWord(&H84C + BaseAddr, &HA7E983B3)
-            WriteWord(&H850 + BaseAddr, &HC0C8ACDA)
-            WriteWord(&H854 + BaseAddr, &HA7A1AAA2)
-            WriteWord(&H858 + BaseAddr, &HE6000000)
-            'グレイガ絵柄表示
-            WriteHalfWord(&HB12 + BaseAddr, &H7FFF)
-            WriteWord(&HB14 + BaseAddr, &H35D3BBF)
-            WriteWord(&HB18 + BaseAddr, &H1550E3C)
-            WriteWord(&HB1C + BaseAddr, &HF10155)
-            WriteWord(&HB20 + BaseAddr, &H20841908)
-            WriteWord(&HB24 + BaseAddr, &H32AF10BF)
-            WriteWord(&HB28 + BaseAddr, &H478A7FD4)
-            WriteWord(&HB2C + BaseAddr, &H19233202)
+            'Write Gregar name.
+            WriteWord(&H1198 + _baseAddr, (4 + 2 + 5) << 8)
+            WriteHalfWord(&H119C + _baseAddr, &H2)
+            WriteBytes(&H119E + _baseAddr, {
+                &H3F, &H34, &HD, &H3C, &HE6
+            })
 
-            'グレイガチップ名
-            WriteHalfWord(&H119E + BaseAddr, &H343F)
-            WriteWord(&H11A0 + BaseAddr, &HE63C0D)
+            'Write Gregar description.
+            WriteWord(&H834 + _baseAddr, (4 + 2 + 31) << 8)
+            WriteHalfWord(&H838 + _baseAddr, &H2)
+            WriteBytes(&H83A + _baseAddr, {
+                &HE4, &H55, &HE4, &H43, &HE4, &H4D, &H3F, &H34, &HD, &H3C, &HCE, &HE9,
+                &H4E, &H34, &H19, &HE4, &HB2, &HE4, &HB3, &H83, &HE9,
+                &HA7, &HDA, &HAC, &HC8, &HC0, &HA2, &HAA, &HA1, &HA7, &HE6
+            })
 
+            'Write Gregar palette.
+            WriteHalfWords(&HB10 + _baseAddr, {
+                &H0, &H77FF, &H479E, &H1F3F, &HA7D, &HD77, &H4F4, &H51,
+                &H1089, &H18A3, &H4D5F, &H3787, &H7F90, &H5ACC, &H3609, &H2126
+            })
 
         ElseIf VersionInfo = "VersionFalzar" Then
-            'ファルザー
-            WriteHalfWord(&H83A + BaseAddr, &H55E4)
-            WriteWord(&H83C + BaseAddr, &H4DE443E4)
-            WriteWord(&H840 + BaseAddr, &H44325528)
-            WriteWord(&H844 + BaseAddr, &H1BE9CE82)
-            WriteWord(&H848 + BaseAddr, &H46821F32)
-            WriteWord(&H84C + BaseAddr, &HB3E4B2E4)
-            WriteWord(&H850 + BaseAddr, &HDAA7E983)
-            WriteWord(&H854 + BaseAddr, &HA2B5C8AC)
-            WriteWord(&H858 + BaseAddr, &HE6A7DBAB)
-            'ファルザー
-            WriteHalfWord(&HB12 + BaseAddr, &H7FFF)
-            WriteWord(&HB14 + BaseAddr, &H9F27B75)
-            WriteWord(&HB18 + BaseAddr, &H62EE3542)
-            WriteWord(&HB1C + BaseAddr, &H61A17660)
-            WriteWord(&HB20 + BaseAddr, &H17DF2C63)
-            WriteWord(&HB24 + BaseAddr, &H1993027F)
-            WriteWord(&HB28 + BaseAddr, &H3D5A6AFE)
-            WriteWord(&HB2C + BaseAddr, &H2C6324DD)
-            'ファルザーチップ名
-            WriteHalfWord(&H119E + BaseAddr, &H5528)
-            WriteWord(&H11A0 + BaseAddr, &HE6794432)
+            'Write Falzar name.
+            WriteWord(&H1198 + _baseAddr, (4 + 2 + 6) << 8)
+            WriteHalfWord(&H119C + _baseAddr, &H2)
+            WriteBytes(&H119E + _baseAddr, {
+                &H28, &H55, &H32, &H44, &H82, &HE6
+            })
+
+            'Write Falzar description.
+            WriteWord(&H834 + _baseAddr, (4 + 2 + 34) << 8)
+            WriteHalfWord(&H838 + _baseAddr, &H2)
+            WriteBytes(&H83A + _baseAddr, {
+                &HE4, &H55, &HE4, &H43, &HE4, &H4D, &H28, &H55, &H32, &H44, &H82, &HCE, &HE9,
+                &H1B, &H32, &H1F, &H82, &H46, &HE4, &HB2, &HE4, &HB3, &H83, &HE9,
+                &HA7, &HDA, &HAC, &HC8, &HB5, &HA2, &HAB, &HDB, &HA7, &HE6
+            })
+
+            'Write Falzar palette.
+            WriteHalfWords(&HB10 + _baseAddr, {
+                &H0, &H7BDE, &H7774, &H49CC, &H44EB, &H7707, &H6E43, &H5582,
+                &H40C1, &H1B3E, &H2659, &H9B4, &H76DD, &H557B, &H2039, &H1805
+            })
 
         End If
     End Sub
 
     Public Sub ResetBeast()
-        '説明
-        WriteHalfWord(&H83A + BaseAddr, &H7E7E)
-        WriteWord(&H83C + BaseAddr, &HE67E7E)
-        WriteWord(&H840 + BaseAddr, &H0)
-        WriteWord(&H844 + BaseAddr, &H0)
-        WriteWord(&H848 + BaseAddr, &H0)
-        WriteWord(&H84C + BaseAddr, &H0)
-        WriteWord(&H850 + BaseAddr, &H0)
-        WriteWord(&H854 + BaseAddr, &H0)
-        WriteWord(&H858 + BaseAddr, &H0)
-        '絵柄表示
-        WriteHalfWord(&HB12 + BaseAddr, &H0)
-        WriteWord(&HB14 + BaseAddr, &H0)
-        WriteWord(&HB18 + BaseAddr, &H0)
-        WriteWord(&HB1C + BaseAddr, &H0)
-        WriteWord(&HB20 + BaseAddr, &H0)
-        WriteWord(&HB24 + BaseAddr, &H0)
-        WriteWord(&HB28 + BaseAddr, &H0)
-        WriteWord(&HB2C + BaseAddr, &H0)
-        'チップ名
-        WriteHalfWord(&H119E + BaseAddr, &H7E7E)
-        WriteWord(&H11A0 + BaseAddr, &HE67E7E)
+        'Reset name.
+        WriteWord(&H1198 + _baseAddr, &H0)
+        WriteHalfWord(&H119C + _baseAddr, &H2)
+        WriteBytes(&H119E + _baseAddr, {
+            &H7E, &H7E, &H7E, &H7E, &HE6
+        })
+        WriteZeroBytes(&H11A3 + _baseAddr, 18 - 5)
+
+        'Reset description.
+        WriteWord(&H834 + _baseAddr, &H0)
+        WriteHalfWord(&H838 + _baseAddr, &H2)
+        WriteBytes(&H83A + _baseAddr, {
+            &H7E, &H7E, &H7E, &H7E, &HE6
+        })
+        WriteZeroBytes(&H83F + _baseAddr, 64 - 5)
+
+        'Reset palette.
+        WriteZeroBytes(&HB10 + _baseAddr, 16 * 2)
     End Sub
 
     Public Property CompressCommandFlag() As Boolean
@@ -797,6 +797,25 @@ Public Class EXE6SaveDataEditor
         buffer(addr + 1) = (value And &HFF00L) >> 8
         buffer(addr + 2) = (value And &HFF0000L) >> 16
         buffer(addr + 3) = (value And &HFF000000L) >> 24
+    End Sub
+
+    Public Sub WriteBytes(ByVal addr As Integer, ByVal value As Byte())
+        For index As Integer = 0 To value.Length - 1
+            buffer(addr + index) = value(index)
+        Next
+    End Sub
+
+    Public Sub WriteHalfWords(ByVal addr As Integer, ByVal value As UShort())
+        For index As Integer = 0 To value.Length - 1
+            buffer(addr + index * 2) = value(index) And &HFFL
+            buffer(addr + index * 2 + 1) = (value(index) And &HFF00L) >> 8
+        Next
+    End Sub
+
+    Public Sub WriteZeroBytes(ByVal addr As Integer, ByVal count As Integer)
+        For index As Integer = 0 To count - 1
+            buffer(addr + index) = 0
+        Next
     End Sub
 
     Public Function ReadSignedByte(ByVal addr As Long) As Object
