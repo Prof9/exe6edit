@@ -11,7 +11,7 @@ Public Class MainForm
 
     Private loadFlag As Integer = lFlag.NONE
 
-    Private enabled As Boolean
+    Private controlsEnabled As Boolean
 
     'ロードフラグ列挙体
     Enum lFlag
@@ -281,7 +281,11 @@ Public Class MainForm
 
     'ダブルビースト→データを追加
     Private Sub MenuItem7_Click(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles MenuItem7.Click
-        If Not be Is Nothing Then be.SetDoubleBeast()
+        If Not be Is Nothing Then be.SetDoubleBeast(False)
+    End Sub
+
+    Private Sub MenuItem4_Click(sender As Object, e As EventArgs) Handles MenuItem4.Click
+        If Not be Is Nothing Then be.SetDoubleBeast(True)
     End Sub
 
     'ダブルビースト→データを削除
@@ -290,7 +294,11 @@ Public Class MainForm
     End Sub
 
     Private Sub MenuItem1_Click(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles MenuItem1.Click
-        If Not be Is Nothing Then be.SetBeast()
+        If Not be Is Nothing Then be.SetBeast(False)
+    End Sub
+
+    Private Sub MenuItem5_Click(sender As Object, e As EventArgs) Handles MenuItem5.Click
+        If Not be Is Nothing Then be.SetBeast(True)
     End Sub
 
     Private Sub MenuItem2_Click(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles MenuItem2.Click
@@ -663,7 +671,7 @@ Public Class MainForm
 
     'Enabledをまとめて指定
     Private Sub SetEnabled(ByVal enable As Boolean)
-        Me.enabled = enable
+        Me.controlsEnabled = enable
 
         normalGB.Enabled = enable
         ChipGB.Enabled = enable
@@ -841,7 +849,7 @@ Public Class MainForm
             ReadRemodelCard()
         End If
 
-        SetEnabled(Me.enabled)
+        SetEnabled(Me.controlsEnabled)
 
         Me.ResumeLayout()
     End Sub

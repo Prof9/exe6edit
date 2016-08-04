@@ -138,17 +138,11 @@
   <data name="MenuItem3.Text" xml:space="preserve">
     <value>検索</value>
   </data>
-  <data name="FolderGB.Text" xml:space="preserve">
-    <value>フォルダ</value>
-  </data>
   <data name="Label19.Text" xml:space="preserve">
     <value>フォルダの数</value>
   </data>
-  <data name="TabPage1.Text" xml:space="preserve">
-    <value>全般</value>
-  </data>
-  <data name="normalGB.Text" xml:space="preserve">
-    <value>一般</value>
+  <data name="FolderGB.Text" xml:space="preserve">
+    <value>フォルダ</value>
   </data>
   <data name="Label1.Text" xml:space="preserve">
     <value>ZENNY</value>
@@ -159,8 +153,8 @@
   <data name="Label10.Text" xml:space="preserve">
     <value>時間</value>
   </data>
-  <data name="SubChipGB.Text" xml:space="preserve">
-    <value>サブチップ</value>
+  <data name="normalGB.Text" xml:space="preserve">
+    <value>一般</value>
   </data>
   <data name="Label16.Text" xml:space="preserve">
     <value>最大枚数</value>
@@ -192,8 +186,8 @@
   <data name="Label3.Text" xml:space="preserve">
     <value>枚数</value>
   </data>
-  <data name="ChipGB.Text" xml:space="preserve">
-    <value>チップ</value>
+  <data name="SubChipGB.Text" xml:space="preserve">
+    <value>サブチップ</value>
   </data>
   <data name="Label14.Text" xml:space="preserve">
     <value>種類選択</value>
@@ -201,8 +195,8 @@
   <data name="Label15.Text" xml:space="preserve">
     <value>枚数</value>
   </data>
-  <data name="NaviCustGB.Text" xml:space="preserve">
-    <value>ナビカスタマイザー</value>
+  <data name="ChipGB.Text" xml:space="preserve">
+    <value>チップ</value>
   </data>
   <data name="NaviCustExistFlagCkB.Text" xml:space="preserve">
     <value>ナビカス画面表示</value>
@@ -225,11 +219,14 @@
   <data name="Label8.Text" xml:space="preserve">
     <value>種類選択</value>
   </data>
+  <data name="NaviCustGB.Text" xml:space="preserve">
+    <value>ナビカスタマイザー</value>
+  </data>
   <data name="Label18.Text" xml:space="preserve">
     <value>ファイル名</value>
   </data>
-  <data name="TabPage3.Text" xml:space="preserve">
-    <value>ライブラリ</value>
+  <data name="TabPage1.Text" xml:space="preserve">
+    <value>全般</value>
   </data>
   <data name="PaGB.Text" xml:space="preserve">
     <value>Ｐ．Ａ．</value>
@@ -246,11 +243,8 @@
   <data name="StandardChipGB.Text" xml:space="preserve">
     <value>スタンダードチップ</value>
   </data>
-  <data name="TabPage2.Text" xml:space="preserve">
-    <value>その他</value>
-  </data>
-  <data name="RemodelCardGB.Text" xml:space="preserve">
-    <value>改造カード</value>
+  <data name="TabPage3.Text" xml:space="preserve">
+    <value>ライブラリ</value>
   </data>
   <data name="RcDisplayExistFlagCkB.Text" xml:space="preserve">
     <value>改造カード画面表示</value>
@@ -261,14 +255,17 @@
   <data name="Label6.Text" xml:space="preserve">
     <value>改造カード総量</value>
   </data>
+  <data name="RemodelCardGB.Text" xml:space="preserve">
+    <value>改造カード</value>
+  </data>
   <data name="KeyItemGB.Text" xml:space="preserve">
     <value>マップ変更</value>
   </data>
   <data name="MapListGB.Text" xml:space="preserve">
     <value>マップ変更</value>
   </data>
-  <data name="MenuFile.Text" xml:space="preserve">
-    <value>ファイル(&amp;F)</value>
+  <data name="TabPage2.Text" xml:space="preserve">
+    <value>その他</value>
   </data>
   <data name="MenuFileOpen.Text" xml:space="preserve">
     <value>開く(&amp;O)</value>
@@ -282,23 +279,20 @@
   <data name="MenuFileClose.Text" xml:space="preserve">
     <value>閉じる(&amp;C)</value>
   </data>
-  <data name="MenuFolder.Text" xml:space="preserve">
-    <value>フォルダ(&amp;F)</value>
-  </data>
   <data name="MenuFolderSave.Text" xml:space="preserve">
     <value>ファイルへ保存</value>
   </data>
   <data name="MenuFolderLoad.Text" xml:space="preserve">
     <value>ファイルから読み込み</value>
   </data>
+  <data name="MenuFolder.Text" xml:space="preserve">
+    <value>フォルダ(&amp;F)</value>
+  </data>
   <data name="MenuExit.Text" xml:space="preserve">
     <value>終了(&amp;X)</value>
   </data>
-  <data name="MenuEdit.Text" xml:space="preserve">
-    <value>編集(&amp;E)</value>
-  </data>
-  <data name="MenuLibrary.Text" xml:space="preserve">
-    <value>データライブラリ全開</value>
+  <data name="MenuFile.Text" xml:space="preserve">
+    <value>ファイル(&amp;F)</value>
   </data>
   <data name="MenuItem16.Text" xml:space="preserve">
     <value>全て</value>
@@ -318,23 +312,32 @@
   <data name="MenuItem21.Text" xml:space="preserve">
     <value>Ｐ．Ａ．のみ</value>
   </data>
-  <data name="MenuDoubleBeast.Text" xml:space="preserve">
-    <value>ダブルビーストチップデータ</value>
+  <data name="MenuLibrary.Text" xml:space="preserve">
+    <value>データライブラリ全開</value>
   </data>
   <data name="MenuItem7.Text" xml:space="preserve">
-    <value>データ追加</value>
+    <value>データ追加 (日本語)</value>
+  </data>
+  <data name="MenuItem4.Text" xml:space="preserve">
+    <value>データ追加 (英語、非公認)</value>
   </data>
   <data name="MenuItem8.Text" xml:space="preserve">
     <value>データ削除</value>
   </data>
-  <data name="MenuBeast.Text" xml:space="preserve">
-    <value>電脳獣</value>
+  <data name="MenuDoubleBeast.Text" xml:space="preserve">
+    <value>ダブルビーストチップデータ</value>
   </data>
   <data name="MenuItem1.Text" xml:space="preserve">
-    <value>データ追加</value>
+    <value>データ追加 (日本語)</value>
+  </data>
+  <data name="MenuItem5.Text" xml:space="preserve">
+    <value>データ追加 (英語、非公認)</value>
   </data>
   <data name="MenuItem2.Text" xml:space="preserve">
     <value>データ削除</value>
+  </data>
+  <data name="MenuBeast.Text" xml:space="preserve">
+    <value>電脳獣</value>
   </data>
   <data name="MenuChip.Text" xml:space="preserve">
     <value>チップ全て×99</value>
@@ -348,13 +351,16 @@
   <data name="MenuKeyItem.Text" xml:space="preserve">
     <value>キーアイテム全て所持</value>
   </data>
+  <data name="MenuEdit.Text" xml:space="preserve">
+    <value>編集(&amp;E)</value>
+  </data>
   <data name="MenuLanguage.Text" xml:space="preserve">
     <value>言語(&amp;L)</value>
   </data>
-  <data name="MenuHelp.Text" xml:space="preserve">
-    <value>ヘルプ(&amp;H)</value>
-  </data>
   <data name="MenuVersionInfo.Text" xml:space="preserve">
     <value>バージョン情報(&amp;A)</value>
+  </data>
+  <data name="MenuHelp.Text" xml:space="preserve">
+    <value>ヘルプ(&amp;H)</value>
   </data>
 </root>

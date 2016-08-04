@@ -125,9 +125,11 @@ Partial Class MainForm
         Me.MenuItem21 = New System.Windows.Forms.MenuItem()
         Me.MenuDoubleBeast = New System.Windows.Forms.MenuItem()
         Me.MenuItem7 = New System.Windows.Forms.MenuItem()
+        Me.MenuItem4 = New System.Windows.Forms.MenuItem()
         Me.MenuItem8 = New System.Windows.Forms.MenuItem()
         Me.MenuBeast = New System.Windows.Forms.MenuItem()
         Me.MenuItem1 = New System.Windows.Forms.MenuItem()
+        Me.MenuItem5 = New System.Windows.Forms.MenuItem()
         Me.MenuItem2 = New System.Windows.Forms.MenuItem()
         Me.MenuChip = New System.Windows.Forms.MenuItem()
         Me.MenuSubChip = New System.Windows.Forms.MenuItem()
@@ -808,7 +810,7 @@ Partial Class MainForm
         'MenuDoubleBeast
         '
         Me.MenuDoubleBeast.Index = 1
-        Me.MenuDoubleBeast.MenuItems.AddRange(New System.Windows.Forms.MenuItem() {Me.MenuItem7, Me.MenuItem8})
+        Me.MenuDoubleBeast.MenuItems.AddRange(New System.Windows.Forms.MenuItem() {Me.MenuItem7, Me.MenuItem4, Me.MenuItem8})
         resources.ApplyResources(Me.MenuDoubleBeast, "MenuDoubleBeast")
         '
         'MenuItem7
@@ -816,15 +818,20 @@ Partial Class MainForm
         Me.MenuItem7.Index = 0
         resources.ApplyResources(Me.MenuItem7, "MenuItem7")
         '
+        'MenuItem4
+        '
+        Me.MenuItem4.Index = 1
+        resources.ApplyResources(Me.MenuItem4, "MenuItem4")
+        '
         'MenuItem8
         '
-        Me.MenuItem8.Index = 1
+        Me.MenuItem8.Index = 2
         resources.ApplyResources(Me.MenuItem8, "MenuItem8")
         '
         'MenuBeast
         '
         Me.MenuBeast.Index = 2
-        Me.MenuBeast.MenuItems.AddRange(New System.Windows.Forms.MenuItem() {Me.MenuItem1, Me.MenuItem2})
+        Me.MenuBeast.MenuItems.AddRange(New System.Windows.Forms.MenuItem() {Me.MenuItem1, Me.MenuItem5, Me.MenuItem2})
         resources.ApplyResources(Me.MenuBeast, "MenuBeast")
         '
         'MenuItem1
@@ -832,9 +839,14 @@ Partial Class MainForm
         Me.MenuItem1.Index = 0
         resources.ApplyResources(Me.MenuItem1, "MenuItem1")
         '
+        'MenuItem5
+        '
+        Me.MenuItem5.Index = 1
+        resources.ApplyResources(Me.MenuItem5, "MenuItem5")
+        '
         'MenuItem2
         '
-        Me.MenuItem2.Index = 1
+        Me.MenuItem2.Index = 2
         resources.ApplyResources(Me.MenuItem2, "MenuItem2")
         '
         'MenuChip
@@ -1047,4 +1059,6 @@ Partial Class MainForm
     Friend WithEvents MenuLanguage As MenuItem
     Friend WithEvents MenuEnglish As MenuItem
     Friend WithEvents MenuJapanese As MenuItem
+    Friend WithEvents MenuItem4 As MenuItem
+    Friend WithEvents MenuItem5 As MenuItem
 End Class

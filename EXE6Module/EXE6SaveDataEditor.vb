@@ -505,24 +505,44 @@ Public Class EXE6SaveDataEditor
         Next
     End Sub
 
-    Public Sub SetDoubleBeast()
+    Public Sub SetDoubleBeast(Optional ByVal english As Boolean = False)
         ResetDoubleBeast()
 
         'Write name.
-        WriteWord(&H1180 + _baseAddr, (4 + 2 + 8) << 8)
-        WriteHalfWord(&H1184 + _baseAddr, &H2)
-        WriteBytes(&H1186 + _baseAddr, {
+        If english Then
+            WriteWord(&H1180 + _baseAddr, (4 + 2 + 9) << 8)
+            WriteHalfWord(&H1184 + _baseAddr, &H2)
+            'Writes "DblBeast" -- official name
+            WriteBytes(&H1186 + _baseAddr, {
+                &HE, &H27, &H31, &HC, &H2A, &H26, &H38, &H39, &HE6
+            })
+        Else
+            WriteWord(&H1180 + _baseAddr, (4 + 2 + 8) << 8)
+            WriteHalfWord(&H1184 + _baseAddr, &H2)
+            WriteBytes(&H1186 + _baseAddr, {
             &H48, &H4E, &H32, &H4B, &H82, &H19, &H1B, &HE6
         })
+        End If
 
         'Write description.
-        WriteWord(&H7D0 + _baseAddr, (4 + 2 + 29) << 8)
-        WriteHalfWord(&H7D4 + _baseAddr, &H2)
-        WriteBytes(&H7D6 + _baseAddr, {
-            &HB7, &HA4, &H9F, &HA7, &HC1, &H14, &H4D, &HAB, &HE9,
-            &HB8, &HA2, &HA8, &HA1, &H1C, &H4D, &H16, &H83, &HE9,
-            &HBE, &HB9, &HB0, &H48, &H4E, &H32, &HE4, &HB2, &HE4, &HB3, &HE6
-        })
+        If english Then
+            WriteWord(&H7D0 + _baseAddr, (4 + 2 + 28) << 8)
+            WriteHalfWord(&H7D4 + _baseAddr, &H2)
+            'Writes "Fang&wing\ndoubl atk\nfrenzy!" -- unofficial translation
+            WriteBytes(&H7D6 + _baseAddr, {
+                &H10, &H26, &H33, &H2C, &HA3, &H3C, &H2E, &H33, &H2C, &HE9,
+                &H29, &H34, &H3A, &H27, &H31, &H0, &H26, &H39, &H30, &HE9,
+                &H2B, &H37, &H2A, &H33, &H3F, &H3E, &HA2, &HE6
+            })
+        Else
+            WriteWord(&H7D0 + _baseAddr, (4 + 2 + 29) << 8)
+            WriteHalfWord(&H7D4 + _baseAddr, &H2)
+            WriteBytes(&H7D6 + _baseAddr, {
+                &HB7, &HA4, &H9F, &HA7, &HC1, &H14, &H4D, &HAB, &HE9,
+                &HB8, &HA2, &HA8, &HA1, &H1C, &H4D, &H16, &H83, &HE9,
+                &HBE, &HB9, &HB0, &H48, &H4E, &H32, &HE4, &HB2, &HE4, &HB3, &HE6
+            })
+        End If
 
         'Write palette.
         WriteHalfWords(&HAF0 + _baseAddr, {
@@ -552,25 +572,45 @@ Public Class EXE6SaveDataEditor
         WriteZeroBytes(&HAF0 + _baseAddr, 16 * 2)
     End Sub
 
-    Public Sub SetBeast()
+    Public Sub SetBeast(Optional ByVal english As Boolean = False)
         ResetBeast()
 
         If VersionInfo = "VersionGregar" Then
             'Write Gregar name.
-            WriteWord(&H1198 + _baseAddr, (4 + 2 + 5) << 8)
-            WriteHalfWord(&H119C + _baseAddr, &H2)
-            WriteBytes(&H119E + _baseAddr, {
-                &H3F, &H34, &HD, &H3C, &HE6
-            })
+            If english Then
+                WriteWord(&H1198 + _baseAddr, (4 + 2 + 7) << 8)
+                WriteHalfWord(&H119C + _baseAddr, &H2)
+                'Writes "Gregar" -- official name
+                WriteBytes(&H119E + _baseAddr, {
+                    &H11, &H37, &H2A, &H2C, &H26, &H37, &HE6
+                })
+            Else
+                WriteWord(&H1198 + _baseAddr, (4 + 2 + 5) << 8)
+                WriteHalfWord(&H119C + _baseAddr, &H2)
+                WriteBytes(&H119E + _baseAddr, {
+                    &H3F, &H34, &HD, &H3C, &HE6
+                })
+            End If
 
             'Write Gregar description.
-            WriteWord(&H834 + _baseAddr, (4 + 2 + 31) << 8)
-            WriteHalfWord(&H838 + _baseAddr, &H2)
-            WriteBytes(&H83A + _baseAddr, {
-                &HE4, &H55, &HE4, &H43, &HE4, &H4D, &H3F, &H34, &HD, &H3C, &HCE, &HE9,
-                &H4E, &H34, &H19, &HE4, &HB2, &HE4, &HB3, &H83, &HE9,
-                &HA7, &HDA, &HAC, &HC8, &HC0, &HA2, &HAA, &HA1, &HA7, &HE6
-            })
+            If english Then
+                WriteWord(&H834 + _baseAddr, (4 + 2 + 27) << 8)
+                WriteHalfWord(&H838 + _baseAddr, &H2)
+                'Writes "Gregar's\nscorching\nbreath!" -- unofficial translation
+                WriteBytes(&H83A + _baseAddr, {
+                    &H11, &H37, &H2A, &H2C, &H26, &H37, &HA9, &H38, &HE9,
+                    &H38, &H28, &H34, &H37, &H28, &H2D, &H2E, &H33, &H2C, &HE9,
+                    &H27, &H37, &H2A, &H26, &H39, &H2D, &HA2, &HE6
+                })
+            Else
+                WriteWord(&H834 + _baseAddr, (4 + 2 + 31) << 8)
+                WriteHalfWord(&H838 + _baseAddr, &H2)
+                WriteBytes(&H83A + _baseAddr, {
+                    &HE4, &H55, &HE4, &H43, &HE4, &H4D, &H3F, &H34, &HD, &H3C, &HCE, &HE9,
+                    &H4E, &H34, &H19, &HE4, &HB2, &HE4, &HB3, &H83, &HE9,
+                    &HA7, &HDA, &HAC, &HC8, &HC0, &HA2, &HAA, &HA1, &HA7, &HE6
+                })
+            End If
 
             'Write Gregar palette.
             WriteHalfWords(&HB10 + _baseAddr, {
@@ -580,20 +620,40 @@ Public Class EXE6SaveDataEditor
 
         ElseIf VersionInfo = "VersionFalzar" Then
             'Write Falzar name.
-            WriteWord(&H1198 + _baseAddr, (4 + 2 + 6) << 8)
-            WriteHalfWord(&H119C + _baseAddr, &H2)
-            WriteBytes(&H119E + _baseAddr, {
-                &H28, &H55, &H32, &H44, &H82, &HE6
-            })
+            If english Then
+                WriteWord(&H1198 + _baseAddr, (4 + 2 + 7) << 8)
+                WriteHalfWord(&H119C + _baseAddr, &H2)
+                'Writes "Falzar" -- official name
+                WriteBytes(&H119E + _baseAddr, {
+                    &H10, &H26, &H31, &H3F, &H26, &H37, &HE6
+                })
+            Else
+                WriteWord(&H1198 + _baseAddr, (4 + 2 + 6) << 8)
+                WriteHalfWord(&H119C + _baseAddr, &H2)
+                WriteBytes(&H119E + _baseAddr, {
+                    &H28, &H55, &H32, &H44, &H82, &HE6
+                })
+            End If
 
             'Write Falzar description.
-            WriteWord(&H834 + _baseAddr, (4 + 2 + 34) << 8)
-            WriteHalfWord(&H838 + _baseAddr, &H2)
-            WriteBytes(&H83A + _baseAddr, {
-                &HE4, &H55, &HE4, &H43, &HE4, &H4D, &H28, &H55, &H32, &H44, &H82, &HCE, &HE9,
-                &H1B, &H32, &H1F, &H82, &H46, &HE4, &HB2, &HE4, &HB3, &H83, &HE9,
-                &HA7, &HDA, &HAC, &HC8, &HB5, &HA2, &HAB, &HDB, &HA7, &HE6
-            })
+            If english Then
+                WriteWord(&H834 + _baseAddr, (4 + 2 + 34) << 8)
+                WriteHalfWord(&H838 + _baseAddr, &H2)
+                'Writes "Falzar's\nstorming\ntornado!" -- unofficial translation
+                WriteBytes(&H83A + _baseAddr, {
+                    &H10, &H26, &H31, &H3F, &H26, &H37, &HA9, &H38, &HE9,
+                    &H38, &H39, &H34, &H37, &H32, &H2E, &H33, &H2C, &HE9,
+                    &H39, &H34, &H37, &H33, &H26, &H29, &H34, &HA2, &HE6
+                })
+            Else
+                WriteWord(&H834 + _baseAddr, (4 + 2 + 34) << 8)
+                WriteHalfWord(&H838 + _baseAddr, &H2)
+                WriteBytes(&H83A + _baseAddr, {
+                    &HE4, &H55, &HE4, &H43, &HE4, &H4D, &H28, &H55, &H32, &H44, &H82, &HCE, &HE9,
+                    &H1B, &H32, &H1F, &H82, &H46, &HE4, &HB2, &HE4, &HB3, &H83, &HE9,
+                    &HA7, &HDA, &HAC, &HC8, &HB5, &HA2, &HAB, &HDB, &HA7, &HE6
+                })
+            End If
 
             'Write Falzar palette.
             WriteHalfWords(&HB10 + _baseAddr, {

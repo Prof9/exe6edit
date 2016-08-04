@@ -2155,7 +2155,10 @@
     <value>Full Library</value>
   </data>
   <data name="MenuItem7.Text" xml:space="preserve">
-    <value>Add data</value>
+    <value>Add data (Japanese)</value>
+  </data>
+  <data name="MenuItem4.Text" xml:space="preserve">
+    <value>Add data (English unofficial)</value>
   </data>
   <data name="MenuItem8.Text" xml:space="preserve">
     <value>Delete data</value>
@@ -2164,7 +2167,10 @@
     <value>DblBeast Chip Data</value>
   </data>
   <data name="MenuItem1.Text" xml:space="preserve">
-    <value>Add data</value>
+    <value>Add data (Japanese)</value>
+  </data>
+  <data name="MenuItem5.Text" xml:space="preserve">
+    <value>Add data (English unofficial)</value>
   </data>
   <data name="MenuItem2.Text" xml:space="preserve">
     <value>Delete data</value>
@@ -2218,7 +2224,7 @@
     <value>634, 463</value>
   </data>
   <data name="$this.Text" xml:space="preserve">
-    <value>EXE6 SaveDataEditor</value>
+    <value>EXE6 SaveDataEditor Mod</value>
   </data>
   <data name="&gt;&gt;FindCM.Name" xml:space="preserve">
     <value>FindCM</value>
@@ -2376,6 +2382,12 @@
   <data name="&gt;&gt;MenuItem7.Type" xml:space="preserve">
     <value>System.Windows.Forms.MenuItem, System.Windows.Forms, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </data>
+  <data name="&gt;&gt;MenuItem4.Name" xml:space="preserve">
+    <value>MenuItem4</value>
+  </data>
+  <data name="&gt;&gt;MenuItem4.Type" xml:space="preserve">
+    <value>System.Windows.Forms.MenuItem, System.Windows.Forms, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
   <data name="&gt;&gt;MenuItem8.Name" xml:space="preserve">
     <value>MenuItem8</value>
   </data>
@@ -2392,6 +2404,12 @@
     <value>MenuItem1</value>
   </data>
   <data name="&gt;&gt;MenuItem1.Type" xml:space="preserve">
+    <value>System.Windows.Forms.MenuItem, System.Windows.Forms, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;MenuItem5.Name" xml:space="preserve">
+    <value>MenuItem5</value>
+  </data>
+  <data name="&gt;&gt;MenuItem5.Type" xml:space="preserve">
     <value>System.Windows.Forms.MenuItem, System.Windows.Forms, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </data>
   <data name="&gt;&gt;MenuItem2.Name" xml:space="preserve">
