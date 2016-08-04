@@ -217,8 +217,8 @@
   <PropertyGroup>
     <PreBuildEvent>
     </PreBuildEvent>
-    <PostBuildEvent>copy $(SolutionDir)license.txt $(TargetDir)license.txt
-copy $(SolutionDir)readme-original.txt $(TargetDir)readme-original.txt
-copy $(SolutionDir)readme.md $(TargetDir)readme.txt</PostBuildEvent>
+    <PostBuildEvent>copy /Y $(SolutionDir)license.txt $(TargetDir)license.txt
+copy /Y $(SolutionDir)readme-original.txt $(TargetDir)readme-original.txt
+copy /Y $(SolutionDir)readme.md $(TargetDir)readme.txt</PostBuildEvent>
   </PropertyGroup>
 </Project>

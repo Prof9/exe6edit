@@ -5,6 +5,8 @@ EXE6 SaveDataEditor Mod is a save editor for both versions of Rockman EXE 6
 (Japanese version). It should work for the English version, Mega Man Battle
 Network 6, as well.
 
+Big thanks to haru_arc for letting us translate his old EXE6 save editor!
+
 
 Features
 --------
