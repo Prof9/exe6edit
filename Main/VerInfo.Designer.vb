@@ -26,6 +26,7 @@ Partial Class VerInfo
         Me.Label1 = New System.Windows.Forms.Label()
         Me.Button1 = New System.Windows.Forms.Button()
         Me.Label2 = New System.Windows.Forms.Label()
+        Me.LinkLabel2 = New System.Windows.Forms.LinkLabel()
         Me.SuspendLayout()
         '
         'Label4
@@ -35,9 +36,9 @@ Partial Class VerInfo
         '
         'LinkLabel1
         '
-        resources.ApplyResources(Me.LinkLabel1, "LinkLabel1")
         Me.LinkLabel1.FlatStyle = System.Windows.Forms.FlatStyle.System
         Me.LinkLabel1.LinkColor = System.Drawing.Color.FromArgb(CType(CType(0, Byte), Integer), CType(CType(0, Byte), Integer), CType(CType(255, Byte), Integer))
+        resources.ApplyResources(Me.LinkLabel1, "LinkLabel1")
         Me.LinkLabel1.Name = "LinkLabel1"
         Me.LinkLabel1.TabStop = True
         '
@@ -53,8 +54,8 @@ Partial Class VerInfo
         '
         'Button1
         '
-        resources.ApplyResources(Me.Button1, "Button1")
         Me.Button1.Cursor = System.Windows.Forms.Cursors.Default
+        resources.ApplyResources(Me.Button1, "Button1")
         Me.Button1.Name = "Button1"
         '
         'Label2
@@ -62,11 +63,20 @@ Partial Class VerInfo
         resources.ApplyResources(Me.Label2, "Label2")
         Me.Label2.Name = "Label2"
         '
+        'LinkLabel2
+        '
+        Me.LinkLabel2.FlatStyle = System.Windows.Forms.FlatStyle.System
+        resources.ApplyResources(Me.LinkLabel2, "LinkLabel2")
+        Me.LinkLabel2.LinkColor = System.Drawing.Color.FromArgb(CType(CType(0, Byte), Integer), CType(CType(0, Byte), Integer), CType(CType(255, Byte), Integer))
+        Me.LinkLabel2.Name = "LinkLabel2"
+        Me.LinkLabel2.TabStop = True
+        '
         'VerInfo
         '
         resources.ApplyResources(Me, "$this")
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
         Me.ControlBox = False
+        Me.Controls.Add(Me.LinkLabel2)
         Me.Controls.Add(Me.Label2)
         Me.Controls.Add(Me.Label4)
         Me.Controls.Add(Me.LinkLabel1)
@@ -84,4 +94,5 @@ Partial Class VerInfo
     Friend WithEvents Label1 As System.Windows.Forms.Label
     Friend WithEvents Button1 As System.Windows.Forms.Button
     Friend WithEvents Label2 As Label
+    Friend WithEvents LinkLabel2 As LinkLabel
 End Class
