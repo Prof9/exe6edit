@@ -83,6 +83,15 @@ Public Class MainForm
 
     'ファイルの読み込み
     Private Sub Initializer()
+        LibGigaChipLB.Items.Clear()
+        If (be.VersionInfo = "VersionGregar") Then
+            LibGigaChipLB.Items.AddRange(dataList.LibGigaChipNameListGregar)
+            MenuBeast.Text = My.Resources.MenuGregarChipData
+        ElseIf (be.VersionInfo = "VersionFalzar") Then
+            LibGigaChipLB.Items.AddRange(dataList.LibGigaChipNameListFalzar)
+            MenuBeast.Text = My.Resources.MenuFalzarChipData
+        End If
+
         ClearDatabindings()
         SetDatabindings()
         For i As Integer = 0 To dataList.KeyItemList.Length - 1
@@ -746,8 +755,8 @@ Public Class MainForm
         LibPaLB.Items.Clear()
         LibPaLB.Items.AddRange(dataList.LibPaNameList)
 
+        LibGigaChipLB.Items.Clear()
         If Not be Is Nothing Then
-            LibGigaChipLB.Items.Clear()
             If (be.VersionInfo = "VersionGregar") Then
                 LibGigaChipLB.Items.AddRange(dataList.LibGigaChipNameListGregar)
                 MenuBeast.Text = My.Resources.MenuGregarChipData
@@ -755,6 +764,8 @@ Public Class MainForm
                 LibGigaChipLB.Items.AddRange(dataList.LibGigaChipNameListFalzar)
                 MenuBeast.Text = My.Resources.MenuFalzarChipData
             End If
+
+            ReadLibrary()
         End If
     End Sub
 
